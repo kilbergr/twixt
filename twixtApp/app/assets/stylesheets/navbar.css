@@ -1,5 +1,4 @@
 #navbar {
-  position: fixed;
   width: 100vw;
   height: 70px;
   background: rgba(255, 255, 255, 0.7);
@@ -65,5 +64,10 @@ nav ul li a:active {
   height: 50px;
   border: black 1px solid;
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+.buffer {
+  width: 100%;
+  margin-top: 50px;
 }
 

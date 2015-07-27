@@ -13,10 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
  *, *:after, *:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
+body {
+	background-color: silver;
+}
+
