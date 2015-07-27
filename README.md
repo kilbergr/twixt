@@ -15,13 +15,10 @@
 - Google calendar
 - EasyUpload
 
-
 ##Stretch goals (not in order):
 - Shopping list / expense tracker and calculator
 - Venmo integration
 - Google maps integration (integrate a mini map in a list item, with directions)
-
-
 
 ##Models:
 ####User
