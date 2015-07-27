@@ -32,7 +32,7 @@
        		</div>    
    			<% end %>
         <% if session[:user_id] %>
-        	<%= link_to logout_path do %>
+        	<%= link_to logout_path, method: :delete do %>
         		<li>Logout</li>
         	<% end %>
         <% else %>
