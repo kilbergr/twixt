@@ -1,24 +1,48 @@
 Rails.application.routes.draw do
 
-  root 'users#show'
-  resources 'users'
+	#signup routes
+  get '/signup' => 'sessions#signup'
+  post '/signup' => 'sessions#create'
 
-  resources 'groups' do
-    resources 'lists', shallow: true do
+  #login routes
+  get '/login' => 'sessions#login', as: "login"
+  post '/login', to: "sessions#attempt_login"
+  #logout route
+  delete '/logout' => 'sessions#logout', as: "logout"
+
+  root 'sessions#login'
+
+  get '/users/:id' => 'users#show'
+  #edit and update user routes
+  get 'users/:id/edit' => 'users#edit', as: 'edit_user'
+  patch 'users/update' => 'users#update'
+  put 'users/update' => 'users#update'
+
+
+  #delete user profile
+  delete 'users/:id' => 'users#destroy'
+
+
+
+  resources 'groups' do 
+  	resources 'lists', shallow: true do
       resources 'items', shallow: true 
     end
   end
   
 
       # Prefix Verb   URI Pattern                           Controller#Action
-#           root GET    /                                     users#show
-#          users GET    /users(.:format)                      users#index
-#                POST   /users(.:format)                      users#create
-#       new_user GET    /users/new(.:format)                  users#new
+#                 Prefix Verb   URI Pattern                           Controller#Action
+#         signup GET    /signup(.:format)                     sessions#signup
+#                POST   /signup(.:format)                     sessions#create
+#          login GET    /login(.:format)                      sessions#login
+#                POST   /login(.:format)                      sessions#attempt_login
+#         logout DELETE /logout(.:format)                     sessions#logout
+#           root GET    /                                     sessions#login
+#                GET    /users/:id(.:format)                  users#show
 #      edit_user GET    /users/:id/edit(.:format)             users#edit
-#           user GET    /users/:id(.:format)                  users#show
-#                PATCH  /users/:id(.:format)                  users#update
-#                PUT    /users/:id(.:format)                  users#update
+#   users_update PATCH  /users/update(.:format)               users#update
+#                PUT    /users/update(.:format)               users#update
 #                DELETE /users/:id(.:format)                  users#destroy
 #     list_items GET    /lists/:list_id/items(.:format)       items#index
 #                POST   /lists/:list_id/items(.:format)       items#create
@@ -28,7 +52,7 @@ Rails.application.routes.draw do
 #                PATCH  /items/:id(.:format)                  items#update
 #                PUT    /items/:id(.:format)                  items#update
 #                DELETE /items/:id(.:format)                  items#destroy
-#     GET    /groups/:group_id/lists(.:format)     lists#index
+#    group_lists GET    /groups/:group_id/lists(.:format)     lists#index
 #                POST   /groups/:group_id/lists(.:format)     lists#create
 # new_group_list GET    /groups/:group_id/lists/new(.:format) lists#new
 #      edit_list GET    /lists/:id/edit(.:format)             lists#edit
