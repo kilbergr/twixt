@@ -4,7 +4,7 @@
 - Shared / group todo lists
 - Todo list, sortable by dragging. Drag list items from one list to  another.
 - Delayed text and mail messaging integrated on to each list item. 
-- Add list list items to google calendar
+- Add list items to google calendar
 - Upload images, or link images from other social media accounts, to be displayed in the list
 - oAuth / Omniauth for google, facebook.
 
@@ -25,7 +25,6 @@
 
 ##Models:
 ####User
-
 * email (req)
 * username (req)
 * password (req)
@@ -34,19 +33,27 @@
 * last_name
 * birthday
 * phone #
-* group_id
+* avatar
+* is_admin
+* is_owner
+
 ####Group
 * name
-* lists_id
-* users_id
-    
-##Abilities (for users and groups)
+
 ####List
-* name
-* items_id
+* name (req)
+* date
+
 ####Item
-* name
-* is_done?
-* date/time created
+* name (req)
+* complete default false (req)
+* date
+* priority_level 
 * image_url
-* priority_level
+* list_id
+
+##Associations (for users and groups)
+* user:references
+* group:references
+
+All models one:many except users:groups.
