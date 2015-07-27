@@ -1,4 +1,7 @@
 class Group < ActiveRecord::Base
-	has_many :users
+	validates :name, presence: true
 	
+	has_many :associations, dependent: :destroy
+	has_many :users, through: :associations
+	has_many :lists, dependent: :destroy
 end
