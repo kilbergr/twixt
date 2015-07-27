@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/signup' => 'sessions#signup'
   post '/signup' => 'sessions#create'
 
+  get "/auth/:provider/callback" => 'sessions#auth'
+
   #login routes
   get '/login' => 'sessions#login', as: "login"
   post '/login', to: "sessions#attempt_login"
