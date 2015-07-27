@@ -22,7 +22,7 @@ nav ul li {
   padding: 1vw;
   border-radius: 5px;
   background: white;
-  color: white;
+  color: black;
   margin-right: 1vw;
 }
 nav ul li:hover {
@@ -48,6 +48,12 @@ nav ul li a:active {
 	color: #fff;
 }
 
+.group-nav-icon {
+  text-align: center;
+}
+.group-add-icon {
+  text-align: center;
+}
 
 #photo-div{
 	

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def confirm_admin
      unless current_user.is_admin
-       redirect_to home_path, alert: "You must be an admin to perform that action."
+       redirect_to groups_path, alert: "You must be an admin to perform that action."
      end
   end
 
@@ -21,6 +21,12 @@ class ApplicationController < ActionController::Base
     if session[:user_id]
       redirect_to :back, notice: "You are already logged in"
       # what do you think redirect_to :back does?
+    end
+  end
+
+  def ensure_correct_user
+    unless params[:id] == session[:id]
+      redirect_to login_path, flash: {alert: "Not Authorized"}
     end
   end
 

@@ -1,2 +1,19 @@
-<h1>Sessions#login</h1>
-<p>Find me in app/views/sessions/login.html.erb</p>
+<div class="login-box">
+	<h1>Login</h1>
+  <%= form_tag(login_path) do %>
+<p>
+  <%= label_tag(:email, nil, class:"control-label")%>
+  <%= text_field_tag(:email, params[:email], autofocus: true)%>
+</p>
+<p>
+  <%= label_tag(:password)%>
+  <%= password_field_tag(:password)%>
+</p>
+<p>
+  <%= submit_tag("Log in", class: "btn btn-primary") %>
+</p>
+<% end %>
+
+<%= link_to "Sign up for an account here!", signup_path%>
+
+</div>

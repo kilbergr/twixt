@@ -1,11 +1,11 @@
 class GroupsController < ApplicationController
-  
+  before_action :confirm_logged_in
 	before_action :find_group, except: [:index, :new, :create]
 
   def index
   	@groups = Group.all
   end
-
+ 
   def new
   	@group = Group.new
   end

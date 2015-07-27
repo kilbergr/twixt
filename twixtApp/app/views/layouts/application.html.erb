@@ -2,9 +2,23 @@
 <html>
 <head>
   <title>TwixtApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <!-- Font-Awesome for Bootstrap -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
 
@@ -13,19 +27,27 @@
     <%= link_to image_tag("logo.png", :class => "logo-image"), root_path %>
     <nav class="navy">
       <ul> 
-      	<% if session[:id] %> 
+      	<% if session[:user_id] %> 
        		<div id="photo-div" title="Link to users profile" style='background-image: url(#{user.avatar});'>		
        		</div>    
    			<% end %>
-        <% if session[:id] %>
-        	<li><%= link_to "Logout", logout_path  %></li>
+        <% if session[:user_id] %>
+        	<%= link_to logout_path, method: :delete do %>
+        		<li>Logout</li>
+        	<% end %>
         <% else %>
-       		<li><%= link_to "Login", root_path  %></li>
+       		<%= link_to root_path do %>
+       			<li>Login</li>
+					<% end %>
         <% end %>
 
-        <li><%= link_to "Add a Group", new_group_path  %></li>
-
-        <li><%= link_to "Groups", groups_path(session[:id])  %> </li>  
+        <%= link_to new_group_path do %>
+        	<li> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
+				<% end %>
+        
+        <%= link_to groups_path(session[:user_id]) do %> 
+        	<li> <i class="fa fa-users group-nav-icon"></i> </li>
+        <% end %>  
     	</ul>
     </nav>
   </div>
