@@ -8,6 +8,45 @@
 </head>
 <body>
 
+
+<div id="navbar">
+    <%= link_to image_tag("logo.png", :class => "logo-image"), root_path %>
+    <nav class="navy">
+      <ul>  
+       	<div id="photo-div" title="Link to users profile" style='background-image: url(#{user.avatar});'></div></li>    
+   
+        <% if session[:id] %>
+        	<li><%= link_to "Logout", logout_path  %></li>
+        <% else %>
+       		<li><%= link_to "Login", root_path  %></li>
+        <% end %>
+
+        <li><%= link_to "Add a Group", new_group_path  %></li>
+
+        <li><%= link_to "Groups", root_path(session[:id])  %> </li>
+        
+
+    
+
+      </ul>
+    </nav>
+  </div>
+
+<div class="buffer"></div>
+
+
+<% flash.each do |key, value| %>
+  <% if key == "notice" %>
+    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
+  <% elsif key == "alert" %>
+    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+  <% elsif key == "info" %>
+    <%= content_tag :div, value, class: "text-center alert alert-info" %>
+  <% else %>
+    <%= content_tag :div, value, class: "text-center alert alert-success" %>
+  <% end %>
+<% end %> 
+
 <%= yield %>
 
 </body>
