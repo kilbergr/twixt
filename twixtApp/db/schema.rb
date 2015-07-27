@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727181644) do
+ActiveRecord::Schema.define(version: 20150727190545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 20150727181644) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "complete"
+    t.boolean  "complete",   default: false
     t.date     "created"
     t.string   "priority"
     t.string   "image_url"
     t.integer  "list_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "lists", force: :cascade do |t|
@@ -59,11 +59,11 @@ ActiveRecord::Schema.define(version: 20150727181644) do
     t.string   "first_name"
     t.string   "last_name"
     t.date     "birthday"
-    t.boolean  "is_admin"
-    t.boolean  "is_owner"
+    t.boolean  "is_admin",        default: false
+    t.boolean  "is_owner",        default: false
     t.string   "avatar"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_foreign_key "associations", "groups"

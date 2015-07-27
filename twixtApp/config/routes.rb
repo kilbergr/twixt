@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 #                PATCH  /items/:id(.:format)                  items#update
 #                PUT    /items/:id(.:format)                  items#update
 #                DELETE /items/:id(.:format)                  items#destroy
-#    group_lists GET    /groups/:group_id/lists(.:format)     lists#index
+#     GET    /groups/:group_id/lists(.:format)     lists#index
 #                POST   /groups/:group_id/lists(.:format)     lists#create
 # new_group_list GET    /groups/:group_id/lists/new(.:format) lists#new
 #      edit_list GET    /lists/:id/edit(.:format)             lists#edit

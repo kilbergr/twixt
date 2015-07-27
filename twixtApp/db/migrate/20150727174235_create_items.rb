@@ -2,7 +2,7 @@ class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
       t.string :name
-      t.boolean :complete
+      t.boolean :complete, :default => false
       t.date :created
       t.string :priority
       t.string :image_url

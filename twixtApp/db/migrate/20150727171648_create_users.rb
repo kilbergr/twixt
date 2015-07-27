@@ -8,8 +8,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.date :birthday
-      t.boolean :is_admin
-      t.boolean :is_owner
+      t.boolean :is_admin, :default => false
+      t.boolean :is_owner, :default => false
       t.string :avatar
 
       t.timestamps null: false
