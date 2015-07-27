@@ -6,7 +6,8 @@ describe 'Item' do
 									created: "Mon Jul 27 2015 15:04:40 GMT-0700 (PDT)",
 									priority: "high",
 									image_url: "http://www.stewartspackaging.com/ProductImages/Icedraw.jpg",
-									complete: false
+									complete: false,
+									list_id: 2
 		)}
 
 	it { is_expected.to respond_to :name}
@@ -14,6 +15,7 @@ describe 'Item' do
 	it { is_expected.to respond_to :priority}
 	it { is_expected.to respond_to :image_url}
 	it { is_expected.to respond_to :complete}
+	it { is_expected.to respond_to :list_id}
 	
 end
 
