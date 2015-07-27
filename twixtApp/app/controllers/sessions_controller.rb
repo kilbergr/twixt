@@ -17,6 +17,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  def auth
+     @auth = request.env['omniauth.auth']['credentials']
+  end
+
   def attempt_login
     if params[:username].present? && params[:password].present?
       found_user = User.where(username: params[:username]).first

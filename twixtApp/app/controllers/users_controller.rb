@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user_groups = @user.groups
   end
 
   def destroy 
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-    	params.require(:user).permit(:username, :password, :email, :first_name, :last_name, :avatar, :birthday) 
+    	params.require(:user).permit(:username, :password, :email, :first_name, :last_name, :avatar, :birthday, :group_ids =>[]) 
     end
 
     def find_user

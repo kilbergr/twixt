@@ -35,6 +35,10 @@ gem 'activerecord-import', '~> 0.7.0'
 gem 'typhoeus'
 
 gem 'font-awesome-sass'
+#for omniauth (oauth and gmail)
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-google-oauth2'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
