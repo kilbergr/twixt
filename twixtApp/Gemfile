@@ -46,7 +46,7 @@ group :development, :test do
   # bug fixing
   gem 'pry-rails'
   # replaces the standard Rails error page with a much better and more useful error page. It is also usable outside of Rails in any Rack app as Rack middleware.
-  gem 'better errors'
+  gem 'better_errors'
   # testing platform
   gem 'rspec-rails'
   # Guard::RSpec allows to automatically & intelligently launch specs when files are modified.
@@ -54,7 +54,7 @@ group :development, :test do
   # feature testing
   gem 'capybara'
   # testing automated emails
-  gem 'capybard-email'
+  gem 'capybara-email'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications. 

@@ -10,6 +10,7 @@
 
 ##APIs to use:
 - Twilio
+- 2FA
 - oAuth/Omniauth
 - Google calendar
 - EasyUpload
@@ -25,25 +26,27 @@
 ##Models:
 ####User
 
-    * email
-    * first_name
-    * last_name
-    * birthday
-    * phone #
-    * group_id
+* email (req)
+* username (req)
+* password (req)
+* password_digest (req)
+* first_name 
+* last_name
+* birthday
+* phone #
+* group_id
 ####Group
-
-    * name
-    * lists_id
-    *users_id
+* name
+* lists_id
+* users_id
     
 ##Abilities (for users and groups)
 ####List
-    * name
-    * items_id
+* name
+* items_id
 ####Item
-    * name
-    * is_done?
-    * date/time created
-    * image_url
-    * priority_level
+* name
+* is_done?
+* date/time created
+* image_url
+* priority_level
