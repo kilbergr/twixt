@@ -34,6 +34,8 @@ gem 'activerecord-import', '~> 0.7.0'
 # for making external API requests
 gem 'typhoeus'
 
+gem 'font-awesome-sass'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
