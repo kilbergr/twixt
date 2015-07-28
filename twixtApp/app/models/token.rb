@@ -3,6 +3,7 @@ class Token < ActiveRecord::Base
     {'refresh_token' => refresh_token,
     'client_id' => ENV['CLIENT_ID'],
     'client_secret' => ENV['CLIENT_SECRET'],
+    'email' => email,
     'grant_type' => 'refresh_token'}
   end
  
