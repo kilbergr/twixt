@@ -61,6 +61,7 @@ group :development, :test do
   gem 'capybara'
   # testing automated emails
   gem 'capybara-email'
+  gem 'binding_of_caller'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications. 
