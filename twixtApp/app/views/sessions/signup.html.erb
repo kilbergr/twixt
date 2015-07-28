@@ -14,11 +14,11 @@
 </p>
 <p>
   <%= f.label(:email) %>
-  <%= f.text_field(:email) %>
+  <%= f.text_field(:email, class: "email-field") %>
 </p>
 <p>
   <%= f.label(:password) %>
-  <%= f.password_field(:password) %>
+  <%= f.password_field(:password, class: "password-field") %>
 </p>
 <p>
   <%= f.submit("Signup", class: "btn btn-primary") %>
