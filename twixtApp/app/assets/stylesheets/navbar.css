@@ -1,8 +1,8 @@
 #navbar {
   width: 100vw;
   height: 70px;
-  background: rgba(255, 255, 255, 0.7);
-  border: solid black 1px;
+  background: #75DCB1; 
+  border-bottom: solid #5C4463 6px;
   z-index: 1;
 }
 
@@ -14,19 +14,19 @@ nav ul {
   list-style: none;
   margin-top: 1vh;
   cursor: pointer;
-  color: white;
+  color: #F9F9F9;
 }
 nav ul li {
 	float: right;
   display: inline;
   padding: 1vw;
   border-radius: 5px;
-  background: white;
+  background: #F9F9F9;
   color: black;
   margin-right: 1vw;
 }
 nav ul li:hover {
-  background: silver;
+  background: #5C4463;
   color: #fff;
 }
 

@@ -18,7 +18,7 @@
 	border: 1px black solid;
 	overflow-y: hidden;
 	overflow-x: scroll;
-	background-color: white;
+	background-color: #F9F9F9;
 }
 
 .list-list-toggles-inner {
@@ -32,7 +32,7 @@
 .list-toggle-box {
 	height: 70px;
 	width: 100px;
-	background-color: white;
+	background-color: #F9F9F9;
 	color: black;
 	border: solid black 1px;
 	border-radius: 15px;
@@ -48,7 +48,7 @@
 
 
 .list-toggle-box:hover {
-	background: silver;
+	background: #5C4463;
   color: #fff;	
 }
 
@@ -58,7 +58,7 @@
 }
 
 .list-display {
-	background-color: white;
+	background-color: #F9F9F9;
 	width: 100vw;
 	height: 54vh;
 	margin-top: 15px;
