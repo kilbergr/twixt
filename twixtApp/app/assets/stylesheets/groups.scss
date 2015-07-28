@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .groups-list {
-	background-color: white;
+	background-color: #647A9E;
 	width: 100vw;
 	height:60vh;
 }
@@ -11,6 +11,7 @@
 .list-text {
 	margin-left: 30px;
 	padding-top: 20px;
+	color: #F9F9F9;
 }
 
 .group-icon {
@@ -20,9 +21,9 @@
 .group-box {
 	height: 100px;
 	width: 170px;
-	background-color: white;
+	background-color: #F9F9F9;
 	color: black;
-	border: solid black 1px;
+	border: solid #5C4463 1px;
 	border-radius: 15px;
 	display: inline-block;
 	float: left;
@@ -33,7 +34,7 @@
 }
 
 .group-box:hover {
-	background: silver;
+	background: #5C4463;
   color: #fff;	
 }
 
