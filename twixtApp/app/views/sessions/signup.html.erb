@@ -1,5 +1,6 @@
 <div class="login-box">
 	<h1>Create a Twixt account</h1>
+
 		<div class= "sign-up-errors">
 			<% if @user.errors.any? %>
 		  	<% @user.errors.full_messages.each do |error| %>
@@ -7,27 +8,37 @@
 		  	<% end %>
 			<% end %>
 		</div>
-	<%= form_for(@user, url: signup_path) do |f|%>
+	
 		<div class="sign-up-form-box">
+			<%= form_for(@user, url: signup_path) do |f|%>
+				<p>
+			  		<div class="signup-label"><%= f.label(:first_name) %></div>
+			  		<%= f.text_field(:first_name, autofocus: true, class: "name-field") %>
+				</p>
+				<p>
+		  			<div class="signup-label"><%= f.label(:email) %></div>
+		  			<%= f.text_field(:email, class: "email-field") %>
+				</p>
+				<p>
+					<div class="signup-label"><%= f.label(:password, class: "password-label") %></div>
+					<%= f.password_field(:password, class: "password-field") %>
+				</p>
+				<p>
+					<%= f.submit("Signup", class: "btn btn-primary") %>
+				</p>
+			<% end %>
+		
+
+			<div>
+				<%= link_to "Have an account already? Log in here", login_path %>
+			</div>
 			
-			<p>
-	  		<div class="signup-label"><%= f.label(:first_name) %></div>
-	  		<%= f.text_field(:first_name, autofocus: true, class: "name-field") %>
-			</p>
-			<p>
-	  		<div class="signup-label"><%= f.label(:email) %></div>
-	  			<%= f.text_field(:email, class: "email-field") %>
-			</p>
-			<p>
-			  <div class="signup-label"><%= f.label(:password, class: "password-label") %></div>
-			  <%= f.password_field(:password, class: "password-field") %>
-			</p>
-			<p>
-			  <%= f.submit("Signup", class: "btn btn-primary") %>
-			</p>
-			<div><%= link_to "Have an account already? Log in here", login_path %></div>
+			<div>
 			<h3>Have a Google account?</h3>
-			<div><%= link_to "Connect using your Google account!", '/auth/google_oauth2', class: "btn btn-primary" %></div>
-	<% end %>
-		</div>
-</div>
+				<div>
+					<%= link_to "Join using your Google account!", '/auth/google_oauth2', class: "btn btn-primary" %>
+				</div>
+			</div>
+	
+		</div>	<!-- close sign-up-form-box class -->
+</div> <!-- close login-box class -->
