@@ -18,11 +18,23 @@
 }
 
 .group-box {
-	height: 200px;
-	width: 200px;
+	height: 100px;
+	width: 170px;
 	background-color: white;
+	color: black;
 	border: solid black 1px;
-	border-radius: 35px;
+	border-radius: 15px;
+	display: inline-block;
+	float: left;
+	list-style: none;
+	padding: 10px;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.group-box:hover {
+	background: silver;
+  color: #fff;	
 }
 
 .group-box-name {
