@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 	#signup routes
   get '/signup' => 'sessions#signup'
   post '/signup' => 'sessions#create'
-
+  
+  #oauth route
   get "/auth/:provider/callback" => 'sessions#auth'
 
   #login routes
