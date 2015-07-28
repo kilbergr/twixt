@@ -16,9 +16,9 @@ class SessionsController < ApplicationController
       render :signup
     end
   end
-
+  ##oauth section
   def auth
-     @auth = request.env['omniauth.auth']['credentials']
+    @auth = request.env['omniauth.auth']['credentials']
   end
 
   def attempt_login
