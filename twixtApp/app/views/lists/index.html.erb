@@ -4,7 +4,7 @@
 	<div class="list-list-toggles">   
 		<div class="list-list-toggles-inner">
 			<% @lists.each do |list| %>
-				<div class="list-toggle-box">
+				<div class="list-toggle-box", data-id= <%= list.id %>>
 					
 					<h5><%= list.name %></h5>
 				</div>
