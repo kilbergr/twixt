@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     Token.create(
       access_token: @auth['token'],
       refresh_token: @auth['refresh_token'],
-      email: @auth['email'],
+      email: request.env['omniauth.auth']['info']['email'],
       expires_at: Time.at(@auth['expires_at']).to_datetime)
   end
 
