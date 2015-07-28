@@ -2,11 +2,13 @@
 
 <div class="groups-list">
 	<h4 class="list-text"> <i class="fa fa-users group-icon"> </i>    My Groups</h4>
-	<ul>
+
 		<% @groups.each do |group| %>
-			<div class="group-box">
-				<h5 class="group-box-name"><%= group.name %></h5>
-			</div>		
+			<%= link_to group_lists_path(group) do %>
+				<div class="group-box">
+					<h5 class="group-box-name"><%= group.name %></h5>
+				</div>
+			<% end %>		
 		<% end %>
-	</ul>
+
 </div>
