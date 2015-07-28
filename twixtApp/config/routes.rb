@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   root 'sessions#login'
 
-  get '/users/:id' => 'users#show'
+  get '/users/:id' => 'users#show', as: "user"
   #edit and update user routes
   get 'users/:id/edit' => 'users#edit', as: 'edit_user'
   patch 'users/update' => 'users#update'
