@@ -3,8 +3,7 @@ class GroupsController < ApplicationController
 	before_action :find_group, except: [:index, :new, :create]
 
   def index
-  	@groups = Group.all
-    # @groups = Group.where(:users => current_user.id)
+    @groups = current_user.groups
   end
  
   def new
