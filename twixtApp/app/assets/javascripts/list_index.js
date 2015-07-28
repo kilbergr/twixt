@@ -1,7 +1,7 @@
 $(function(){
 
 	$('.new-list-button').click(function(e){
-		alert("AHHH - JAVASCRIPT");
+		$('.hidden-list-box').toggle("slow");
 	});
 
 	$('.list-toggle-box').click(function(e){

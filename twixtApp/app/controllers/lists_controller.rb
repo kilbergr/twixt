@@ -2,7 +2,9 @@ class ListsController < ApplicationController
   before_action :find_group, only: [:index, :new, :create]
   before_action :find_list, except: [:index, :new, :create]
 
+
   def index
+    @list = List.new
     @lists = @group.lists
   end
 
@@ -11,9 +13,12 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = @group.lists.create list_params
-    @list.save
-    redirect_to group_lists_path(@group)
+    @list = @group.lists.create(list_params)
+    if @list.save
+      redirect_to group_lists_path(@group)
+    else 
+      render group_lists_path(@group), flash: {alert: "Failed to Create New List"}
+    end
   end
 
   def edit

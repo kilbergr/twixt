@@ -81,9 +81,9 @@ nav ul li a:active {
   width: 400px;
   height: 200px;
   position: fixed;
-  left: 70%;
+  left: 75%;
   margin-left: -200px; 
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(100,122,158,0.9);
   border: black solid 1px;
   border-radius: 25px;
   z-index: 1;
