@@ -11,9 +11,13 @@ class GroupsController < ApplicationController
   end
 
   def create
-  	@group = Group.new group_params
-  	@group.save
-  	redirect_to groups_path
+  	@group = Group.new(group_params)
+    @group.associations.build(user_id: session[:user_id] ) 
+    if @group.save
+  	  redirect_to groups_path
+    else 
+      render groups_path
+    end
   end
 
   def edit
@@ -34,7 +38,7 @@ class GroupsController < ApplicationController
 
   private
   	def group_params
-  		params.require(:group).permit(:name)
+  		params.require(:group).permit(:name, :user_id)
   	end
 
   	def find_group

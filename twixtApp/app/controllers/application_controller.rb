@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :current_user
+  before_action :group
 
   def confirm_logged_in
     unless session[:user_id]
@@ -36,5 +37,11 @@ class ApplicationController < ActionController::Base
   # Defines @current_user if it is not already defined.
    @current_user ||= User.find_by_id(session[:user_id])
   end
-  helper_method :current_user #make it available in views (it will be available in all controllers as well
+
+  def group
+    @group = Group.new
+  end
+    
+
+  helper_method :current_user, :group #make it available in views (it will be available in all controllers as well
 end
