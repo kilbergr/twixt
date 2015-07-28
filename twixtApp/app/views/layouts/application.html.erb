@@ -24,7 +24,7 @@
 
 
 	<div id="navbar">
-    <%= link_to image_tag("logo.png", :class => "logo-image"), root_path %>
+    <%= link_to image_tag("logo.png", :class => "logo-image"), user_path(:user_id) %>
     <nav class="navy">
       <ul> 
       	<% if session[:user_id] %> 

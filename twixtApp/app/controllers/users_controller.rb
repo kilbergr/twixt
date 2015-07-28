@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_groups = @user.groups
+    # @user_groups = @user.groups
   end
 
   def destroy 
