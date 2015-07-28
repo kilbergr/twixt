@@ -1,2 +1,22 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="new-list-button btn btn-primary"> Add a New List</div>
+<div>
+	
+	<div class="list-list-toggles">   
+		<div class="list-list-toggles-inner">
+			<% @lists.each do |list| %>
+				<div class="list-toggle-box">
+					
+					<h5><%= list.name %></h5>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<h6 class="lists-label">Toggle Lists to Show</h6>
+</div>
+<div class="list-display">
+	
+
+
+</div>
+
+
