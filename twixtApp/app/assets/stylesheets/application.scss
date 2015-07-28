@@ -15,7 +15,7 @@
  */
  @import "font-awesome-sprockets";
  @import "font-awesome";
- 
+
  *, *:after, *:before {
   margin: 0;
   padding: 0;
@@ -23,6 +23,51 @@
 }
 
 body {
-	background-color: silver;
+	background-color: #DFEBD7;
+	color: #5C4463;
 }
 
+h1 {
+	color: #47B1C5;
+}
+
+/*  COLOR PALETTE
+
+--- colors in use for option #2 ---
+--- we should probably stick with no more than 6 colors throughout the site ---
+
+super teal - currently the navbar background color
+HEX: 75DCB1
+RGB: 117, 220, 177
+
+bright solid blue - currently the H1 text
+HEX: 47B1C5
+RGB: 71, 177, 197
+
+soft green gray - currently the main content area background color
+HEX: DFEBD7
+RGB: 223, 235, 215
+
+off white / very light gray - to replace anything we want to be white
+HEX: F9F9F9
+RGB: 249, 249, 249
+
+deep purple - currently the body text color, outlines/borders, logo text color, items/groups/li hover color
+HEX: 5C4463
+RGB: 92, 68, 99
+
+blue gray - currently the center content background
+HEX: 647A9E
+RGB: 100, 122, 158
+
+----colors not currently in use ----
+
+teal - another potential navbar background option (not currently in use)
+HEX: 82E5C6
+RGB: 130, 229, 198
+
+lime green - not currently in use
+HEX: D1EFAB 
+RGB: 209, 239, 171
+
+*/
