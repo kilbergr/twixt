@@ -21,7 +21,7 @@ nav ul li {
   display: inline;
   padding: 1vw;
   border-radius: 5px;
-  background: #F9F9F9;
+  background: #DFEBD7;
   color: black;
   margin-right: 1vw;
 }
@@ -77,3 +77,33 @@ nav ul li a:active {
   margin-top: 50px;
 }
 
+.hidden-new-group-box {
+  width: 400px;
+  height: 200px;
+  position: fixed;
+  left: 70%;
+  margin-left: -200px; 
+  background-color: rgba(0,0,0,0.7);
+  border: black solid 1px;
+  border-radius: 25px;
+  z-index: 1;
+  display: none;
+  color: white;
+  text-align: center;
+}
+.new-group-label {
+  margin-right: 114px;
+}
+
+.new-group-form {
+
+}
+
+.new-group-form{
+  z-index: 2;
+  background-color: transparent;
+}
+
+.create-group-btn {
+  margin-top: 20px;
+}

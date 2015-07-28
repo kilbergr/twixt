@@ -24,7 +24,7 @@
 
 
 	<div id="navbar">
-    <%= link_to image_tag("logo.png", :class => "logo-image"), groups_path %>
+    <%= link_to image_tag("logo2.gif", :class => "logo-image"), groups_path %>
     <nav class="navy">
       <ul> 
       	<% if session[:user_id] %> 
@@ -43,15 +43,25 @@
 					<% end %>
         <% end %>
 
-        <%= link_to new_group_path do %>
-        	<li> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
-				<% end %>
+        <% if session[:user_id] %>
+        	<li class="click-me-to-add-group"> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
+        <% end %>
+	
         
         <%= link_to groups_path(session[:user_id]) do %> 
         	<li> <i class="fa fa-users group-nav-icon"></i> </li>
         <% end %>  
     	</ul>
-    </nav>
+    </nav>  
+  </div>
+
+  <div class="hidden-new-group-box">
+    <h3>Create a New Group</h3>
+    <%= form_for @group, url: groups_path, method: :post do |f| %>
+      <div><%= f.label :name, class:"new-group-label" %></div>
+      <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-group-form" %></div>
+      <div class="create-group-btn"><%= f.submit "Create a Group", class:"btn btn-primary" %></div>
+    <% end %>
   </div>
 
 	<div class="buffer"></div>
