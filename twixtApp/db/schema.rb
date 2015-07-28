@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728205723) do
+ActiveRecord::Schema.define(version: 20150728232757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,11 +68,12 @@ ActiveRecord::Schema.define(version: 20150728205723) do
     t.string   "first_name"
     t.string   "last_name"
     t.date     "birthday"
-    t.boolean  "is_admin",        default: false
-    t.boolean  "is_owner",        default: false
+    t.boolean  "is_admin",             default: false
+    t.boolean  "is_owner",             default: false
     t.string   "avatar"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "password_reset_token"
   end
 
   add_foreign_key "associations", "groups"
