@@ -6,7 +6,14 @@ $(function(){
 
 	$('.list-toggle-box').click(function(e){
 		var $this = $(this);
-		alert("AHHH - JAVASCRIPT IN" + $this);
+		var id = $this.attr('data-id');
+		$.ajax({
+			type: 'GET',
+			url: '/lists/' + id + '/items/',
+			dataType: 'json'
+		}).done(function (data){
+			console.log(data);
+		});
 	});
 
 

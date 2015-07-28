@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
 
 
   def index
-    @items = Item.all
+    @items = Item.where(:list_id => @list.id)
+    render json: @items
   end
 
   def new
@@ -45,7 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def find_list
-    @list = List.find_bhy_id params[:list_id]
+    @list = List.find_by_id params[:list_id]
   end
 
 end
