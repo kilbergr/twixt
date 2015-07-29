@@ -16,6 +16,8 @@
 - EasyUpload
 
 ##Stretch goals (not in order):
+- Move  “Add a new List” button to nav bar… but only render on the list index page
+- Button that brings up a form to invite a user to your group...only render on list index page
 - Shopping list / expense tracker and calculator
 - Venmo integration
 - Google maps integration (integrate a mini map in a list item, with directions)
