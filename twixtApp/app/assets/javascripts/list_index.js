@@ -59,7 +59,7 @@ $(function(){
 														'<div class="list-item-body">' +
 														'<div class="image-div">' +
 														// if item.image_url('<img src="'+ item.image_url + '" class="item-img"></div>') +
-														 'ITEM TEXT BODY' +					
+														 item.description +					
 														'</div>' +
 														'<div class="list-item-footer">' +
 															'<i class="item-completed-button fa fa-check-square"></i>' +
