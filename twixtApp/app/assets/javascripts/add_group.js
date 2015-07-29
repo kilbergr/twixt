@@ -7,7 +7,7 @@
 // toggles hidden property using Jquery .toggle method
 
 
-$(function(){
+$(document).ready(function(){
 $('.click-me-to-add-group').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
