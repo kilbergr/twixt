@@ -1,5 +1,9 @@
+<div>
+<% @members.each do |member| %>
+    <div id="photo-div" title="Link to users profile" style='background-image: url(#{member.avatar});'> <%= member.first_name %></div>  
 
-
+<% end %>
+</div>
 <div class="hidden-list-box">
       <h3>Create a New List</h3>
       <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
@@ -11,6 +15,32 @@
 <div class="render-forms-here">
     <i class="close-me-button fa fa-times"></i>
     
+
+        <div class="new-reminder-form">
+            <h3>Send a reminder</h3>
+            
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- <div class="new-item-form-box">
         <h3>Add a new item to your list</h3>
         <form action="/groups/:group_id/items/" class="add-item-form" method="POST">
