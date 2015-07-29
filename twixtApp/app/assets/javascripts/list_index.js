@@ -35,6 +35,7 @@ $(function(){
 			dataType: 'json'
 		}).done(function (data){
 			var items = data;
+			//LIST HEADER TEXT STRING
 			htmlHead = '<div class="list-item-box", data-id="'+ 'LIST ID' +'">' +
 											'<div class="list-header">' +
 												'<h4 class="list-name-text">' + 'LIST NAME' +'</h4>' +
@@ -43,7 +44,8 @@ $(function(){
 			$('.list-display').append(htmlHead);								
 			items.forEach(function (item){
 				console.log(item);
-				var html = 		'<div class="list-body">' +
+				//LIST ITEM TEXT STRING
+				var html = 		'<div class="list-body">' + 
 												'<ul class="list-ul">' +
 													'<li class="list-li">' +
 														'<div class="list-item-header">' +
