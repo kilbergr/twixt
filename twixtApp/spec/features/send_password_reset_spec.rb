@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "email user password reset link, and," do
-	let(:user){ User.create(email:"test@test.com", password:"testing") }
+  let(:user){ User.create(email:"test@test.com", password:"testing") }
 
   before {visit login_path}
 
