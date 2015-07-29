@@ -1,0 +1,123 @@
+// =========================================================================================================
+// ==== THE DRAGGABLE DROPABLE SUPER DYNAMIC AND INTERACTIVE LIST BOX THAT IS BASICALLY 99% OF OUR APP =====
+// =========================================================================================================
+
+
+.list-item-box {
+	background-color: white;
+	width: 220px;
+	border: black solid 3px;
+	overflow-y: scroll;
+
+}
+
+
+
+.list-header {
+	background-color: #75DCB1;
+}
+
+
+.list-name-text {
+	display: inline;
+	padding-left: 3px;
+}
+
+.add-item-icon {
+	float: right;
+	margin-right: 5px;
+	margin-top: 4px;
+
+}
+
+.list-body {
+	width: 220px;
+	height: auto;
+	overflow-y: scroll;
+}
+
+.list-ul{
+
+}
+
+.list-li {
+	border: black solid 1px;
+	margin-bottom: 5px;
+	width: 220px;
+	height: auto;
+}
+
+.list-item-header {
+	background-color: #DFEBD7;
+	height: 30px;
+}
+
+.collapse-icon {
+	display: inline;
+	padding-left: 3px;
+	margin-top: 10px;
+}
+
+
+.list-item-name {
+	display: inline;
+	margin-left: 5px;
+}
+
+.easy-upload-button {
+	display: inline;
+	float: right;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.google-calendar-button {
+	display: inline;
+	float: right;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.schedule-email-button {
+	display: inline;
+	float: right;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.schedule-text-button {
+	display: inline;
+	float: right;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.list-item-body {
+	background-color: white;
+	height: auto;
+}
+
+.image-div {
+
+}
+
+.item-img {
+
+}
+
+.list-item-footer {
+	margin-top: 20px;
+	margin-bottom: -10px;
+	background-color: #DFEBD7;
+}
+
+.item-completed-button {
+	display: inline;
+	margin-left: 180px;
+}
+
+.delete-item-button {
+	display: inline;
+	margin-left: 3px;
+
+}

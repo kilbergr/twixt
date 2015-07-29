@@ -2,14 +2,21 @@ class GroupsController < ApplicationController
   before_action :confirm_logged_in
 	before_action :find_group, except: [:index, :new, :create]
 
+# ==========================================================================
+# ==== ONLY FINDS AND RENDERS GROUPS THAT THE CURRENT USER BELONGS TO ======
+# ==========================================================================
   def index
     @groups = current_user.groups
   end
- 
+
+##### THIS MIGHT NOT BE NECESSARY SINCE WE DO THE SAME IN APP CONTROLLER ##### 
   def new
   	@group = Group.new
   end
 
+# ========================================================
+# ==== TWEAKED TO ALLOW GROUP CREATION FROM NAB BAR ======
+# ========================================================
   def create
   	@group = Group.new(group_params)
     @group.associations.build(user_id: session[:user_id] ) 
