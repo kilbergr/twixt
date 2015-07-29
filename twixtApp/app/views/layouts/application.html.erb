@@ -74,16 +74,7 @@
     <% end %>
   </div>
 
-  <% if params[:controller] == 'lists'%>
-    <div class="hidden-list-box">
-      <h3>Create a New List</h3>
-      <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
-        <div><%= f.label "List Name:", class:"new-list-label" %></div>
-        <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-list-form" %></div>
-        <div class="create-list-btn"><%= f.submit "Create a new List", class:"btn btn-primary" %></div>
-      <% end %>
-    </div>
-    <% end %>
+
 
 	<div class="buffer"></div>
   
