@@ -46,14 +46,23 @@
         <% if session[:user_id] %>
         	<li class="click-me-to-add-group"> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
         <% end %>
-	
+	     
+
+        <% if params[:controller] == 'lists' %>
+          <%= link_to new_group_list_path do %> 
+         <li> <i class="fa fa-plus-square list-add-icon">   List</i>  </li>
+         <% end %>
         
         <%= link_to groups_path(session[:user_id]) do %> 
         	<li> <i class="fa fa-users group-nav-icon"></i> </li>
         <% end %>  
-    	</ul>
+
+        <% end %>
+      </ul>
     </nav>  
   </div>
+
+
 
   <div class="hidden-new-group-box">
     <h3>Create a New Group</h3>
@@ -64,6 +73,9 @@
     <% end %>
   </div>
 
+  
+
+    
 	<div class="buffer"></div>
 
 
