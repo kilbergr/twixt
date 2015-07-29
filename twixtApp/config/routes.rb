@@ -5,22 +5,22 @@ Rails.application.routes.draw do
 
 	#signup routes
   get '/signup' => 'sessions#signup'
-  post '/signup' => 'sessions#create', as: "user_signup"
+  post '/signup' => 'sessions#create', as: 'user_signup'
   
   #oauth route
-  get "/auth/:provider/callback" => 'sessions#auth'
+  get '/auth/:provider/callback' => 'sessions#auth'
 
   #login routes
-  get '/login' => 'sessions#login', as: "login"
-  post '/login', to: "sessions#attempt_login"
+  get '/login' => 'sessions#login', as: 'login'
+  post '/login', to: 'sessions#attempt_login'
   #logout route
-  delete '/logout' => 'sessions#logout', as: "logout"
+  delete '/logout' => 'sessions#logout', as: 'logout'
 
   # root route
   root 'sessions#login'
 
   # user routes
-  get '/users/:id' => 'users#show', as: "user"
+  get '/users/:id' => 'users#show', as: 'user'
   #edit and update user routes
   get 'users/:id/edit' => 'users#edit', as: 'edit_user'
   patch 'users/update' => 'users#update'
@@ -29,7 +29,9 @@ Rails.application.routes.draw do
   delete 'users/:id' => 'users#destroy'
 
   # list of items route
-  get 'lists/:list_id/items' => 'items#index'
+  get  '/lists/:list_id/items' => 'items#index', as: 'items'
+  post '/groups/:group_id/items' => 'items#create'
+  get  '/items/:id/edit' => 'items#edit', as: 'edit_item' 
 
   # groups routes & nested list routes
   resources 'groups' do 

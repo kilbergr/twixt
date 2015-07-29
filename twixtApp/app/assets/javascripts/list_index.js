@@ -2,8 +2,44 @@
 // ==== JQUERY FOR LISTS INDEX PAGE ===========
 // ============================================
 
-
 $(function () {
+
+// ============================================
+// =========== GLOBAL FUNCTIONS ===============
+// ============================================
+
+
+	function toggleScreenBlank() {
+		$('.screen-blanket').toggle();
+		$('.render-forms-here').toggle();
+	}
+
+	function renderAddItem() {
+	// 	html = <div class="new-item-form-box">
+	// 	<h3>Add a new item to your list</h3>
+	// 	<form action="/groups/:group_id/items/" class="add-item-form" method="POST">
+	// 		<div>
+	// 			<div class='item-name-label'><label for="title">Name: </div>
+	// 				<input type="text" name="item[name]" id="name" class="add-item-form" autofocus>
+	// 			</label>
+	// 		</div>
+	// 		<div class='item-description-label'><label> Decription of Issue: </label></div>	
+	// 			<div id ="item-description" class="text-box">	
+	// 					<textarea name="item[description]" rows="5" cols="20" id="description" class="add-item-description"></textarea>
+	// 			</div>
+	// 		<div>
+	// 			<label for="uploadcare"> Upload an Image.</label>
+	// 		</div>
+	// 		<div class="image-upload-div">
+	// 			<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload" />
+	// 		</div>				
+	// 		<div>
+	// 			<input type="submit" value="Create New Issue" class="add-item-submit-button">
+	// 		</div>
+	// 	</form>
+	// </div>
+
+	}
 
 // ==================================
 // ==== TOGGLES FOR HIDDEN DIVS =====
@@ -81,7 +117,7 @@ $(function () {
 		
 		//ADD NEW ITEM TO LIST
 			$('.add-item-icon').click(function(e){
-
+				toggleScreenBlank();
 
 			});
 
@@ -95,21 +131,21 @@ $(function () {
 		//EASY UPLOAD BUTTON
 
 		$('easy-upload-button').click(function(e){
-
+			toggleScreenBlank();
 
 		});
 
 		//GOOGLE CALENDAR BUTTON
 
 		$('.google-calendar-button').click(function(e){
-
+			toggleScreenBlank();
 
 		});
 
 		//SCHEDULE EMAIL BUTTON
 
 		$('.schedule-email-button').click(function(e){
-
+			toggleScreenBlank();
 
 		});
 
@@ -117,7 +153,7 @@ $(function () {
 		//SCHEDULE TEST BUTTON
 
 		$('.schedule-text-button').click(function(e){
-
+			toggleScreenBlank();
 
 		});
 
