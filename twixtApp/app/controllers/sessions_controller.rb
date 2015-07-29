@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
       last_name: @auth_info['family_name'],
       full_name: @auth_info['name'],
       expires_at: Time.at(@auth_cred['expires_at']).to_datetime)
-    @user = User.new(
+    @user = User.create(
             email: @token.email, 
             avatar: @token.image, 
             first_name: @token.first_name, 

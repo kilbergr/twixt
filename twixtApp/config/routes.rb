@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 	#signup routes
   get '/signup' => 'sessions#signup'
-  post '/signup' => 'sessions#create', as: "post_signup"
+  post '/signup' => 'sessions#create', as: "user_signup"
   
   #oauth route
   get "/auth/:provider/callback" => 'sessions#auth'
