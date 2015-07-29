@@ -28,15 +28,17 @@ Rails.application.routes.draw do
   #delete user profile
   delete 'users/:id' => 'users#destroy'
 
+  resources 'groups' do 
+    resources 'lists', shallow: true 
+      # resources 'items', shallow: true 
+    # end
+  end
+
   # list of items route
   get 'lists/:list_id/items' => 'items#index'
 
   # groups routes & nested list routes
-  resources 'groups' do 
-  	resources 'lists', shallow: true 
-      # resources 'items', shallow: true 
-    # end
-  end
+
   
 end
 

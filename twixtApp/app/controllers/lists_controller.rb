@@ -38,17 +38,19 @@ class ListsController < ApplicationController
     redirect_to group_lists_path(@list.group)
   end
 
+  def find_group 
+    @group = Group.find_by_id(params[:group_id])
+  end
+
   private
 
     def list_params
-      params.require(:list).permit(:name, :created)
+      params.require(:list).permit(:name, :created, :group_id)
     end
 
     def find_list
       @list = List.find_by_id(params[:id])
     end
 
-    def find_group 
-      @group = Group.find_by_id(params[:group_id])
-    end
+
 end
