@@ -7,14 +7,14 @@
 	background-color: white;
 	width: 220px;
 	border: black solid 3px;
-	overflow-y: scroll;
-
+	display: inline;
 }
 
 
 
 .list-header {
 	background-color: #75DCB1;
+	width: 220px;
 }
 
 
@@ -32,8 +32,7 @@
 
 .list-body {
 	width: 220px;
-	height: auto;
-	overflow-y: scroll;
+	
 }
 
 .list-ul{
@@ -44,7 +43,8 @@
 	border: black solid 1px;
 	margin-bottom: 5px;
 	width: 220px;
-	height: auto;
+	list-style-type: none;
+
 }
 
 .list-item-header {
