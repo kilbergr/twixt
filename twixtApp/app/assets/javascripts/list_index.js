@@ -37,7 +37,7 @@ $(function () {
 		}).done(function (data){
 			var items = data;
 			//LIST HEADER TEXT STRING
-			var html= '<div class="list-item-box draggable-list", data-id="'+ id +'">' +
+			var html= '<div class="list-item-box draggable-list", id="drag-me" data-id="'+ id +'">' +
 											'<div class="list-header">' +
 												'<h4 class="list-name-text">' + listName +'</h4>' +
 												'<i class="add-item-icon fa fa-plus" data-id="'+ id +'""></i>' +
@@ -55,12 +55,12 @@ $(function () {
 										'<i class="schedule-email-button fa fa-envelope-o"></i>' +
 										'<i class="schedule-text-button fa fa-phone-square"></i>'	+		
 									'</div>' +
-									'<div class="list-item-body">' +
+									'<div class="list-item-body" id="ib">' +
 									'<div class="image-div">' +
 									// if item.image_url('<img src="'+ item.image_url + '" class="item-img"></div>') +
 									 item.description +					
 									'</div>' +
-									'<div class="list-item-footer">' +
+									'<div class="list-item-footer" id="if">' +
 										'<i class="item-completed-button fa fa-check-square"></i>' +
 										'<i class="delete-item-button fa fa-minus-square"></i>' +
 									'</div>' +
@@ -87,9 +87,9 @@ $(function () {
 
 		//TOGGLE DESCRIPTION AND FOOTER
 
-			$('.add-item-icon').click(function(e){
-
-
+			$('.collapse-icon').click(function(e){	
+				$(this).closest('div').toggle();
+				$(this).closest('.list-item-footer').toggle();
 			});
 
 		//EASY UPLOAD BUTTON
