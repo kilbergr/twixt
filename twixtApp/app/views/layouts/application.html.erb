@@ -17,11 +17,16 @@
   
   <!-- Font-Awesome for Bootstrap -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Uploadcare for easy uploads -->
+  <script src="https://ucarecdn.com/widget/2.3.5/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
 
+  <script>
+    UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+  </script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
-
+<div class="screen-blanket"></div>
 
 	<div id="navbar">
     <%= link_to image_tag("logo2.gif", :class => "logo-image"), groups_path %>

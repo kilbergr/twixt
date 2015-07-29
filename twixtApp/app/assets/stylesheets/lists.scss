@@ -7,9 +7,48 @@
 // ==== LISTs INDEX PAGE =====
 // ===========================
 
+.screen-blanket {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
 
+.render-forms-here {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background-color: #DFEBD7;
+	border-radius: 25px;
+	z-index: 2;
+	left: 50%;
+  margin-left: -200px;
+  // display: none;
+  border: black solid 3px; 
+  padding: 10px;
+}
 
+.new-item-form-box {
+	text-align: center;
 
+}
+
+.item-name-label {
+	margin-right: 120px;
+}
+
+.item-description-label{
+	margin-right: 30px;
+}
+
+.image-upload-div {
+	margin-top: 10px;
+}
+
+.add-item-submit-button {
+	margin-top: 15px;
+}
 //==========================
 //==== ADD LISTS TO PAGE ===
 //==========================
