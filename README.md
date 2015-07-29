@@ -19,6 +19,7 @@
 - Shopping list / expense tracker and calculator
 - Venmo integration
 - Google maps integration (integrate a mini map in a list item, with directions)
+- Having profile pics of other users in group appear on lists index
 
 ##Models:
 ####User
