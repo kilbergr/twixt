@@ -1,3 +1,22 @@
-<h1>Resets#edit</h1>
-<p>Find me in app/views/resets/edit.html.erb</p>
-<p>this is where we'll enter a new password and be logged in</p>
+<div class="resets-box">
+
+	<div class= "resets-errors"></div>
+
+	<h1>Welcome back!</h1>
+
+	<p>Let's create a new password and get you logged in.</p>
+
+	<div class="resets-form-box">
+		<p class="resets-instructions">Please enter a new password to continue.</p>
+		<div class="resets-forms">
+			<%= form_for :user, url:reset_path(@user.password_reset_token), method: :patch do |f| %>
+			<div class="resets-label"><%= f.label :password %></div>
+			<p><%= f.password_field :password, autofocus: true %></p>
+
+			<p><%= f.submit "Reset Password" %></p>
+
+			<% end %>
+		</div>
+	</div>
+
+</div>
