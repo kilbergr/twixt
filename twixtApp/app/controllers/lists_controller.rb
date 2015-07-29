@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
   before_action :find_group, only: [:index, :new, :create]
   before_action :find_list, except: [:index, :new, :create]
-
+  before_action :find_users_in_group, only: [:index]
 
   def index
     @list = List.new
@@ -50,6 +50,10 @@ class ListsController < ApplicationController
 
     def find_list
       @list = List.find_by_id(params[:id])
+    end
+
+    def find_users_in_group
+      @members = @group.users.all
     end
 
 
