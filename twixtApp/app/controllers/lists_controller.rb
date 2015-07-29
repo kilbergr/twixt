@@ -35,7 +35,7 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to group_lists_path(@list)
+    redirect_to group_lists_path(@list.group)
   end
 
   private
@@ -45,10 +45,10 @@ class ListsController < ApplicationController
     end
 
     def find_list
-      @list = List.find_by_id params[:id]
+      @list = List.find_by_id(params[:id])
     end
 
     def find_group 
-      @group = Group.find_by_id params[:group_id]
+      @group = Group.find_by_id(params[:group_id])
     end
 end
