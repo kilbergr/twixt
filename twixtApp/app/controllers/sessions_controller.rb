@@ -16,14 +16,31 @@ class SessionsController < ApplicationController
       render :signup
     end
   end
+
   ##oauth section
   def auth
-    @auth = request.env['omniauth.auth']['credentials']
-    Token.create(
-      access_token: @auth['token'],
-      refresh_token: @auth['refresh_token'],
-      email: @auth['email'],
-      expires_at: Time.at(@auth['expires_at']).to_datetime)
+    @auth_cred = request.env['omniauth.auth']['credentials']
+    @auth_info = request.env['omniauth.auth']['info']
+    @token = Token.create(
+      access_token: @auth_cred['token'],
+      refresh_token: @auth_cred['refresh_token'],
+      email: @auth_info['email'],
+      image: @auth_info['image'],
+      first_name: @auth_info['given_name'],
+      last_name: @auth_info['family_name'],
+      full_name: @auth_info['name'],
+      expires_at: Time.at(@auth_cred['expires_at']).to_datetime)
+    @user = User.create(
+            email: @token.email, 
+            avatar: @token.image, 
+            first_name: @token.first_name, 
+            last_name: @token.last_name)
+     end
+
+  def update
+    @user.update user_params
+    @user.save
+    redirect_to user_path
   end
 
   def attempt_login
@@ -56,6 +73,10 @@ class SessionsController < ApplicationController
 
   def find_user
   		@user = User.find_by_id(params[:id])
+  end
+
+  def token_params
+    params.require(:token).permit(:given_name, :family_name, :google_profile, :image)
   end
 
 
