@@ -4,6 +4,16 @@ $(function(){
 		$('.hidden-list-box').toggle("slow");
 	});
 
+	$('.remove-list').click(function(e){
+		e.stopPropagation();
+		$('.hidden-remove-box').toggle("slow");
+	});
+
+	$('.cancel-button').click(function(e){
+		e.stopPropagation();
+		$('.hidden-remove-box').toggle("slow");
+	});
+
 	$('.list-toggle-box').click(function(e){
 		var $this = $(this);
 		var id = $this.attr('data-id');
@@ -15,7 +25,7 @@ $(function(){
 			console.log(data);
 		});
 	});
-
+	
 
 	
 
