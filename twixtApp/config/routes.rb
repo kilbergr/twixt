@@ -1,4 +1,4 @@
-require 'sidekiq/web'
+
 Rails.application.routes.draw do
 
   # password reset routes
@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   # groups routes & nested list routes
 
   #sidekiq mount
-  mount Sidekiq::Web, at: '/sidekiq'
+  #mount Sidekiq::Web, at: '/sidekiq'
   
   end
 end
