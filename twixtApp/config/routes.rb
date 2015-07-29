@@ -28,20 +28,18 @@ Rails.application.routes.draw do
   #delete user profile
   delete 'users/:id' => 'users#destroy'
 
-<<<<<<< HEAD
+
   # list of items route
   get  '/lists/:list_id/items' => 'items#index', as: 'items'
   post '/groups/:group_id/items' => 'items#create'
   get  '/items/:id/edit' => 'items#edit', as: 'edit_item' 
 
   # groups routes & nested list routes
-=======
->>>>>>> 7c6984391d0383225b60c90c7ba5f0d191044476
+
   resources 'groups' do 
     resources 'lists', shallow: true 
       # resources 'items', shallow: true 
     # end
-  end
 
   # list of items route
   get 'lists/:list_id/items' => 'items#index'
@@ -49,8 +47,8 @@ Rails.application.routes.draw do
   # groups routes & nested list routes
 
   
+  end
 end
-
 # # # ROUTES # # #
 
 #         Prefix Verb   URI Pattern                           Controller#Action
@@ -93,7 +91,6 @@ end
 #                PATCH  /groups/:id(.:format)                 groups#update
 #                PUT    /groups/:id(.:format)                 groups#update
 #                DELETE /groups/:id(.:format)                 groups#destroy
-
 
 
 
