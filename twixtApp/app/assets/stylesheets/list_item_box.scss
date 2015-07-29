@@ -6,8 +6,10 @@
 .list-item-box {
 	background-color: white;
 	width: 220px;
-	border: black solid 3px;
-	display: inline;
+	float: left;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
 
@@ -15,6 +17,8 @@
 .list-header {
 	background-color: #75DCB1;
 	width: 220px;
+	height: 30px;
+	margin-bottom: -10px;
 }
 
 
@@ -30,6 +34,11 @@
 
 }
 
+.add-item-icon:hover {
+	color: white;
+	cursor: pointer;
+}
+
 .list-body {
 	width: 220px;
 	
@@ -41,9 +50,10 @@
 
 .list-li {
 	border: black solid 1px;
-	margin-bottom: 5px;
 	width: 220px;
 	list-style-type: none;
+	float: left;
+
 
 }
 
@@ -56,6 +66,11 @@
 	display: inline;
 	padding-left: 3px;
 	margin-top: 10px;
+}
+
+.collapse-icon:hover {
+	color: white;
+	cursor: pointer;
 }
 
 
@@ -71,11 +86,21 @@
 	margin-top: 10px;
 }
 
+.easy-upload-button:hover {
+	color: white;
+	cursor: pointer;
+}
+
 .google-calendar-button {
 	display: inline;
 	float: right;
 	margin-right: 7px;
 	margin-top: 10px;
+}
+
+.google-calendar-button:hover {
+	color: white;
+	cursor: pointer;
 }
 
 .schedule-email-button {
@@ -85,11 +110,21 @@
 	margin-top: 10px;
 }
 
+.schedule-email-button:hover {
+	color: white;
+	cursor: pointer;
+}
+
 .schedule-text-button {
 	display: inline;
 	float: right;
 	margin-right: 7px;
 	margin-top: 10px;
+}
+
+.schedule-text-button:hover {
+	color: white;
+	cursor: pointer;
 }
 
 .list-item-body {
@@ -107,7 +142,6 @@
 
 .list-item-footer {
 	margin-top: 20px;
-	margin-bottom: -10px;
 	background-color: #DFEBD7;
 }
 
@@ -116,8 +150,29 @@
 	margin-left: 180px;
 }
 
+.item-completed-button:hover {
+	color: white;
+	cursor: pointer;
+}
+
+
 .delete-item-button {
 	display: inline;
 	margin-left: 3px;
+}
 
+.delete-item-button:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.tilt.right {
+    transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+}
+.tilt.left {
+    transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
 }
