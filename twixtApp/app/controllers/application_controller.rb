@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :current_user
   before_action :group
+  before_action :list
+  before_action :new_list
 
 
 # ============================================
@@ -47,9 +49,16 @@ class ApplicationController < ActionController::Base
 # ==================================================
 # this way we can create a new group, and redirect to the groups page from the nav bar
   def group
-    @group = Group.new
+    Group.new
   end
     
+  def list
+    @list = List.new
+  end
 
-  helper_method :current_user, :group #make it available in views (it will be available in all controllers as well
+  def new_list
+    group.lists.new
+  end
+
+  helper_method :current_user, :group, :list, :new_list #make it available in views (it will be available in all controllers as well
 end

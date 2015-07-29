@@ -58,40 +58,35 @@
          <% end %>
         <% end %>
         
-        
-        <%= link_to groups_path(session[:user_id]) do %> 
-        	<li> <i class="fa fa-users group-nav-icon"></i> </li>
+        <%= link_to groups_path do %>
+          <li> <i class="fa fa-users group-nav-icon"></i> </li>
         <% end %>  
-
       
       </ul>
     </nav>  
   </div>
-
-
-
   <div class="hidden-new-group-box">
     <h3>Create a New Group</h3>
-    <%= form_for @group, url: groups_path, method: :post do |f| %>
+    <%= form_for group, url: groups_path, method: :post do |f| %>
       <div><%= f.label :name, class:"new-group-label" %></div>
       <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-group-form" %></div>
       <div class="create-group-btn"><%= f.submit "Create a Group", class:"btn btn-primary" %></div>
     <% end %>
   </div>
 
+  <% if params[:controller] == 'lists'%>
     <div class="hidden-list-box">
       <h3>Create a New List</h3>
-      <%= form_for @list, url: group_lists_path, method: :post do |f| %>
+      <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
         <div><%= f.label "List Name:", class:"new-list-label" %></div>
         <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-list-form" %></div>
         <div class="create-list-btn"><%= f.submit "Create a new List", class:"btn btn-primary" %></div>
       <% end %>
     </div>
-
-    
+    <% end %>
+ 
 	<div class="buffer"></div>
-
-
+  
 	<% flash.each do |key, value| %>
 	  <% if key == "notice" %>
 	    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
