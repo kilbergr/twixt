@@ -23,16 +23,18 @@
 .hidden-list-box {
 	width: 300px;
 	height: 200px;
-	position: fixed;
+	// position: fixed;
 	background-color: rgba(100,122,158,0.9);
 	text-align: center;
-	left: 50%;
-  margin-left: -150px;
+	margin-left: 65%;
+  margin-right: 35px;
   color: white;
   border-radius: 25px;
+  padding: 10px;
   display: none;
-  margin-top: -20px; 
+  margin-top: 20px; 
 }
+
 
 .new-list-label {
 	margin-right: 99px;

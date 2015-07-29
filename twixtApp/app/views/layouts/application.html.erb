@@ -47,17 +47,18 @@
         	<li class="click-me-to-add-group"> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
         <% end %>
 	     
-
         <% if params[:controller] == 'lists' %>
-          <%= link_to new_group_list_path do %> 
-         <li> <i class="fa fa-plus-square list-add-icon">   List</i>  </li>
+          <%= link_to group_lists_path(@group.id) do %> 
+           <li class="click-me-to-add-list"> <i class="fa fa-plus-square list-add-icon">   List</i>  </li>
          <% end %>
+        <% end %>
+        
         
         <%= link_to groups_path(session[:user_id]) do %> 
         	<li> <i class="fa fa-users group-nav-icon"></i> </li>
         <% end %>  
 
-        <% end %>
+      
       </ul>
     </nav>  
   </div>
@@ -73,7 +74,14 @@
     <% end %>
   </div>
 
-  
+    <div class="hidden-list-box">
+      <h3>Create a New List</h3>
+      <%= form_for @list, url: group_lists_path, method: :post do |f| %>
+        <div><%= f.label "List Name:", class:"new-list-label" %></div>
+        <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-list-form" %></div>
+        <div class="create-list-btn"><%= f.submit "Create a new List", class:"btn btn-primary" %></div>
+      <% end %>
+    </div>
 
     
 	<div class="buffer"></div>
