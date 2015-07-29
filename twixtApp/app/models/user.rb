@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 	has_secure_password
+	# has_secure_password replaces the :password validation below
 	
-	validates :password, presence: true
+	# validates :password, presence: true
 	validates :first_name, presence: true
 	validates :email, presence: true, uniqueness: true
 
