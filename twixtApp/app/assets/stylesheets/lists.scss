@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// ===========================
+// ==== LISTs INDEX PAGE =====
+// ===========================
+
+
+
+
+//==========================
+//==== ADD LISTS TO PAGE ===
+//==========================
 .new-list-button {
 	margin-left: 45%;
 	margin-right: auto;
@@ -35,6 +46,9 @@
 	margin-top: 20px;
 }
 
+//============================================
+//==== DISPLAY LISTS AND LIST TOGGLE BTNS  ===
+//============================================
 .list-list-toggles {
 	height: 100px;
 	width: 450px;
@@ -68,8 +82,21 @@
 	margin-top: 15px;
 	text-align: center;
 	cursor: pointer;
+	overflow-x: hidden;
 }
 
+.list-toggle-box:hover {
+	background: #5C4463;
+  color: #fff;	
+}
+
+.list-name {
+	display: inline;
+}
+
+//=====================
+//==== REMOVE LISTS ===
+//=====================
 .remove-list {
 	text-align: left;
 	z-index: 2;
@@ -102,14 +129,10 @@
 	display: inline-block;
 }
 
-.list-name {
-	display: inline;
-}
+//=========================
+//==== LIST RENDER AREA ===
+//=========================
 
-.list-toggle-box:hover {
-	background: #5C4463;
-  color: #fff;	
-}
 
 .lists-label {
 	text-align: center;
@@ -117,9 +140,10 @@
 }
 
 .list-display {
-	background-color: #F9F9F9;
+	background-color: #647A9E;
 	width: 100vw;
 	height: 54vh;
 	margin-top: 15px;
+	border: solid 3px #5C4463;
 
 }

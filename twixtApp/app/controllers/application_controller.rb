@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
   before_action :current_user
   before_action :group
 
+
+# ============================================
+# ==== LOCAL LOGIN AND SECURITY METHODS ======
+# ============================================
   def confirm_logged_in
     unless session[:user_id]
       redirect_to login_path, alert: "Please log in"
@@ -38,6 +42,10 @@ class ApplicationController < ActionController::Base
    @current_user ||= User.find_by_id(session[:user_id])
   end
 
+# ==================================================
+# ==== MAKES @group ACCESSIBLE FROM EVERY PAGE =====
+# ==================================================
+# this way we can create a new group, and redirect to the groups page from the nav bar
   def group
     @group = Group.new
   end

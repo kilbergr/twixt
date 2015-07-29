@@ -1,3 +1,9 @@
+/*
+====================================
+==== NAV BAR AND NAV BAR BUTTONS ===
+====================================
+*/
+
 #navbar {
   width: 100vw;
   height: 70px;
@@ -48,12 +54,24 @@ nav ul li a:active {
 	color: #fff;
 }
 
+/*
+===========================
+==== NAVBAR ICONS =========
+===========================
+*/
+
 .group-nav-icon {
   text-align: center;
 }
 .group-add-icon {
   text-align: center;
 }
+
+/*
+===========================
+==== USER AVATAR CIRCLE ===
+===========================
+*/
 
 #photo-div{
 	
@@ -72,10 +90,22 @@ nav ul li a:active {
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
+/*
+===============
+==== BUFFER ===
+===============
+*/
+
 .buffer {
   width: 100%;
   margin-top: 50px;
 }
+
+/*
+====================================
+==== ADD A NEW GROUP -- HIDEN DIV ==
+====================================
+*/
 
 .hidden-new-group-box {
   width: 400px;
