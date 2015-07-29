@@ -55,9 +55,14 @@ ActiveRecord::Schema.define(version: 20150728232757) do
     t.string   "access_token"
     t.string   "refresh_token"
     t.datetime "expires_at"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "image"
+    t.string   "full_name"
+    t.string   "google_profile"
   end
 
   create_table "users", force: :cascade do |t|

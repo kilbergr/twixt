@@ -1,6 +1,11 @@
-# app/views/sessions/auth.html.erb
-<% @auth.each do |key, value| %>
-
-  <h1><%= key %> </h1>
-  <p><%= value %> </p>
+<%= form_for @user, url:post_signup_path do |f| %>
+		<%= f.label "Email" %>
+		<%= f.text_field :email, autofocus: true %><br/>
+    <%= f.label "First Name" %>
+    <%= f.text_field :first_name%><br />
+	  <%= f.label "Last Name" %>
+    <%= f.text_field :last_name%><br />
+    <%= f.label "Profile Picture" %>
+    <%= f.text_field :avatar%><br />
+    <%= f.submit "Confirm User Information"%>
 <% end %>
