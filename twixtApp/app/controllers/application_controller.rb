@@ -61,4 +61,5 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user, :group, :list, :new_list #make it available in views (it will be available in all controllers as well
+
 end
