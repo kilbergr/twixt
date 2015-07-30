@@ -66,7 +66,7 @@ $(function () {
 	$('.close-me-button').click(function (){
 		removeAddItemForms();
 		toggleScreenBlank();
-	})
+	});
 
 // ======================================================
 // ==== BUILD LIST ITEMS DYNAMICALLY WITH AJAX CALL =====
@@ -226,13 +226,11 @@ $(function () {
 			}
 
 		// ADDING JQUERY UI CLASSES	
-			$( ".list-item-box" ).addClass( "draggable ui-widget ui-helper-clearfix ui-corner-all" )
+			$( ".list-item-box" ).addClass( "draggable ui-widget ui-helper-clearfix ui-corner-all" );
 
 		});//END OF AJAX .done CALL
 	}); //END OF LIST-TOGGLE-BOX CLICK FUNCTION
 	
-	
-
 	
 
 

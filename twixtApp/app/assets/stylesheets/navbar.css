@@ -12,6 +12,10 @@
   z-index: 1;
 }
 
+#navbar a:hover {
+  text-decoration: none;
+}
+
 .logo-text {
   font-family: Kranky,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 5em;
@@ -150,7 +154,7 @@ nav ul li a:active {
   border-radius: 25px;
   z-index: 1;
   display: none;
-  color: white;
+  color: #F9F9F9;
   text-align: center;
   margin-top: 10px;
 }
