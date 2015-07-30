@@ -21,10 +21,20 @@
 	border: #5C4463 solid 1px;
 }
 
+// .list-name-text-box {
+// 	display: inline;
+// 	padding-left: 3px;
+// 	width: 180px;
+// 	overflow-x: hidden;
+
+// }
 
 .list-name-text {
 	display: inline;
 	padding-left: 3px;
+	width: 180px;
+	overflow-x: hidden;
+
 }
 
 .add-item-icon {
@@ -54,14 +64,25 @@
 	float: left;
 }
 
-.list-item-header {
+.list-item-header-outer {
 	background-color: #DFEBD7;
 	height: 30px;
+	overflow-x: scroll;
+}
+
+.list-item-header-inner {
+	background-color: #DFEBD7;
+	width: 250px;
+	height: 30px;
+	overflow-x: scroll;
+	
 }
 
 .collapse-icon {
 	display: inline;
+	float: left;
 	padding-left: 3px;
+	margin-right: 7px;
 	margin-top: 10px;
 }
 
@@ -78,7 +99,7 @@
 
 .easy-upload-button {
 	display: inline;
-	float: right;
+	float: left;
 	margin-right: 7px;
 	margin-top: 10px;
 }
@@ -90,7 +111,7 @@
 
 .google-calendar-button {
 	display: inline;
-	float: right;
+	float: left;
 	margin-right: 7px;
 	margin-top: 10px;
 }
@@ -102,7 +123,7 @@
 
 .schedule-email-button {
 	display: inline;
-	float: right;
+	float: left;
 	margin-right: 7px;
 	margin-top: 10px;
 }
@@ -114,9 +135,10 @@
 
 .schedule-text-button {
 	display: inline;
-	float: right;
+	float: left;
 	margin-right: 7px;
 	margin-top: 10px;
+
 }
 
 .schedule-text-button:hover {
@@ -130,11 +152,15 @@
 }
 
 .image-div {
-
+	width: 180px;
+	height: 190px;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
 .item-img {
-
+	width: 180px;
+	height: 190px;
 }
 
 .list-item-footer {

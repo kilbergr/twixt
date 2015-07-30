@@ -28,6 +28,7 @@ ready = function(){
 
 	$('.close-me-button').click(function (){
 		removeAddItemForms();
+		removeAddNotificationForms();
 		toggleScreenBlank();
 	});
 
@@ -56,25 +57,37 @@ ready = function(){
 			items.forEach(function (item){
 				//LIST ITEM TEXT STRING
 				html += '<li class="list-li">' +
-									'<div class="list-item-header">' +
+									'<div class="list-item-header-outer">' +
+									'<div class="list-item-header-inner">' +
 										'<i class="collapse-icon fa fa-caret-square-o-down"></i>' +
 										'<h7 class="list-item-name">' + item.name + '</h7>' +
-										'<i class="easy-upload-button fa fa-camera"></i>' +
-										'<i class="google-calendar-button fa fa-calendar"></i>' +
-										'<i class="schedule-email-button fa fa-envelope-o"></i>' +
 										'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
+											'<i class="google-calendar-button fa fa-calendar"></i>' +
+										'<i class="schedule-email-button fa fa-envelope-o"></i>' +	
+										'<i class="easy-upload-button fa fa-camera"></i>' +
 									'</div>' +
-									'<div class="list-item-body" id="ib">' +
-									'<div class="image-div">' +
-									// if item.image_url('<img src="'+ item.image_url + '" class="item-img"></div>') +
-									 item.description +					
+									'</div>' +
+									'<div class="list-item-body" id="ib">';
+
+				if (item.image_url == "" || item.image_url == "nil"){
+					html +=		'<div class="image-div">' +
+										'<img src="'+ item.image_url +'" class="item-img"></div>' +
+										'</div>' +
+										item.description +	
+										'<div class="list-item-footer" id="if">' +
+										'<i class="item-completed-button fa fa-check-square"></i>' +
+										'<i class="delete-item-button fa fa-minus-square"></i>' +
+										'</div>' +
+										'</li>';
+				} else {
+									html += item.description +					
 									'</div>' +
 									'<div class="list-item-footer" id="if">' +
 										'<i class="item-completed-button fa fa-check-square"></i>' +
 										'<i class="delete-item-button fa fa-minus-square"></i>' +
 									'</div>' +
 								'</li>';
-			
+				}
 				
 			});
 			html += '</ul>' +
@@ -245,7 +258,7 @@ ready = function(){
 			                    '<label for="phone">Cell phone number:</label>' + 
 			                '</div>' +
 			                '<div>' +
-			                    '<input type="tel" name="notification[phone]" class="add-item-form" pattern="?:\(\d{3}\)|\d{3}[- ]?\d{3}[- ]?\d{4}" maxlength="12" required="required" placeholder="xxx-xxx-xxxx" autofocus>' +
+			                    '<input type="tel" name="notification[phone]" class="add-item-form" maxlength="12" required="required" placeholder="xxx-xxx-xxxx" autofocus>' +
 			                '</div>' +
 			                '<div class="item-description-label">' +
 			                    '<label for="message"> Custom message (optional): </label>' +
@@ -256,9 +269,9 @@ ready = function(){
 			                '<div>' +
 			                    '<label for="select">Select when to send this reminder:</label>' + 
 			                '</div>' +
-			                '<input type="hidden" value="notification[' + itemName + ']">' +
-			                '<input type="hidden" value="notification[' + itemId +']">' +
-			                '<input type="hidden" value="notification[' + listId +']">' +
+			                '<input type="hidden" name="notification[item_name]" value="'+ itemName +'">' +
+			                '<input type="hidden" name="notification[item_id]" value="'+ itemId +'">' +
+			                '<input type="hidden" name="notification[list_id]" value="'+ listId +'">' +
 			                '<select name="notification[send_by]"" onchange="this.form.submit()">' +
 			                    '<option selected>Select time</option>' +
 			                    '<option>Now</option>' +
@@ -276,7 +289,9 @@ ready = function(){
 		$('.new-item-form-box').remove();
 	}
 	
-
+	function removeAddNotificationForms() {
+		$('.new-reminder-form-box').remove();
+	}
 
 };//END
 
