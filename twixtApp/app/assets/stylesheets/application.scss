@@ -17,6 +17,7 @@
  */
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import url(http://fonts.googleapis.com/css?family=Oswald|Kranky);
 
 
 
@@ -24,8 +25,7 @@
 // ==== GLOBAL CSS AND COLOR SCHEME ===========
 // ============================================
 
- *, *:after, *:before {
-  margin: 0;
+*, *:after, *:before {
   padding: 0;
   box-sizing: border-box;
 }
@@ -33,10 +33,47 @@
 body {
 	background-color: #DFEBD7;
 	color: #5C4463;
+	line-height: 1.5;
+	font-family: 'Oswald'
 }
 
 h1 {
-	color: #47B1C5;
+	// color: #47B1C5;
+	color: #5C4463;
+	margin-bottom: 25px;
+	margin-top: 0;
+}
+
+h3 {
+	font-size: 1.35em;
+}
+
+h5{
+	font-size: 1.15em;
+}
+
+.error-messages {
+	margin: 10px;
+}
+
+.float-left {
+	float: left;
+	margin-left: 20px;
+}
+
+// ==============================================
+// ==== GLOBAL BUTTON OVERRIDES TO BOOTSTRAP ====
+// ==============================================
+
+.btn {
+	background-color: #f8efc0; /* light yellow bootstrap uses for alerts */
+	background-image: none;
+	color: #5C4463;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+	background-color: #5C4463;
+	// border-color: #F9F9F9;
 }
 
 /*  COLOR PALETTE
@@ -67,6 +104,9 @@ RGB: 92, 68, 99
 blue gray - currently the center content background
 HEX: 647A9E
 RGB: 100, 122, 158
+
+lightish gray
+HEX: e8e6e6
 
 ----colors not currently in use ----
 

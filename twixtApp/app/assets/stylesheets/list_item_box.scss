@@ -1,19 +1,16 @@
 // =========================================================================================================
 // ==== THE DRAGGABLE DROPABLE SUPER DYNAMIC AND INTERACTIVE LIST BOX THAT IS BASICALLY 99% OF OUR APP =====
 // =========================================================================================================
-
-
-
-
+//WHOA THERE, MISTER. 99%????
 .list-item-box {
-	background-color: white;
-	width: 220px;
+	background-color: #F9F9F9;
+	// width: 220px;
 	float: left;
 	display: inline-block;
 	margin-left: 20px;
 	margin-top: 20px;
+	border: 5px solid #F9F9F9;
 }
-
 
 
 .list-header {
@@ -21,6 +18,7 @@
 	width: 220px;
 	height: 30px;
 	margin-bottom: -10px;
+	border: #5C4463 solid 1px;
 }
 
 
@@ -33,11 +31,10 @@
 	float: right;
 	margin-right: 5px;
 	margin-top: 4px;
-
 }
 
 .add-item-icon:hover {
-	color: white;
+	color: #F9F9F9; /* off-white */
 	cursor: pointer;
 }
 
@@ -51,12 +48,10 @@
 }
 
 .list-li {
-	border: black solid 1px;
+	border: #5C4463 solid 1px;
 	width: 220px;
 	list-style-type: none;
 	float: left;
-
-
 }
 
 .list-item-header {
@@ -71,7 +66,7 @@
 }
 
 .collapse-icon:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 
@@ -89,7 +84,7 @@
 }
 
 .easy-upload-button:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 
@@ -101,7 +96,7 @@
 }
 
 .google-calendar-button:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 
@@ -113,7 +108,7 @@
 }
 
 .schedule-email-button:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 
@@ -125,12 +120,12 @@
 }
 
 .schedule-text-button:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 
 .list-item-body {
-	background-color: white;
+	background-color: #F9F9F9;
 	height: auto;
 }
 
@@ -153,7 +148,7 @@
 }
 
 .item-completed-button:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 
@@ -164,7 +159,7 @@
 }
 
 .delete-item-button:hover {
-	color: white;
+	color: #F9F9F9;
 	cursor: pointer;
 }
 

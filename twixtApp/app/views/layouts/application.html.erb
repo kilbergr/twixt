@@ -29,15 +29,28 @@
 <div class="screen-blanket"></div>
 
 	<div id="navbar">
-    <%= link_to image_tag("logo2.gif", :class => "logo-image"), groups_path %>
-    <nav class="navy">
+
+    <% if session[:user_id] %>
+      <%= link_to groups_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% else %>
+      <%= link_to root_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% end %>
+
+    <nav class="nav-group-right">
       <ul> 
+
       	<% if session[:user_id] %> 
-       		<%= link_to user_path(:user_id) do %>
-	       		<div id="photo-div" title="Link to users profile" style='background-image: url(#{user.avatar});'>		
-	       		</div>  
+       		<%= link_to user_path(session[:user_id]) do %>
+            <span class="user-mini-profile">
+	       		  <div class="photo-div photo-div-nav" title="Link to users profile" style="background-image: url(<%= current_user.avatar %>);"></div>
+	       		</span>  
 	       	<% end %>  
    			<% end %>
+
         <% if session[:user_id] %>
         	<%= link_to logout_path, method: :delete do %>
         		<li>Logout</li>
@@ -49,22 +62,27 @@
         <% end %>
 
         <% if session[:user_id] %>
-        	<li class="click-me-to-add-group"> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
-        <% end %>
-	     
-        <% if params[:controller] == 'lists' %>
-          <%= link_to group_lists_path(@group.id) do %> 
-           <li class="click-me-to-add-list"> <i class="fa fa-plus-square list-add-icon">   List</i>  </li>
-         <% end %>
-        <% end %>
-        
-        <%= link_to groups_path do %>
-          <li> <i class="fa fa-users group-nav-icon"></i> </li>
-        <% end %>  
+
+          <% if params[:controller] == 'lists' %>
+            <%= link_to group_lists_path(@group.id) do %> 
+              <li class="click-me-to-add-list">
+                <i class="fa fa-plus-square list-add-icon"></i> New List
+              </li>
+            <% end %>
+          <% end %>
+
+          <li class="click-me-to-add-group"><i class="fa fa-plus-square group-add-icon"></i> New Group</li>
+
+          <%= link_to groups_path do %>
+            <li><i class="fa fa-users group-nav-icon"></i> My Groups</li>
+          <% end %>  
+
+        <% end %> 
       
       </ul>
     </nav>  
   </div>
+
   <div class="hidden-new-group-box">
     <h3>Create a New Group</h3>
     <%= form_for group, url: groups_path, method: :post do |f| %>

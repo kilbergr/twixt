@@ -29,29 +29,18 @@ Rails.application.routes.draw do
   #delete user profile
   delete 'users/:id' => 'users#destroy'
 
-
-  # list of items route
-  get  '/lists/:list_id/items' => 'items#index', as: 'items'
-  post '/groups/:group_id/items' => 'items#create'
+  # items routes
+  get  '/lists/:list_id/items' => 'items#index'
+  post '/lists/:list_id/items' => 'items#create'
   get  '/items/:id/edit' => 'items#edit', as: 'edit_item' 
 
   # groups routes & nested list routes
-
   resources 'groups' do 
-    resources 'lists', shallow: true 
-      # resources 'items', shallow: true 
-    # end
-
-  # list of items route
-  get 'lists/:list_id/items' => 'items#index'
-
-  # groups routes & nested list routes
-
-  #sidekiq mount
-  #mount Sidekiq::Web, at: '/sidekiq'
-  
+    resources 'lists', shallow: true
   end
+
 end
+
 # # # ROUTES # # #
 
 #         Prefix Verb   URI Pattern                           Controller#Action
@@ -60,9 +49,10 @@ end
 #      new_reset GET    /resets/new(.:format)                 resets#new
 #     edit_reset GET    /resets/:id/edit(.:format)            resets#edit
 #          reset PATCH  /resets/:id(.:format)                 resets#update
+#                PUT    /resets/:id(.:format)                 resets#update
 
 #         signup GET    /signup(.:format)                     sessions#signup
-#                POST   /signup(.:format)                     sessions#create
+#    user_signup POST   /signup(.:format)                     sessions#create
 #                GET    /auth/:provider/callback(.:format)    sessions#auth
 #          login GET    /login(.:format)                      sessions#login
 #                POST   /login(.:format)                      sessions#attempt_login
@@ -76,6 +66,8 @@ end
 #                DELETE /users/:id(.:format)                  users#destroy
 
 #                GET    /lists/:list_id/items(.:format)       items#index
+#                POST   /lists/:list_id/items(.:format)       items#create
+#      edit_item GET    /items/:id/edit(.:format)             items#edit
 
 #    group_lists GET    /groups/:group_id/lists(.:format)     lists#index
 #                POST   /groups/:group_id/lists(.:format)     lists#create
@@ -94,6 +86,7 @@ end
 #                PATCH  /groups/:id(.:format)                 groups#update
 #                PUT    /groups/:id(.:format)                 groups#update
 #                DELETE /groups/:id(.:format)                 groups#destroy
+
 
 
 

@@ -2,7 +2,10 @@
 // ==== JQUERY FOR LISTS INDEX PAGE ===========
 // ============================================
 
-$(function () {
+var ready;
+ready = function(){
+
+	console.log("list_index.js jquery is ready");
 
 // ============================================
 // =========== GLOBAL FUNCTIONS ===============
@@ -14,27 +17,28 @@ $(function () {
 		$('.render-forms-here').toggle();
 	}
 
-	function renderAddItem() {
+	function renderAddItem(id) {
 		var html = '<div class="new-item-form-box">' +
-				        '<h3>Add a new item to your list</h3>' +
-				        '<form action="/groups/:group_id/items/" class="add-item-form" method="POST">' +
+				        '<h3 style="margin-bottom:30px;">Add a new item to your list</h3>' +
+				        '<form action="/lists/'+ id +'/items/" class="add-item-form" method="POST">' +
 				            '<div>' +
 				                '<div class="item-name-label"><label for="title">Name: </div>' +
 				                    '<input type="text" name="item[name]" id="name" class="add-item-form" autofocus>' +
 				                '</label>' +
 				            '</div>' +
-				            '<div class="item-description-label"><label> Decription of Issue: </label></div>'+
+				            '<div class="item-description-label"><label> Item Description: </label></div>'+
 				                '<div id ="item-description" class="text-box">'+    
 				                        '<textarea name="item[description]" rows="5" cols="20" id="description" class="add-item-description"></textarea>' +
 				                '</div>' +
-				            '<div>' +
-				                '<label for="uploadcare"> Upload an Image.</label>' +
+				            '<div class="image-upload-div-outer">' +
+				                '<label for="uploadcare" class="item-description-label" style="margin-top:15px">Upload an Image for this Item</label>' +
+				            
+				            '<div class="image-upload-div" style="display:inline;margin-top:15px">' +
+				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload">' +
 				            '</div>' +
-				            '<div class="image-upload-div">' +
-				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload" />' +
-				            '</div>' +                
-				            '<div>' +
-				                '<input type="submit" value="Create New Issue" class="add-item-submit-button">' +
+				            '</div>' +            
+				            '<div style="margin-top:15px;">' +
+				                '<input type="submit" value="Add List Item" class="add-item-submit-button btn btn-primary">' +
 				            '</div>' +
 				        '</form>' +
 				    '</div>';
@@ -49,14 +53,14 @@ $(function () {
 // ==================================
 // ==== TOGGLES FOR HIDDEN DIVS =====
 // ==================================
-  $('.new-list-button').click(function () {
-    $('.hidden-list-box').toggle("slow");
-  });
+	$('.new-list-button').click(function () {
+		$('.hidden-list-box').toggle("slow");
+	});
 
-  $('.remove-list').click(function(e){
-    e.stopPropagation();
-    $('.hidden-remove-box').toggle("slow");
-  });
+	$('.remove-list').click(function(e){
+		e.stopPropagation();
+		$('.hidden-remove-box').toggle("slow");
+	});
 
 	$('.cancel-button').click(function(e){
 		e.stopPropagation();
@@ -66,7 +70,7 @@ $(function () {
 	$('.close-me-button').click(function (){
 		removeAddItemForms();
 		toggleScreenBlank();
-	})
+	});
 
 // ======================================================
 // ==== BUILD LIST ITEMS DYNAMICALLY WITH AJAX CALL =====
@@ -127,8 +131,10 @@ $(function () {
 		
 		//ADD NEW ITEM TO LIST
 			$('.add-item-icon').click(function(e){
+				var $this = $(this);
+				var id = $this.attr('data-id');
 				toggleScreenBlank();
-				renderAddItem();
+				renderAddItem(id);
 
 			});
 
@@ -224,16 +230,13 @@ $(function () {
 			}
 
 		// ADDING JQUERY UI CLASSES	
-			$( ".list-item-box" ).addClass( "draggable ui-widget ui-helper-clearfix ui-corner-all" )
+			$( ".list-item-box" ).addClass( "draggable ui-widget ui-helper-clearfix ui-corner-all" );
 
 		});//END OF AJAX .done CALL
 	}); //END OF LIST-TOGGLE-BOX CLICK FUNCTION
 	
-	
 
-	
+};//END
 
-
-
-
-});//END
+$(document).ready(ready);
+$(document).on('page:load', ready);
