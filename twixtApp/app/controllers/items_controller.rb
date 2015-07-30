@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   def update
     @item.update(item_params)
     @item.save
-    redirect_to list_path
+    redirect_to group_lists_path(@list.group)
   end
 
   def show
