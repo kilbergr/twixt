@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
   def create
     @item = @list.items.create(item_params)
     @item.save
-    redirect_to list_items_path(@list)
+    redirect_to group_lists_path(@list.group)
   end
 
   def edit
@@ -37,18 +37,18 @@ class ItemsController < ApplicationController
     redirect_to list_items_path(@list)
   end
 
-  private
-
-  def item_params
-    params.require(:item).permit(:name, :complete, :created, :priority, :image_url)
-  end
-
-  def find_item
-    @item = Item.find_by_id(params[:id])
-  end
-
   def find_list
     @list = List.find_by_id(params[:list_id])
   end
+
+  private
+
+    def item_params
+      params.require(:item).permit(:name, :created, :image_url, :list_id)  #:complete, :priority,
+    end
+
+    def find_item
+      @item = Item.find_by_id(params[:list_id])
+    end
 
 end
