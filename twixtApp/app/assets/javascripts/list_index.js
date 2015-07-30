@@ -4,47 +4,7 @@
 
 $(function () {
 
-// ============================================
-// =========== GLOBAL FUNCTIONS ===============
-// ============================================
 
-
-	function toggleScreenBlank() {
-		$('.screen-blanket').toggle();
-		$('.render-forms-here').toggle();
-	}
-
-	function renderAddItem(id) {
-		var html = '<div class="new-item-form-box">' +
-				        '<h3 style="margin-bottom:30px;">Add a new item to your list</h3>' +
-				        '<form action="/lists/'+ id +'/items/" class="add-item-form" method="POST">' +
-				            '<div>' +
-				                '<div class="item-name-label"><label for="title">Name: </div>' +
-				                    '<input type="text" name="item[name]" id="name" class="add-item-form" autofocus>' +
-				                '</label>' +
-				            '</div>' +
-				            '<div class="item-description-label"><label> Item Description: </label></div>'+
-				                '<div id ="item-description" class="text-box">'+    
-				                        '<textarea name="item[description]" rows="5" cols="20" id="description" class="add-item-description"></textarea>' +
-				                '</div>' +
-				            '<div style="display:inline;padding:10px;">' +
-				                '<label for="uploadcare">Upload an Image for this Item</label>' +
-				            '</div>' +
-				            '<div class="image-upload-div" style="display:inline;">' +
-				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload">' +
-				            '</div>' +                
-				            '<div style="margin-top:30px;">' +
-				                '<input type="submit" value="Add List Item" class="add-item-submit-button button">' +
-				            '</div>' +
-				        '</form>' +
-				    '</div>';
-
-		$(html).appendTo('.render-forms-here');
-	}
-
-	function removeAddItemForms() {
-		$('.new-item-form-box').remove();
-	}
 
 // ==================================
 // ==== TOGGLES FOR HIDDEN DIVS =====
@@ -66,7 +26,7 @@ $(function () {
 	$('.close-me-button').click(function (){
 		removeAddItemForms();
 		toggleScreenBlank();
-	})
+	});
 
 // ======================================================
 // ==== BUILD LIST ITEMS DYNAMICALLY WITH AJAX CALL =====
@@ -232,7 +192,47 @@ $(function () {
 	}); //END OF LIST-TOGGLE-BOX CLICK FUNCTION
 	
 	
+// ============================================
+// =========== GLOBAL FUNCTIONS ===============
+// ============================================
 
+
+	function toggleScreenBlank() {
+		$('.screen-blanket').toggle();
+		$('.render-forms-here').toggle();
+	}
+
+	function renderAddItem(id) {
+		var html = '<div class="new-item-form-box">' +
+				        '<h3 style="margin-bottom:30px;">Add a new item to your list</h3>' +
+				        '<form action="/lists/'+ id +'/items/" class="add-item-form" method="POST">' +
+				            '<div>' +
+				                '<div class="item-name-label"><label for="title">Name: </div>' +
+				                    '<input type="text" name="item[name]" id="name" class="add-item-form" autofocus>' +
+				                '</label>' +
+				            '</div>' +
+				            '<div class="item-description-label"><label> Item Description: </label></div>'+
+				                '<div id ="item-description" class="text-box">'+    
+				                        '<textarea name="item[description]" rows="5" cols="20" class="add-item-description"></textarea>' +
+				                '</div>' +
+				            '<div style="display:inline;padding:10px;">' +
+				                '<label for="uploadcare">Upload an Image for this Item</label>' +
+				            '</div>' +
+				            '<div class="image-upload-div" style="display:inline;">' +
+				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload">' +
+				            '</div>' +                
+				            '<div style="margin-top:30px;">' +
+				                '<input type="submit" value="Add List Item" class="add-item-submit-button button">' +
+				            '</div>' +
+				        '</form>' +
+				    '</div>';
+
+		$(html).appendTo('.render-forms-here');
+	}
+
+	function removeAddItemForms() {
+		$('.new-item-form-box').remove();
+	}
 	
 
 
