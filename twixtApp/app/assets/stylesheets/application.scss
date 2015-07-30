@@ -61,6 +61,21 @@ h5{
 	margin-left: 20px;
 }
 
+// ==============================================
+// ==== GLOBAL BUTTON OVERRIDES TO BOOTSTRAP ====
+// ==============================================
+
+.btn {
+	background-color: #f8efc0; /* light yellow bootstrap uses for alerts */
+	background-image: none;
+	color: #5C4463;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+	background-color: #5C4463;
+	// border-color: #F9F9F9;
+}
+
 /*  COLOR PALETTE
 
 --- colors in use for option #2 ---

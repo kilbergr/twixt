@@ -2,7 +2,10 @@
 // ==== JQUERY FOR LISTS INDEX PAGE ===========
 // ============================================
 
-$(function () {
+var ready;
+ready = function(){
+
+	console.log("list_index.js jquery is ready");
 
 // ============================================
 // =========== GLOBAL FUNCTIONS ===============
@@ -27,14 +30,15 @@ $(function () {
 				                '<div id ="item-description" class="text-box">'+    
 				                        '<textarea name="item[description]" rows="5" cols="20" id="description" class="add-item-description"></textarea>' +
 				                '</div>' +
-				            '<div style="display:inline;padding:10px;">' +
-				                '<label for="uploadcare">Upload an Image for this Item</label>' +
-				            '</div>' +
-				            '<div class="image-upload-div" style="display:inline;">' +
+				            '<div class="image-upload-div-outer">' +
+				                '<label for="uploadcare" class="item-description-label" style="margin-top:15px">Upload an Image for this Item</label>' +
+				            
+				            '<div class="image-upload-div" style="display:inline;margin-top:15px">' +
 				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload">' +
-				            '</div>' +                
-				            '<div style="margin-top:30px;">' +
-				                '<input type="submit" value="Add List Item" class="add-item-submit-button button">' +
+				            '</div>' +
+				            '</div>' +            
+				            '<div style="margin-top:15px;">' +
+				                '<input type="submit" value="Add List Item" class="add-item-submit-button btn btn-primary">' +
 				            '</div>' +
 				        '</form>' +
 				    '</div>';
@@ -49,14 +53,14 @@ $(function () {
 // ==================================
 // ==== TOGGLES FOR HIDDEN DIVS =====
 // ==================================
-  $('.new-list-button').click(function () {
-    $('.hidden-list-box').toggle("slow");
-  });
+	$('.new-list-button').click(function () {
+		$('.hidden-list-box').toggle("slow");
+	});
 
-  $('.remove-list').click(function(e){
-    e.stopPropagation();
-    $('.hidden-remove-box').toggle("slow");
-  });
+	$('.remove-list').click(function(e){
+		e.stopPropagation();
+		$('.hidden-remove-box').toggle("slow");
+	});
 
 	$('.cancel-button').click(function(e){
 		e.stopPropagation();
@@ -66,7 +70,7 @@ $(function () {
 	$('.close-me-button').click(function (){
 		removeAddItemForms();
 		toggleScreenBlank();
-	})
+	});
 
 // ======================================================
 // ==== BUILD LIST ITEMS DYNAMICALLY WITH AJAX CALL =====
@@ -226,16 +230,13 @@ $(function () {
 			}
 
 		// ADDING JQUERY UI CLASSES	
-			$( ".list-item-box" ).addClass( "draggable ui-widget ui-helper-clearfix ui-corner-all" )
+			$( ".list-item-box" ).addClass( "draggable ui-widget ui-helper-clearfix ui-corner-all" );
 
 		});//END OF AJAX .done CALL
 	}); //END OF LIST-TOGGLE-BOX CLICK FUNCTION
 	
-	
 
-	
+};//END
 
-
-
-
-});//END
+$(document).ready(ready);
+$(document).on('page:load', ready);

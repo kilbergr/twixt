@@ -4,7 +4,7 @@
 
 
 // ===========================
-// ==== LISTs INDEX PAGE =====
+// ==== LISTS INDEX PAGE =====
 // ===========================
 
 .screen-blanket {
@@ -18,43 +18,73 @@
 .render-forms-here {
 	position: absolute;
 	width: 400px;
-	height: 400px;
+	height: 420px;
 	background-color: #DFEBD7;
 	border-radius: 25px;
 	z-index: 2;
 	left: 50%;
-  margin-left: -200px;
-  display: none;
-  border: black solid 3px; 
-  padding: 10px;
+	margin-left: -200px;
+	display: none;
+	border: #5C4463 solid 3px; 
+	padding: 10px;
+}
+
+.close-me-button {
+	float: right;
 }
 
 .close-me-button:hover {
 	cursor: pointer;
-	color: white;
+	color: #F9F9F9;
 }
 
 .new-item-form-box {
-	text-align: center;
+	// text-align: center;
+}
 
+.new-item-form-box h3 {
+	margin-left: 15px;
+}
+
+.new-item-form-box #description{
+	width: 350px;
+	margin-left: 15px;
+}
+
+.new-item-form-box #name{
+	width: 350px;
+	margin-left: 15px;
 }
 
 .item-name-label {
-	margin-right: 120px;
+	margin-left: 15px;
 }
 
 .item-description-label{
-	margin-right: 30px;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.item-description-label .uploadcare-widget{
+	margin-top: 20px
 }
 
 .image-upload-div {
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.image-label {
 	margin-top: 10px;
 }
 
 .add-item-submit-button {
 	margin-top: 15px;
+	margin-left: 15px;
 	padding: 8px;
 }
+
+
 //==========================
 //==== ADD LISTS TO PAGE ===
 //==========================
@@ -72,7 +102,7 @@
   left: 75%;
   margin-left: -200px; 
   background-color: rgba(100,122,158,0.9);
-  border: black solid 1px;
+  border: #5C4463 solid 1px;
   border-radius: 25px;
   z-index: 1;
   display: none;
@@ -119,7 +149,7 @@
 	height: 70px;
 	width: 100px;
 	background-color: #F9F9F9;  /* off-white */
-	color: black;
+	color: #5C4463;
 	border: solid #5C4463 1px;
 	border-radius: 15px;
 	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
@@ -164,7 +194,7 @@
 	text-align: center;
 	left: 50%;
   margin-left: -150px;
-  color: white;
+  color: #F9F9F9;
   border-radius: 25px;
   display: none;
   margin-top: -20px; 

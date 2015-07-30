@@ -29,7 +29,16 @@
 <div class="screen-blanket"></div>
 
 	<div id="navbar">
-    <span class="logo-text">TWIXT</span>
+
+    <% if session[:user_id] %>
+      <%= link_to groups_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% else %>
+      <%= link_to root_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% end %>
 
     <nav class="nav-group-right">
       <ul> 
@@ -73,7 +82,7 @@
       </ul>
     </nav>  
   </div>
-  
+
   <div class="hidden-new-group-box">
     <h3>Create a New Group</h3>
     <%= form_for group, url: groups_path, method: :post do |f| %>
