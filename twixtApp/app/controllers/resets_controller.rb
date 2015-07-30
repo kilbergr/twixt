@@ -33,11 +33,11 @@ class ResetsController < ApplicationController
 				session[:user_id] = @user.id
 				redirect_to user_path, flash: {success: "Password has been updated."}
 			else
-				flash.now[:notice] = "Password reset token not found."
+				flash.now[:notice] = "Password should be at least 8 characters."
 				render :edit
 			end
 		else
-			flash.now[:alert] = "Please enter a new password"
+			flash.now[:alert] = "Password reset token not found."
 			render :edit
 		end
 	end

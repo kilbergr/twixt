@@ -45,9 +45,12 @@ gem 'omniauth-google-oauth2'
 gem 'google-api-client', :require => 'google/api_client'
 gem 'twilio-ruby'
 
+<<<<<<< HEAD
 #Simple gem for implementing texter classes which allow sending SMS messages in similar way to how e-mails are implemented and sent with ActionMailer-based mailers.
 gem 'textris'
 
+=======
+>>>>>>> 715ca4e786a89a55184817cab7c5865780808bb6
 # Use Unicorn as the app server
 # gem 'unicorn'
 

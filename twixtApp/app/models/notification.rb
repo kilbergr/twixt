@@ -34,3 +34,5 @@ class Notification < ActiveRecord::Base
 	end
 
 end
+
+#SELECT "notifications".* FROM "notifications" WHERE (send_by >= CURRENT_TIMESTAMP);

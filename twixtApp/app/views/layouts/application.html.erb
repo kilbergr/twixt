@@ -29,12 +29,12 @@
 <div class="screen-blanket"></div>
 
 	<div id="navbar">
-    <%= link_to image_tag("logo2.gif", :class => "logo-image"), groups_path %>
+    <%= link_to image_tag("logo2.gif", :class => "logo-image"), root_path %>
     <nav class="navy">
       <ul> 
       	<% if session[:user_id] %> 
        		<%= link_to user_path(:user_id) do %>
-	       		<div id="photo-div" title="Link to users profile" style='background-image: url(#{user.avatar});'>		
+	       		<div class="photo-div" title="Link to users profile" style=''>		
 	       		</div>  
 	       	<% end %>  
    			<% end %>
