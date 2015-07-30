@@ -17,7 +17,7 @@
  */
  @import "font-awesome-sprockets";
  @import "font-awesome";
- @import url(http://fonts.googleapis.com/css?family=Kranky);
+ @import url(http://fonts.googleapis.com/css?family=Oswald|Kranky);
 
 
 
@@ -34,6 +34,7 @@ body {
 	background-color: #DFEBD7;
 	color: #5C4463;
 	line-height: 1.5;
+	font-family: 'Oswald'
 }
 
 h1 {
@@ -44,7 +45,11 @@ h1 {
 }
 
 h3 {
-	font-size: 1.25em;
+	font-size: 1.35em;
+}
+
+h5{
+	font-size: 1.15em;
 }
 
 .error-messages {

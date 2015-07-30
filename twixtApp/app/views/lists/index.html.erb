@@ -63,8 +63,8 @@
             <% @lists.each do |list| %>
                 <div class="hidden-remove-box">
                      <h5>Are you sure you want to delete this list?</h5>
-                     <%= button_to 'Delete', {:controller => :lists, :action => "destroy", id: list.id }, class: "delete-button btn btn-danger btn-xs", :method => :delete%>
-                     <button class="cancel-button btn btn-xs btn-success">Cancel</button>
+                     <%= button_to 'Delete', {:controller => :lists, :action => "destroy", id: list.id }, class: "delete-button btn btn-danger btn-s", :method => :delete%>
+                     <button class="cancel-button btn btn-s btn-success">Cancel</button>
                 </div>
                 <div class="list-toggle-box", data-id= <%= list.id %> data-name="<%= list.name %>" >
                     <div class="remove-list-div"><i class="remove-list fa fa-minus-square", data-id=<%= list.id %>></i></div>

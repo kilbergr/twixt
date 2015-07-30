@@ -1,1 +1,8 @@
-<h1>User Account Info</h1>
+<h1>Your Account Info</h1>
+<h5>First Name: <%= @user.first_name %></h5>
+<h5>Last Name: <%= @user.last_name %></h5>
+<h5>Email: <%= @user.email %></h5>
+<% if @user.birthday %>
+<h5>Your Birthday: <%= @user.birthday %></h5>
+<% end %>
+<h5>Profile Image: <%= @user.avatar %></h5>
