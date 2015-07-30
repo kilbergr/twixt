@@ -67,8 +67,8 @@
 //==== DISPLAY LISTS AND LIST TOGGLE BTNS  ===
 //============================================
 
-.list-list-toggles {
-	height: 110px;
+.lists-list-toggles-outer {
+	height: 115px;
 	width: 100vw;
 	padding-left: 14px;
 	// border-bottom: 1px #5C4463 solid;
@@ -77,13 +77,17 @@
 	background-color: #DFEBD7;
 	clear: both;
 	margin-top: -20px;
+	z-index: 5;
+	position: relative;
+
 }
 
-.list-list-toggles-inner {
-	height: 110px;
+.lists-list-toggles-inner {
+	height: 115px;
 	width: 120%;
 	overflow-y: hidden;
 	overflow-x: scroll;
+	// z-index: 5;
 }
 
 .list-toggle-box {
@@ -113,6 +117,29 @@
 .list-name {
 	display: inline;
 }
+
+//=========================
+//==== LIST RENDER AREA ===
+//=========================
+
+
+.lists-label {
+	text-align: center;
+	margin-bottom: -10px;
+}
+
+.list-display {
+	background-color: #647A9E;
+	width: 100vw;
+	height: 100vh;
+	margin-top: -14px;
+	// padding: 20px;
+	display: contain;
+	overflow: auto;
+	z-index: 10;
+	position: relative;
+}
+
 
 // =============================================
 // ==== HIDDEN ELEMENTS FOR DOM MANIPULATION ===
@@ -157,7 +184,6 @@
 // .new-item-form-box {
 // 	text-align: center;
 // }
-
 
 .new-item-form-box #description{
 	width: 350px;
@@ -258,6 +284,7 @@
 //=====================
 //==== REMOVE LISTS ===
 //=====================
+
 .remove-list {
 	text-align: left;
 	z-index: 2;
@@ -288,24 +315,4 @@
 
 .cancel-button {
 	display: inline-block;
-}
-
-//=========================
-//==== LIST RENDER AREA ===
-//=========================
-
-
-.lists-label {
-	text-align: center;
-	margin-bottom: -10px;
-}
-
-.list-display {
-	background-color: #647A9E;
-	width: 100vw;
-	height: 50vh;
-	margin-top: 15px;
-	padding: 20px;
-	display: contain;
-	overflow: auto;
 }
