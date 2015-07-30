@@ -33,7 +33,6 @@ soft green gray
 HEX: DFEBD7
 RGB: 223, 235, 215
 
-
 off white / very light gray 
 - to replace anything we want to be white
 HEX: F9F9F9
@@ -45,15 +44,15 @@ deep purple
 HEX: 5C4463
 RGB: 92, 68, 99
 
-bright solid blue 
-- h1 text
-HEX: 47B1C5
-RGB: 71, 177, 197
-
 blue gray 
 - lower parts of pages
 HEX: 647A9E
 RGB: 100, 122, 158
+
+bright solid blue 
+- h1 text
+HEX: 47B1C5
+RGB: 71, 177, 197
 
 
 ==== COLORS NOT CURRENTLY IN USE ====
@@ -77,15 +76,13 @@ HEX: e8e6e6
  @import url(https://fonts.googleapis.com/css?family=Oswald|Kranky);
 
 
-
-
 // ============================================
 // ==== GLOBAL CSS AND COLOR SCHEME ===========
 // ============================================
 
 *, *:after, *:before {
-  padding: 0;
-  box-sizing: border-box;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -96,7 +93,6 @@ body {
 }
 
 h1 {
-	// color: #47B1C5;
 	color: #5C4463;
 	margin-bottom: 25px;
 	margin-top: 0;
@@ -104,10 +100,9 @@ h1 {
 
 h3 {
 	font-size: 1.35em;
-}
-
-h5{
-	font-size: 1.15em;
+	margin-left: 30px;
+	color: #5C4463;
+	margin-bottom: 15px;
 }
 
 .error-messages {

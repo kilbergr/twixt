@@ -1,6 +1,8 @@
-<div class="groups-list">
-	<h4 class="list-text"> <i class="fa fa-users group-icon"></i>    My Groups</h4>
 
+<h3> <i class="fa fa-users group-icon"></i>    My Groups</h3>
+
+<div class="groups-list-toggle-outer">
+	<div class="groups-list-toggle-inner">
 		<% @groups.each do |group| %>
 			<%= link_to group_lists_path(group) do %>
 				<div class="group-box">
@@ -9,4 +11,8 @@
 			<% end %>		
 		<% end %>
 
+	</div>
+</div>
+
+<div class="lower-half-page">
 </div>
