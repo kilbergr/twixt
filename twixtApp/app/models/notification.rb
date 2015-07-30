@@ -33,7 +33,16 @@ class Notification < ActiveRecord::Base
 		end	
 	end
 
-	def send_email_notification
+	def self.send_email_notification(array)
+		unless array.length == 0
+			array.each do |notification|
+				if notification.message == nil
+					mail(from: @email,
+					to: @friend,
+					subject: "A reminder from #{user.first_name}",
+					)
+				else
+					
 		#if ready_to_send array has elements, array.each for email
 		#from array get notification.recemail, notification.id, and notification.message (if it exists)
 		#if no .message, default to standard message with find_by item.id and get item.name
