@@ -6,3 +6,4 @@
 <h5>Your Birthday: <%= @user.birthday %></h5>
 <% end %>
 <h5>Profile Image: <%= @user.avatar %></h5>
+<%= link_to "Edit Account Info", edit_user_path(@user) %>

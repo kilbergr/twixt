@@ -89,7 +89,18 @@ end
 #     edit_reset GET    /resets/:id/edit(.:format)            resets#edit
 #          reset PATCH  /resets/:id(.:format)                 resets#update
 #                PUT    /resets/:id(.:format)                 resets#update
+#    user_signup GET    /signup(.:format)                     sessions#signup
+#         signup POST   /signup(.:format)                     sessions#create
+#                GET    /auth/:provider/callback(.:format)    sessions#auth
+#          login GET    /login(.:format)                      sessions#login
+#                POST   /login(.:format)                      sessions#attempt_login
+#         logout DELETE /logout(.:format)                     sessions#logout
+#           user GET    /users/:id(.:format)                  users#show
+#      edit_user GET    /users/:id/edit(.:format)             users#edit
+#   users_update PATCH  /users/update(.:format)               users#update
+#                PUT    /users/update(.:format)               users#update
+#                DELETE /users/:id(.:format)                  users#destroy
+#                GET    /lists/:list_id/items(.:format)       items#index
+#                POST   /lists/:list_id/items(.:format)       items#create
+#      edit_item GET    /items/:id/edit(.:format)             items#edit
 #  notifications POST   /notifications(.:format)              notifications#create
-
-
-

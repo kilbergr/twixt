@@ -11,7 +11,6 @@ class Notification < ActiveRecord::Base
 	end
 
 	def self.send_text_notification(array)
-
 		client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token  
 		unless array.length == 0
 			array.each do |notification|
@@ -36,18 +35,20 @@ class Notification < ActiveRecord::Base
 		unless array.length == 0
 			array.each do |notification|
 				if notification.message == nil
-					mail(from: @email,
-					to: @friend,
+					mail(from: 'reminder@twixt.com',
+					to: notification.email,
 					subject: "A reminder from #{user.first_name}",
+					body: "Twixt App is contacting you to remind you about #{notification.item_id}",
 					)
 				else 
-					
+					mail(from: 'reminder@twixt.com',
+					to: notification.recemail,
+					subject: "A reminder from #{user.first_name}",
+					body: "#{notification.message}",
+					)
 				end
 			end
 		end
-		#if ready_to_send array has elements, array.each for email
-		#from array get notification.recemail, notification.id, and notification.message (if it exists)
-		#if no .message, default to standard message with find_by item.id and get item.name
 	end
 
 	def send_notification_to_group
