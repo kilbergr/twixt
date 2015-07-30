@@ -1,6 +1,9 @@
 <div>
 <% @members.each do |member| %>
-    <div class="photo-div" title="Link to users profile" style='background-image: url(#{member.avatar});'> <%= member.first_name %></div>  
+    <div class="user-mini-profile">
+        <div class="photo-div" title="Link to users profile" style="background-image: url(<%= member.avatar %>);"></div>
+        <div class="user-first-name"><%= member.first_name %></div>
+    </div>
 
 <% end %>
 </div>
