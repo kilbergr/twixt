@@ -30,8 +30,14 @@
 
 	<div id="navbar">
 
-    <%= link_to root_path do %>
-      <span class="logo-text">TWIXT</span>
+    <% if session[:user_id] %>
+      <%= link_to groups_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% else %>
+      <%= link_to root_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
     <% end %>
 
     <nav class="nav-group-right">
