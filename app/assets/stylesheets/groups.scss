@@ -2,46 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 // ===========================
 // ==== GROUP INDEX PAGE =====
 // ===========================
 
 
-.lower-half-page {
-	background-color: #647A9E;
-	height: 100vh;
-	clear: both;
-}
 
-
-// ===========================
-// ==== GROUPS LIST AREA =====
-// ===========================
+// ==================================
+// ==== GROUPS SLIDING MENU AREA ====
+// ==================================
 
 .groups-list-toggle-outer {
 	background-color: #DFEBD7;
 	width: 100vw;
-	height: 15vh;
+	height: 150px;
 	overflow-y: hidden;
 	overflow-x: scroll;
+	z-index: 5;
+	position: relative;
+	padding-left: 14px;
 }
 
 .groups-list-toggle-inner {
 	width: 120%;
-	height: 15vh;
+	height: 150px;
 	overflow-y: hidden;
 	overflow-x: scroll;
-	margin-left: 30px;
 }
 
 .group-icon {
 	margin-right: 10px;
 }
 
-// ===========================
-// ==== GROUP LINK/BOX =======
-// ===========================
+
+// =============================
+// ==== GROUP BOXES/BUTTONS ====
+// =============================
 
 .group-box {
 	height: 100px;
@@ -65,4 +61,20 @@
 
 .group-box-name {
 
+}
+
+
+// ===========================
+// ==== GROUP LOWER HALF =====
+// ===========================
+
+
+.lower-half-page {
+	background-color: #647A9E;
+	height: 100vh;
+	width: 100vw;
+	margin-top: -14px;
+	// clear: both;
+	z-index: 10;
+	position: relative;
 }
