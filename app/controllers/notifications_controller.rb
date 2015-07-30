@@ -6,8 +6,7 @@ class NotificationsController < ApplicationController
 		#EXTRACT DATA FROM PARAMS TO FORMAT BEFORE IT GOES IN TO DB (format phone number and figure out how to turn send_by in to real numbers)
 		@notification = Notification.new(notification_params)
     @notification.save
-    redirect_to groups_path(@list) #CHANGE REDIRECT
-	end
+ 	end
 
 	private
 		def notification_params

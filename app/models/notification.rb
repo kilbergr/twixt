@@ -4,6 +4,7 @@
 # ==========================================================================
 
 class Notification < ActiveRecord::Base
+
 	require 'twilio-ruby'
 
 	def self.find_notifications_to_send
@@ -29,26 +30,6 @@ class Notification < ActiveRecord::Base
 				end
 			end	
 		end	
-	end
-
-	def self.send_email_notification(array)
-		unless array.length == 0
-			array.each do |notification|
-				if notification.message == nil
-					mail(from: 'reminder@twixt.com',
-					to: notification.email,
-					subject: "A reminder from #{user.first_name}",
-					body: "Twixt App is contacting you to remind you about #{notification.item_id}",
-					)
-				else 
-					mail(from: 'reminder@twixt.com',
-					to: notification.recemail,
-					subject: "A reminder from #{user.first_name}",
-					body: "#{notification.message}",
-					)
-				end
-			end
-		end
 	end
 
 	def send_notification_to_group

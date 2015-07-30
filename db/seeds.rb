@@ -129,9 +129,9 @@ list10.items << item25
 
 
 #notifications
-note1 = Notification.create(item_id: 1, send_by: 'Thu, 30 Jul 2015 02:26:16 +0000', phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
-note2 = Notification.create(item_id: 1, send_by: 'Thu, 30 Jul 2015 00:26:16 +0000', message: "This is working", phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
-note3 = Notification.create(item_id: 1, send_by: 'Thu, 30 Jul 2015 01:26:16 +0000', message: "This is working", phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
+note1 = Notification.create(item_id: 1, send_by: 'Fri, 31 Jul 2015 02:26:16 +0000', phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
+note2 = Notification.create(item_id: 1, send_by: 'Fri, 31 Jul 2015 00:26:16 +0000', message: "This is working", phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
+note3 = Notification.create(item_id: 1, send_by: 'Fri, 31 Jul 2015 01:26:16 +0000', message: "This is working", phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
 
 
 
