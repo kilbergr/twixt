@@ -31,7 +31,7 @@ class ResetsController < ApplicationController
 			if @user && @user.update(user_params)
 				@user.update(password_reset_token: nil)
 				session[:user_id] = @user.id
-				redirect_to user_path, flash: {success: "Password has been updated."}
+				redirect_to login_path, flash: {success: "Password has been updated."}
 			else
 				flash.now[:notice] = "Password should be at least 8 characters."
 				render :edit

@@ -68,6 +68,7 @@ end
 #        prefix Verb   URI Pattern                           Controller#Action
        
 #           root GET    /                                     sessions#login
+
 #    group_lists GET    /groups/:group_id/lists(.:format)     lists#index
 #                POST   /groups/:group_id/lists(.:format)     lists#create
 # new_group_list GET    /groups/:group_id/lists/new(.:format) lists#new
@@ -76,6 +77,7 @@ end
 #                PATCH  /lists/:id(.:format)                  lists#update
 #                PUT    /lists/:id(.:format)                  lists#update
 #                DELETE /lists/:id(.:format)                  lists#destroy
+
 #         groups GET    /groups(.:format)                     groups#index
 #                POST   /groups(.:format)                     groups#create
 #      new_group GET    /groups/new(.:format)                 groups#new
@@ -84,23 +86,29 @@ end
 #                PATCH  /groups/:id(.:format)                 groups#update
 #                PUT    /groups/:id(.:format)                 groups#update
 #                DELETE /groups/:id(.:format)                 groups#destroy
+
 #         resets POST   /resets(.:format)                     resets#create
 #      new_reset GET    /resets/new(.:format)                 resets#new
 #     edit_reset GET    /resets/:id/edit(.:format)            resets#edit
 #          reset PATCH  /resets/:id(.:format)                 resets#update
 #                PUT    /resets/:id(.:format)                 resets#update
+
 #    user_signup GET    /signup(.:format)                     sessions#signup
 #         signup POST   /signup(.:format)                     sessions#create
 #                GET    /auth/:provider/callback(.:format)    sessions#auth
 #          login GET    /login(.:format)                      sessions#login
 #                POST   /login(.:format)                      sessions#attempt_login
 #         logout DELETE /logout(.:format)                     sessions#logout
+
 #           user GET    /users/:id(.:format)                  users#show
 #      edit_user GET    /users/:id/edit(.:format)             users#edit
 #   users_update PATCH  /users/update(.:format)               users#update
 #                PUT    /users/update(.:format)               users#update
 #                DELETE /users/:id(.:format)                  users#destroy
+
 #                GET    /lists/:list_id/items(.:format)       items#index
 #                POST   /lists/:list_id/items(.:format)       items#create
 #      edit_item GET    /items/:id/edit(.:format)             items#edit
+
 #  notifications POST   /notifications(.:format)              notifications#create
+
