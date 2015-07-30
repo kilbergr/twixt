@@ -5,7 +5,6 @@
 
 class Notification < ActiveRecord::Base
 	require 'twilio-ruby'
-	require 'dotenv-rails'
 
 	def self.find_notifications_to_send
 		notifications_to_send = Notification.where('send_by < ?', DateTime.now.utc)
@@ -41,7 +40,8 @@ class Notification < ActiveRecord::Base
 					to: @friend,
 					subject: "A reminder from #{user.first_name}",
 					)
-				else
+				else 
+					
 				end
 			end
 		end

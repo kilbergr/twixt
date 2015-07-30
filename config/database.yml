@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: twixtApp_production
-  username: twixtApp
-  password: <%= ENV['TWIXTAPP_DATABASE_PASSWORD'] %>

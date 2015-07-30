@@ -43,7 +43,7 @@
     <nav class="nav-group-right">
       <ul> 
 
-      	<% if session[:user_id] %> 
+      	<% if session[:user_id] and not current_user.nil? %> 
        		<%= link_to user_path(session[:user_id]) do %>
             <span class="user-mini-profile">
 	       		  <div class="photo-div photo-div-nav" title="Link to users profile" style="background-image: url(<%= current_user.avatar %>);"></div>
@@ -51,7 +51,7 @@
 	       	<% end %>  
    			<% end %>
 
-        <% if session[:user_id] %>
+        <% if session[:user_id] and not current_user.nil?%>
         	<%= link_to logout_path, method: :delete do %>
         		<li>Logout</li>
         	<% end %>
@@ -61,7 +61,7 @@
 					<% end %>
         <% end %>
 
-        <% if session[:user_id] %>
+        <% if session[:user_id] and not current_user.nil? %>
 
           <% if params[:controller] == 'lists' %>
             <%= link_to group_lists_path(@group.id) do %> 
