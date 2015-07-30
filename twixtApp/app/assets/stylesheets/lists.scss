@@ -7,6 +7,73 @@
 // ==== LISTS INDEX PAGE =====
 // ===========================
 
+
+
+// =================================================
+// ==== GROUP MEMBERS AVATAR CIRCLE & FIRST NAME ===
+// =================================================
+
+.group-members-slider-outer {
+	width: 100vw;
+	height: 80px;
+	margin: auto;
+	margin-top: -50px;
+	border: 1px black solid;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	text-align: center; 
+	background-color: rgba(0,0,0,0.2);
+
+}
+
+.group-members-slider-inner {
+	height: 80px;
+	width: 1500px;
+	margin: auto;
+	overflow-y: hidden;
+	overflow-x: scroll;
+
+}
+
+
+.members-mini-profile {
+  float: left;
+  text-align: center; 
+  margin-top: 3px;
+}
+
+.group-members-photo-div {
+	margin-right: 20px;
+  padding-right: 50px;
+	border-radius: 180px;
+	background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: black 1px solid;
+  box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+
+.user-first-name {
+  margin-right: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.members-label {
+	margin-left: 10px;
+	width: 300px;
+	display: inline-block;
+}
+
+
+// =============================================
+// ==== HIDDEN ELEMENTS FOR DOM MANIPULATION ===
+// =============================================
+
 .screen-blanket {
 	width: 100vw;
 	height: 100vh;
@@ -31,6 +98,14 @@
 
 .close-me-button {
 	float: right;
+  margin-left: -200px;
+  display: none;
+  border: black solid 3px; 
+  padding: 10px;
+  margin-left: -200px;
+  // display: none;
+  border: black solid 3px; 
+  padding: 10px;
 }
 
 .close-me-button:hover {
@@ -38,11 +113,12 @@
 	color: #F9F9F9;
 }
 
+///// NEW ITEM /////
 .new-item-form-box {
 	// text-align: center;
 }
 
-.new-item-form-box h3 {
+h3 {
 	margin-left: 15px;
 }
 
@@ -84,6 +160,23 @@
 	padding: 8px;
 }
 
+///// NEW NOTIFICATION /////
+
+.new-reminder-form-box {
+	text-align: center;
+}
+
+.new-notification-form {
+	margin-top: 20px;
+}
+
+.notification-phone-label {
+	margin-right: 90px;
+}
+
+.add-item-form {
+	margin-right: 45px;
+}
 
 //==========================
 //==== ADD LISTS TO PAGE ===
@@ -103,12 +196,13 @@
   margin-left: -200px; 
   background-color: rgba(100,122,158,0.9);
   border: #5C4463 solid 1px;
+	text-align: center;
+  margin-right: 35px;
+  color: white;
   border-radius: 25px;
   z-index: 1;
   display: none;
-  color: white;
-  text-align: center;
-  margin-top: -25px;
+  margin-top: 20px; 
 }
 
 .new-list-label {
@@ -135,6 +229,8 @@
 	overflow-x: scroll;
 	background-color: #DFEBD7;
 	clear: both;
+	background-color: #F9F9F9;
+	margin-top: -20px;
 }
 
 .list-list-toggles-inner {
