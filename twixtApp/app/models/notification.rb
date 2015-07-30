@@ -1,19 +1,36 @@
+# ==========================================================================
+# ==== MODEL METHODS TO HANDLE FINDING NOTIFICATIONS DUE TO BE =============
+# ====    SENT OUT, SENDING THEM, AND REMOVING FROM DB         =============
+# ==========================================================================
+
 class Notification < ActiveRecord::Base
+	require 'twilio-ruby'
 
 	def self.find_notifications_to_send
-		#find by send_by time
-		Notification.where('send_by >= DateTime.now').where('send_by <= ((DateTime.now.to_time + 5.hours).to_datetime)')
-		
-		#if current time <= send_by and within range where range is send_by - scan interval to send_by
-		#i.e. current time is 10:00 AM send_by is 11:00 PM and scan interval is 3 hours, range is 8:00 PM - 11:00 PM
-		#if in range push whole notification record/obj to ready_to_send array
-		#return array
+		notifications_to_send = Notification.where('send_by < ?', DateTime.now.utc)
 	end
 
-	def send_text_notification
-		#if ready_to_send array has elements, array.each for twilio POST 
-		#from array get notification.phone, notification.id, and notification.message (if it exists)
-		#if no .message, default to standard message with find_by item.id and get item.name
+	def self.send_text_notification(array)
+		account_sid = 'ACd0509cb02417c4a459614b40d29e284d' 
+		auth_token = '59cc552aeb9030fe64cf99ee3bf80cbb'
+		client = Twilio::REST::Client.new account_sid, auth_token  
+		unless array.length == 0
+			array.each do |notification|
+				if notification.message == nil
+					client.account.messages.create({
+						:from => '+14154814661', 
+						:to => '+1' + notification.phone, 
+						:body => "Twixt App is contacting you to remind you about #{notification.item_id}",  
+					})	
+				else
+					client.account.messages.create({
+						:from => '+14154814661', 
+						:to => '+1' + notification.phone, 
+						:body => "Twixt App is contacting you to remind you about #{notification.message}",  
+					})	
+				end
+			end	
+		end	
 	end
 
 	def send_email_notification
@@ -33,6 +50,11 @@ class Notification < ActiveRecord::Base
 		# else send_email_notification
 	end
 
-end
+	def self.purge_old_notifications(array)
+		array.each do |notification|
+			delete_this = Notification.find_by_id(notification.id)
+			delete_this.destroy
+		end
+	end
 
-#SELECT "notifications".* FROM "notifications" WHERE (send_by >= CURRENT_TIMESTAMP);
+end

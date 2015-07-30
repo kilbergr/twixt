@@ -76,35 +76,11 @@ nav ul li a:active {
 	color: #fff;
 }
 
-/*
-===========================
-==== NAVBAR ICONS =========
-===========================
-*/
-
-.group-nav-icon {
-  text-align: center;
-}
-.group-add-icon {
-  text-align: center;
-}
-
-/*
-========================================
-==== USER AVATAR CIRCLE & FIRST NAME ===
-========================================
-*/
-
-.user-mini-profile {
-  float: right;
-  justify-content: space-around;
-}
-
 .photo-div {
   margin-right: 20px;
   padding-right: 50px;
-	border-radius: 180px;
-	background-position: center;
+  border-radius: 180px;
+  background-position: center;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,6 +90,7 @@ nav ul li a:active {
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
+
 .photo-div-nav {
   margin-top: -3px;
 }
@@ -121,10 +98,29 @@ nav ul li a:active {
 .user-first-name {
   margin-right: 20px;
   margin-top: 5px;
+}
+.user-mini-profile {
+  float: right;
+  text-align: center; 
+}
+
+
+/*
+===========================
+==== NAVBAR ICONS =========
+===========================
+*/
+
+.group-nav-icon {
   text-align: center;
   font-family: Kranky,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.25em;
 }
+.group-add-icon {
+  text-align: center;
+}
+
+
 
 /*
 ===============

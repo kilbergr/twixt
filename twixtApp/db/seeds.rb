@@ -5,12 +5,12 @@ List.destroy_all
 Item.destroy_all
 
 # create 5 users
-user1 = User.create(username: "CarrotLover", password: "easy", first_name: "Bugs", last_name: "Bunny", email: "babs@example.com", birthday: DateTime.new(1950, 8, 8), phone: "1234567891", avatar: "http://static.dnaindia.com/sites/default/files/2015/07/27/359539-clip-art-bugs-bunny-397350.jpg")
-user2 = User.create(username: "Minion478", password: "1234", first_name: "Ronals", last_name: "Minion", email: "follower@example.com", birthday: DateTime.new(1960, 1, 5), phone: "1234567891", avatar: "https://yt3.ggpht.com/-VCWP-meZvJM/AAAAAAAAAAI/AAAAAAAAAAA/85TkyvuWYQU/s900-c-k-no/photo.jpg")
-user3 = User.create(username: "YellowBird", password: "birdseed", first_name: "Big", last_name: "Bird", email: "bbird@sesame.com", birthday: DateTime.new(1970, 4, 20), phone: "1234567891", avatar: "http://www.themillions.com/wp-content/uploads/2012/10/570_big-bird-wins.jpg")
-user4 = User.create(username: "CatHat", password: "cats", first_name: "Cat", last_name: "InTheHat", email: "cat@thehat.com", birthday: DateTime.new(1900, 2, 3), phone: "1234567891", avatar: "https://www.mercy.net/sites/default/files/files/5819.jpg")
-user5 = User.create(username: "JusticeRuth", password: "fairness", first_name: "Ruth", last_name: "Bader Ginsberg", email: "ruth@example.com", birthday: DateTime.new(1930, 5, 6), phone: "1234567891", avatar: "http://p.fod4.com/p/media/abd3f37c27/GVWZaJC6QCOahCnU3OSg_Ruth%20Bader%20Ginsburg%201.jpg")
-user6 = User.create(username: "dom", password: "dom", first_name: "dom", last_name: "dom", email: "415.dominic.smith@gmail.com", birthday: DateTime.new(1983, 8, 31), phone: "4156526312", avatar: "http://p.fod4.com/p/media/abd3f37c27/GVWZaJC6QCOahCnU3OSg_Ruth%20Bader%20Ginsburg%201.jpg")
+user1 = User.create(username: "CarrotLover", password: "password", first_name: "Bugs", last_name: "Bunny", email: "babs@example.com", birthday: DateTime.new(1950, 8, 8), phone: "1234567891", avatar: "http://static.dnaindia.com/sites/default/files/2015/07/27/359539-clip-art-bugs-bunny-397350.jpg")
+user2 = User.create(username: "Minion478", password: "password", first_name: "Ronals", last_name: "Minion", email: "follower@example.com", birthday: DateTime.new(1960, 1, 5), phone: "1234567891", avatar: "https://yt3.ggpht.com/-VCWP-meZvJM/AAAAAAAAAAI/AAAAAAAAAAA/85TkyvuWYQU/s900-c-k-no/photo.jpg")
+user3 = User.create(username: "YellowBird", password: "password", first_name: "Big", last_name: "Bird", email: "bbird@sesame.com", birthday: DateTime.new(1970, 4, 20), phone: "1234567891", avatar: "http://www.themillions.com/wp-content/uploads/2012/10/570_big-bird-wins.jpg")
+user4 = User.create(username: "CatHat", password: "password", first_name: "Cat", last_name: "InTheHat", email: "cat@thehat.com", birthday: DateTime.new(1900, 2, 3), phone: "1234567891", avatar: "https://www.mercy.net/sites/default/files/files/5819.jpg")
+user5 = User.create(username: "JusticeRuth", password: "password", first_name: "Ruth", last_name: "Bader Ginsberg", email: "ruth@example.com", birthday: DateTime.new(1930, 5, 6), phone: "1234567891", avatar: "http://p.fod4.com/p/media/abd3f37c27/GVWZaJC6QCOahCnU3OSg_Ruth%20Bader%20Ginsburg%201.jpg")
+user6 = User.create(username: "dom", password: "password", first_name: "dom", last_name: "dom", email: "415.dominic.smith@gmail.com", birthday: DateTime.new(1983, 8, 31), phone: "4156526312", avatar: "http://p.fod4.com/p/media/abd3f37c27/GVWZaJC6QCOahCnU3OSg_Ruth%20Bader%20Ginsburg%201.jpg")
 # create 5 groups
 group1 = Group.create(name: "Furry Friends")
 group2 = Group.create(name: "Rule Followers")
@@ -129,8 +129,9 @@ list10.items << item25
 
 
 #notifications
-note1 = Notification.create(item_id: 1, send_by: 'Wed, 29 Jul 2015 20:15:39 -0700', message: "This is working", phone: "1234567891", recemail: '415.dominic.smith@gmail.com')
-
+note1 = Notification.create(item_id: 1, send_by: 'Thu, 30 Jul 2015 02:26:16 +0000', phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
+note2 = Notification.create(item_id: 1, send_by: 'Thu, 30 Jul 2015 00:26:16 +0000', message: "This is working", phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
+note3 = Notification.create(item_id: 1, send_by: 'Thu, 30 Jul 2015 01:26:16 +0000', message: "This is working", phone: "4156526312", recemail: '415.dominic.smith@gmail.com', item_name: "carrots", list_id: 1)
 
 
 
