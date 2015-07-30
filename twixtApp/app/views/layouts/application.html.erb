@@ -56,14 +56,16 @@
 
           <% if params[:controller] == 'lists' %>
             <%= link_to group_lists_path(@group.id) do %> 
-              <li class="click-me-to-add-list"> <i class="fa fa-plus-square list-add-icon">   List</i>  </li>
+              <li class="click-me-to-add-list">
+                <i class="fa fa-plus-square list-add-icon"></i> New List
+              </li>
             <% end %>
           <% end %>
 
-          <li class="click-me-to-add-group"> <i class="fa fa-plus-square group-add-icon">  Group</i> </li>
+          <li class="click-me-to-add-group"><i class="fa fa-plus-square group-add-icon"></i> New Group</li>
 
           <%= link_to groups_path do %>
-            <li> <i class="fa fa-users group-nav-icon"></i> </li>
+            <li><i class="fa fa-users group-nav-icon"></i> My Groups</li>
           <% end %>  
 
         <% end %> 

@@ -8,7 +8,7 @@
   width: 100vw;
   height: 78px;
   background: #75DCB1; 
-  border-bottom: solid #5C4463 6px;
+  border-bottom: solid #5C4463 8px;
   z-index: 1;
 }
 
@@ -16,7 +16,7 @@
   font-family: Kranky,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 5em;
   margin: 42px 20px;
-  color: 5C4463;
+  color: #5C4463;
   line-height: 1.1;
 }
 
@@ -41,10 +41,16 @@ nav ul li {
   display: inline;
   padding: 1vw;
   border-radius: 5px;
+  border: solid #5C4463 1px;
   background: #DFEBD7;
-  color: black;
-  /*margin-right: 1vw;*/
   margin: auto 1vw auto 0;
+  font-weight: 700;
+  color: #5C4463;
+}
+
+.bold-list-item {
+  font-weight: 700;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 nav ul li:hover {
