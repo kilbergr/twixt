@@ -169,6 +169,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     pg (0.18.2)
+    phony (2.14.13)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -216,6 +217,8 @@ GEM
     redis (3.2.1)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    render_anywhere (0.0.11)
+      rails (>= 3.0.7)
     retriable (1.4.1)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -278,6 +281,11 @@ GEM
       sprockets (>= 2.8, < 4.0)
     table_print (1.5.4)
     temple (0.7.6)
+    textris (0.4.0)
+      actionmailer (~> 4.0)
+      activejob (~> 4.2)
+      phony (~> 2.8)
+      render_anywhere (~> 0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -339,6 +347,7 @@ DEPENDENCIES
   slim
   spring
   table_print
+  textris
   turbolinks
   twilio-ruby
   typhoeus
