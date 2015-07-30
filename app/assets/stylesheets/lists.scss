@@ -14,53 +14,47 @@
 // =================================================
 
 .group-members-slider-outer {
+	height: 100px;
 	width: 100vw;
-	height: 80px;
-	margin: auto;
-	margin-top: -20px;
-	border: 1px black solid;
+	margin-left: 26px;
 	overflow-y: hidden;
 	overflow-x: scroll;
 	text-align: center; 
-	background-color: rgba(0,0,0,0.2);
-
+	background-color: #DFEBD7;
+	// background-color: red;
 }
 
 .group-members-slider-inner {
-	height: 80px;
-	width: 1500px;
-	margin: auto;
+	height: 100px;
+	width: 120%;
 	overflow-y: hidden;
 	overflow-x: scroll;
-
 }
 
-
 .members-mini-profile {
-  float: left;
-  text-align: center; 
-  margin-top: 3px;
+	float: left;
+	text-align: center; 
+	margin-top: 3px;
 }
 
 .group-members-photo-div {
 	margin-right: 20px;
-  padding-right: 50px;
+	padding-right: 50px;
 	border-radius: 180px;
 	background-position: center;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border: black 1px solid;
-  box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border: black 1px solid;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
-
 .user-first-name {
-  margin-right: 20px;
-  margin-top: 5px;
-  text-align: center;
+	margin-right: 20px;
+	margin-top: 5px;
+	text-align: center;
 }
 
 .members-label {
@@ -69,6 +63,56 @@
 	display: inline-block;
 }
 
+//============================================
+//==== DISPLAY LISTS AND LIST TOGGLE BTNS  ===
+//============================================
+
+.list-list-toggles {
+	height: 110px;
+	width: 100vw;
+	padding-left: 14px;
+	// border-bottom: 1px #5C4463 solid;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	background-color: #DFEBD7;
+	clear: both;
+	margin-top: -20px;
+}
+
+.list-list-toggles-inner {
+	height: 110px;
+	width: 120%;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.list-toggle-box {
+	height: 70px;
+	width: 100px;
+	background-color: #F9F9F9;  /* off-white */
+	color: #5C4463;
+	border: solid #5C4463 1px;
+	border-radius: 15px;
+	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	display: inline;
+	float: left;
+	list-style: none;
+	padding: 10px;
+	margin-left: 15px;
+	margin-top: 15px;
+	text-align: center;
+	cursor: pointer;
+	// overflow-x: hidden;
+}
+
+.list-toggle-box:hover {
+	background: #5C4463;
+	color: #fff;	
+}
+
+.list-name {
+	display: inline;
+}
 
 // =============================================
 // ==== HIDDEN ELEMENTS FOR DOM MANIPULATION ===
@@ -98,11 +142,9 @@
 
 .close-me-button {
 	float: right;
-  margin-left: -200px;
-  display: none;
-  padding: 10px;
-  margin-left: -200px;
-  padding: 10px;
+	margin-left: -200px;
+	display: none;
+	padding: 10px;
 }
 
 .close-me-button:hover {
@@ -111,9 +153,10 @@
 }
 
 ///// NEW ITEM /////
-.new-item-form-box {
-	// text-align: center;
-}
+
+// .new-item-form-box {
+// 	text-align: center;
+// }
 
 
 .new-item-form-box #description{
@@ -164,7 +207,7 @@
 	margin-top: 20px;
 }
 
-.notification-phone-label {
+.notification-label {
 	margin-right: 90px;
 }
 
@@ -175,6 +218,7 @@
 //==========================
 //==== ADD LISTS TO PAGE ===
 //==========================
+
 .new-list-button {
 	margin-left: 45%;
 	margin-right: auto;
@@ -183,20 +227,20 @@
 }
 
 .hidden-list-box {
-  width: 400px;
-  height: 200px;
-  position: fixed;
-  left: 75%;
-  margin-left: -200px; 
-  background-color: rgba(100,122,158,0.9);
-  border: #5C4463 solid 1px;
+	width: 400px;
+	height: 200px;
+	position: fixed;
+	left: 75%;
+	margin-left: -200px; 
+	background-color: rgba(100,122,158,0.9);
+	border: #5C4463 solid 1px;
 	text-align: center;
-  margin-right: 35px;
-  color: white;
-  border-radius: 25px;
-  z-index: 1;
-  display: none;
-  margin-top: -100px;
+	margin-right: 35px;
+	color: white;
+	border-radius: 25px;
+	z-index: 1;
+	display: none;
+	margin-top: -100px;
 }
 
 .new-list-label {
@@ -209,58 +253,6 @@
 
 .create-list-btn {
 	margin-top: 20px;
-}
-
-//============================================
-//==== DISPLAY LISTS AND LIST TOGGLE BTNS  ===
-//============================================
-.list-list-toggles {
-	height: 120px;
-	width: 100vw;
-	margin: 0;
-	border-bottom: 1px #5C4463 solid;
-	overflow-y: hidden;
-	overflow-x: scroll;
-	background-color: #DFEBD7;
-	clear: both;
-	background-color: #F9F9F9;
-	margin-top: -20px;
-}
-
-.list-list-toggles-inner {
-	height: 120px;
-	width: 120%;
-	margin: 0;
-	overflow-y: hidden;
-	overflow-x: scroll;
-}
-
-.list-toggle-box {
-	height: 70px;
-	width: 100px;
-	background-color: #F9F9F9;  /* off-white */
-	color: #5C4463;
-	border: solid #5C4463 1px;
-	border-radius: 15px;
-	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
-	display: inline;
-	float: left;
-	list-style: none;
-	padding: 10px;
-	margin-left: 15px;
-	margin-top: 15px;
-	text-align: center;
-	cursor: pointer;
-	// overflow-x: hidden;
-}
-
-.list-toggle-box:hover {
-	background: #5C4463;
-	color: #fff;	
-}
-
-.list-name {
-	display: inline;
 }
 
 //=====================
@@ -283,11 +275,11 @@
 	background-color: rgba(100,122,158,1);
 	text-align: center;
 	left: 50%;
-  margin-left: -150px;
-  color: #F9F9F9;
-  border-radius: 25px;
-  display: none;
-  margin-top: -20px; 
+	margin-left: -150px;
+	color: #F9F9F9;
+	border-radius: 25px;
+	display: none;
+	margin-top: -20px; 
 }
 
 .delete-button {
@@ -316,5 +308,4 @@
 	padding: 20px;
 	display: contain;
 	overflow: auto;
-
 }

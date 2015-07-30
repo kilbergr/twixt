@@ -8,25 +8,31 @@
 // ===========================
 
 
-
+.lower-half-page {
+	background-color: #647A9E;
+	height: 100vh;
+	clear: both;
+}
 
 
 // ===========================
 // ==== GROUPS LIST AREA =====
 // ===========================
 
-.groups-list {
-	background-color: #647A9E;
+.groups-list-toggle-outer {
+	background-color: #DFEBD7;
 	width: 100vw;
-	height: 60vh;
-	overflow-y: scroll;
+	height: 15vh;
+	overflow-y: hidden;
 	overflow-x: scroll;
 }
 
-.list-text {
+.groups-list-toggle-inner {
+	width: 120%;
+	height: 15vh;
+	overflow-y: hidden;
+	overflow-x: scroll;
 	margin-left: 30px;
-	padding-top: 20px;
-	color: #F9F9F9;
 }
 
 .group-icon {
@@ -36,7 +42,6 @@
 // ===========================
 // ==== GROUP LINK/BOX =======
 // ===========================
-
 
 .group-box {
 	height: 100px;
@@ -55,7 +60,7 @@
 
 .group-box:hover {
 	background: #5C4463;
-  color: #fff;	
+	color: #fff;	
 }
 
 .group-box-name {
