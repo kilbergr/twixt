@@ -97,19 +97,20 @@
 //==== DISPLAY LISTS AND LIST TOGGLE BTNS  ===
 //============================================
 .list-list-toggles {
-	height: 100px;
-	width: 450px;
-	margin: auto;
-	border: 1px black solid;
+	height: 120px;
+	width: 100vw;
+	margin: 0;
+	border-bottom: 1px #5C4463 solid;
 	overflow-y: hidden;
 	overflow-x: scroll;
-	background-color: #F9F9F9;
+	background-color: #DFEBD7;
+	clear: both;
 }
 
 .list-list-toggles-inner {
-	height: 100px;
-	width: 1000px;
-	margin: auto;
+	height: 120px;
+	width: 120%;
+	margin: 0;
 	overflow-y: hidden;
 	overflow-x: scroll;
 }
@@ -117,10 +118,11 @@
 .list-toggle-box {
 	height: 70px;
 	width: 100px;
-	background-color: #F9F9F9;
+	background-color: #F9F9F9;  /* off-white */
 	color: black;
-	border: solid black 1px;
+	border: solid #5C4463 1px;
 	border-radius: 15px;
+	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 	display: inline;
 	float: left;
 	list-style: none;
@@ -129,12 +131,12 @@
 	margin-top: 15px;
 	text-align: center;
 	cursor: pointer;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 .list-toggle-box:hover {
 	background: #5C4463;
-  color: #fff;	
+	color: #fff;	
 }
 
 .list-name {
@@ -189,9 +191,8 @@
 .list-display {
 	background-color: #647A9E;
 	width: 100vw;
-	height: 54vh;
+	height: 100vh;
 	margin-top: 15px;
-	border: solid 3px #5C4463;
 	padding: 20px;
 	display: contain;
 	overflow: auto;

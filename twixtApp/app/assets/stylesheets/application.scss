@@ -17,6 +17,7 @@
  */
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import url(http://fonts.googleapis.com/css?family=Kranky);
 
 
 
@@ -24,8 +25,7 @@
 // ==== GLOBAL CSS AND COLOR SCHEME ===========
 // ============================================
 
- *, *:after, *:before {
-  margin: 0;
+*, *:after, *:before {
   padding: 0;
   box-sizing: border-box;
 }
@@ -33,10 +33,14 @@
 body {
 	background-color: #DFEBD7;
 	color: #5C4463;
+	line-height: 1.5;
 }
 
 h1 {
-	color: #47B1C5;
+	// color: #47B1C5;
+	color: #5C4463;
+	margin-bottom: 25px;
+	margin-top: 0;
 }
 
 h3 {
@@ -45,6 +49,11 @@ h3 {
 
 .error-messages {
 	margin: 10px;
+}
+
+.float-left {
+	float: left;
+	margin-left: 20px;
 }
 
 /*  COLOR PALETTE
@@ -75,6 +84,9 @@ RGB: 92, 68, 99
 blue gray - currently the center content background
 HEX: 647A9E
 RGB: 100, 122, 158
+
+lightish gray
+HEX: e8e6e6
 
 ----colors not currently in use ----
 

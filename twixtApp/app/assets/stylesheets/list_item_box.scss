@@ -2,18 +2,15 @@
 // ==== THE DRAGGABLE DROPABLE SUPER DYNAMIC AND INTERACTIVE LIST BOX THAT IS BASICALLY 99% OF OUR APP =====
 // =========================================================================================================
 
-
-
-
 .list-item-box {
-	background-color: white;
-	width: 220px;
+	background-color: #F9F9F9;
+	// width: 220px;
 	float: left;
 	display: inline-block;
 	margin-left: 20px;
 	margin-top: 20px;
+	border: 5px solid #F9F9F9;
 }
-
 
 
 .list-header {
@@ -21,6 +18,7 @@
 	width: 220px;
 	height: 30px;
 	margin-bottom: -10px;
+	border: #5C4463 solid 1px;
 }
 
 
@@ -33,7 +31,6 @@
 	float: right;
 	margin-right: 5px;
 	margin-top: 4px;
-
 }
 
 .add-item-icon:hover {
@@ -51,12 +48,10 @@
 }
 
 .list-li {
-	border: black solid 1px;
+	border: #5C4463 solid 1px;
 	width: 220px;
 	list-style-type: none;
 	float: left;
-
-
 }
 
 .list-item-header {
@@ -130,7 +125,7 @@
 }
 
 .list-item-body {
-	background-color: white;
+	background-color: #F9F9F9;
 	height: auto;
 }
 
