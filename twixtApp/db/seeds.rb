@@ -128,5 +128,11 @@ list10.items << item24
 list10.items << item25
 
 
+#notifications
+note1 = Notification.create(item_id: 1, send_by: 'Wed, 29 Jul 2015 20:15:39 -0700', message: "This is working", phone: "1234567891", recemail: '415.dominic.smith@gmail.com')
+
+
+
+
 
 
