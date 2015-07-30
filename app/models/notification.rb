@@ -5,15 +5,15 @@
 
 class Notification < ActiveRecord::Base
 	require 'twilio-ruby'
+	require 'dotenv-rails'
 
 	def self.find_notifications_to_send
 		notifications_to_send = Notification.where('send_by < ?', DateTime.now.utc)
 	end
 
 	def self.send_text_notification(array)
-		account_sid = 'ACd0509cb02417c4a459614b40d29e284d' 
-		auth_token = '59cc552aeb9030fe64cf99ee3bf80cbb'
-		client = Twilio::REST::Client.new account_sid, auth_token  
+
+		client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token  
 		unless array.length == 0
 			array.each do |notification|
 				if notification.message == nil
@@ -42,7 +42,9 @@ class Notification < ActiveRecord::Base
 					subject: "A reminder from #{user.first_name}",
 					)
 				else
-					
+				end
+			end
+		end
 		#if ready_to_send array has elements, array.each for email
 		#from array get notification.recemail, notification.id, and notification.message (if it exists)
 		#if no .message, default to standard message with find_by item.id and get item.name
