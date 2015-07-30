@@ -135,7 +135,7 @@ nav ul li a:active {
 
 /*
 ====================================
-==== ADD A NEW GROUP -- HIDEN DIV ==
+==== ADD A NEW GROUP -- HIDDEN DIV ==
 ====================================
 */
 
@@ -152,6 +152,7 @@ nav ul li a:active {
   display: none;
   color: white;
   text-align: center;
+  margin-top: 10px;
 }
 .new-group-label {
   margin-right: 114px;
