@@ -3,7 +3,6 @@
 // ============================================
 // toggles hidden property using Jquery .toggle method
 
-
 var ready;
 ready = function(){
 

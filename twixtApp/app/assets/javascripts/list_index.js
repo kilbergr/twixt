@@ -30,14 +30,15 @@ ready = function(){
 				                '<div id ="item-description" class="text-box">'+    
 				                        '<textarea name="item[description]" rows="5" cols="20" id="description" class="add-item-description"></textarea>' +
 				                '</div>' +
-				            '<div style="display:inline;padding:10px;">' +
-				                '<label for="uploadcare">Upload an Image for this Item</label>' +
-				            '</div>' +
-				            '<div class="image-upload-div" style="display:inline;">' +
+				            '<div class="image-upload-div-outer">' +
+				                '<label for="uploadcare" class="item-description-label" style="margin-top:15px">Upload an Image for this Item</label>' +
+				            
+				            '<div class="image-upload-div" style="display:inline;margin-top:15px">' +
 				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload">' +
-				            '</div>' +                
-				            '<div style="margin-top:30px;">' +
-				                '<input type="submit" value="Add List Item" class="add-item-submit-button button">' +
+				            '</div>' +
+				            '</div>' +            
+				            '<div style="margin-top:15px;">' +
+				                '<input type="submit" value="Add List Item" class="add-item-submit-button btn btn-primary">' +
 				            '</div>' +
 				        '</form>' +
 				    '</div>';
@@ -52,14 +53,14 @@ ready = function(){
 // ==================================
 // ==== TOGGLES FOR HIDDEN DIVS =====
 // ==================================
-  $('.new-list-button').click(function () {
-    $('.hidden-list-box').toggle("slow");
-  });
+	$('.new-list-button').click(function () {
+		$('.hidden-list-box').toggle("slow");
+	});
 
-  $('.remove-list').click(function(e){
-    e.stopPropagation();
-    $('.hidden-remove-box').toggle("slow");
-  });
+	$('.remove-list').click(function(e){
+		e.stopPropagation();
+		$('.hidden-remove-box').toggle("slow");
+	});
 
 	$('.cancel-button').click(function(e){
 		e.stopPropagation();
