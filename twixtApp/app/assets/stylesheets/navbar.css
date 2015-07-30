@@ -6,22 +6,36 @@
 
 #navbar {
   width: 100vw;
-  height: 70px;
+  height: 78px;
   background: #75DCB1; 
   border-bottom: solid #5C4463 6px;
   z-index: 1;
+}
+
+.logo-text {
+  font-family: Kranky,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 5em;
+  margin: 42px 20px;
+  color: 5C4463;
+  line-height: 1.1;
+}
+
+.nav-group-right {
+  /*margin-top: 5px;*/
+  margin: 15px 1vw 15px 0;
 }
 
 nav {
   display: inline;
   float: right;
 }
+
 nav ul {
   list-style: none;
-  margin-top: 1vh;
   cursor: pointer;
   color: #F9F9F9;
 }
+
 nav ul li {
 	float: right;
   display: inline;
@@ -29,8 +43,10 @@ nav ul li {
   border-radius: 5px;
   background: #DFEBD7;
   color: black;
-  margin-right: 1vw;
+  /*margin-right: 1vw;*/
+  margin: auto 1vw auto 0;
 }
+
 nav ul li:hover {
   background: #5C4463;
   color: #fff;
@@ -90,6 +106,10 @@ nav ul li a:active {
   height: 50px;
   border: black 1px solid;
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+.photo-div-nav {
+  margin-top: -3px;
 }
 
 .user-first-name {
