@@ -15,17 +15,18 @@ class Notification < ActiveRecord::Base
 		client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token  
 		unless array.length == 0
 			array.each do |notification|
-				if notification.message == nil
+				binding.pry
+				if notification["message"] == nil || notification["message"] == ""
 					client.account.messages.create({
 						:from => '+14154814661', 
-						:to => '+1' + notification.phone, 
-						:body => "Twixt App is contacting you to remind you about #{notification.item_id}",  
+						:to => '+1' + notification["phone"], 
+						:body => "Twixt App is contacting you to remind you about " + notification["item_name"],  
 					})	
 				else
 					client.account.messages.create({
 						:from => '+14154814661', 
-						:to => '+1' + notification.phone, 
-						:body => "Twixt App is contacting you to remind you about #{notification.message}",  
+						:to => '+1' + notification["phone"], 
+						:body => "Twixt App is contacting you to remind you about " + notification["message"] ,  
 					})	
 				end
 			end	

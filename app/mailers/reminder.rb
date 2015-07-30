@@ -8,7 +8,7 @@ class Reminder < ApplicationMailer
 							mail(from: 'reminder@twixt.com',
 							to: notification.recemail,
 							subject: "A reminder from Twixt!",
-							body: "Twixt App is contacting you to remind you about #{notification.item_id}",
+							body: "Twixt App is contacting you to remind you about #{notification.item_name}",
 							)
 						else 
 							mail(from: 'reminder@twixt.com',
