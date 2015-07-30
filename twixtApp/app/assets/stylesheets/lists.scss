@@ -17,7 +17,7 @@
 	width: 100vw;
 	height: 80px;
 	margin: auto;
-	margin-top: -50px;
+	margin-top: -20px;
 	border: 1px black solid;
 	overflow-y: hidden;
 	overflow-x: scroll;
@@ -118,9 +118,6 @@
 	// text-align: center;
 }
 
-h3 {
-	margin-left: 15px;
-}
 
 .new-item-form-box #description{
 	width: 350px;
@@ -202,7 +199,7 @@ h3 {
   border-radius: 25px;
   z-index: 1;
   display: none;
-  margin-top: 20px; 
+  margin-top: -100px;
 }
 
 .new-list-label {
@@ -317,7 +314,7 @@ h3 {
 .list-display {
 	background-color: #647A9E;
 	width: 100vw;
-	height: 100vh;
+	height: 50vh;
 	margin-top: 15px;
 	padding: 20px;
 	display: contain;

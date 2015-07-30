@@ -1,10 +1,7 @@
-<h3 class="float-left"><%= @group.name %> Lists</h3>
-
 
 <div class="group-members-slider-outer">
     <div class="group-members-slider-inner">
        
-
         <% @members.each do |member| %>
             <div class="members-mini-profile">
                 <div class="group-members-photo-div" title="Link to users profile" style="background-image: url(<%= member.avatar %>);"></div>
@@ -89,7 +86,9 @@
 
 </div>    
 
-<div class="below-group-member-list">    
+<div class="below-group-member-list"> 
+
+<h3 class="float-left"><%= @group.name %> Lists</h3>   
     <div class="list-list-toggles">   
         <div class="list-list-toggles-inner">
             <% @lists.each do |list| %>

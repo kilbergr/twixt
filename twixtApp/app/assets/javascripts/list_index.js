@@ -194,14 +194,6 @@ ready = function(){
 		});//END OF AJAX .done CALL
 	}); //END OF LIST-TOGGLE-BOX CLICK FUNCTION
 	
-<<<<<<< HEAD
-||||||| merged common ancestors
-	
-
-	
-
-
-=======
 	
 // ============================================
 // =========== GLOBAL FUNCTIONS ===============
