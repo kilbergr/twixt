@@ -8,7 +8,7 @@
   width: 100vw;
   height: 78px;
   background: #75DCB1; 
-  border-bottom: solid #5C4463 8px;
+  border-bottom: solid #5C4463 4px;
   z-index: 1;
 }
 
@@ -46,11 +46,7 @@ nav ul li {
   margin: auto 1vw auto 0;
   font-weight: 700;
   color: #5C4463;
-}
-
-.bold-list-item {
-  font-weight: 700;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*box-shadow: 3px 3px 5px rgba(0,0,0,.5);*/
 }
 
 nav ul li:hover {
@@ -110,7 +106,7 @@ nav ul li a:active {
   background-size: cover;
   width: 50px;
   height: 50px;
-  border: black 1px solid;
+  border: #5C4463 1px solid;
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
@@ -122,6 +118,8 @@ nav ul li a:active {
   margin-right: 20px;
   margin-top: 5px;
   text-align: center;
+  font-family: Kranky,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.25em;
 }
 
 /*
@@ -132,7 +130,7 @@ nav ul li a:active {
 
 .buffer {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 /*

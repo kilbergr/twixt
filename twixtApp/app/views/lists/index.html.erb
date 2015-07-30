@@ -1,3 +1,5 @@
+<h3 class="float-left"><%= @group.name %> Lists</h3>
+
 <div>
 <% @members.each do |member| %>
     <div class="user-mini-profile">
@@ -7,6 +9,7 @@
 
 <% end %>
 </div>
+
 <div class="hidden-list-box">
       <h3>Create a New List</h3>
       <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
@@ -70,7 +73,6 @@
             <% end %>
         </div>
     </div>
-    <h6 class="lists-label">Toggle Lists to Show</h6>
 </div>
 <div class="list-display">
     
