@@ -62,7 +62,7 @@ ready = function(){
 										'<i class="easy-upload-button fa fa-camera"></i>' +
 										'<i class="google-calendar-button fa fa-calendar"></i>' +
 										'<i class="schedule-email-button fa fa-envelope-o"></i>' +
-										'<i class="schedule-text-button fa fa-phone-square"></i>'	+		
+										'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
 									'</div>' +
 									'<div class="list-item-body" id="ib">' +
 									'<div class="image-div">' +
@@ -126,11 +126,15 @@ ready = function(){
 		});
 
 
-		//SCHEDULE TEST BUTTON
+		//SCHEDULE TEXT BUTTON
 
 		$('.schedule-text-button').click(function(e){
 			toggleScreenBlank();
-
+			var $this = $(this);
+			var itemId = $this.attr('data-itemId');
+			var listId = $this.attr('data-listId');
+			var itemName = $this.attr('data-itemName');
+			renderAddNotification(itemId, listId, itemName);
 		});
 
 		//ITEM COMPLETED BUTTON
@@ -230,6 +234,41 @@ ready = function(){
 				        '</form>' +
 				    '</div>';
 
+		$(html).appendTo('.render-forms-here');
+	}
+
+	function renderAddNotification(itemId, listId, itemName) {
+		var html = '<div class="new-reminder-form-box">' +
+			            '<h3>Send text reminder</h3>' +
+			            '<form action="/notifications/" class="new-notification-form" method="POST">' +
+			                '<div class="notification-phone-label">' +
+			                    '<label for="phone">Cell phone number:</label>' + 
+			                '</div>' +
+			                '<div>' +
+			                    '<input type="tel" name="notification[phone]" class="add-item-form" pattern="?:\(\d{3}\)|\d{3}[- ]?\d{3}[- ]?\d{4}" maxlength="12" required="required" placeholder="xxx-xxx-xxxx" autofocus>' +
+			                '</div>' +
+			                '<div class="item-description-label">' +
+			                    '<label for="message"> Custom message (optional): </label>' +
+			                '</div>' +    
+			                '<div id ="item-description" class="notification-text-box">' +
+			                    '<input type="text" name="notification[message]" class="add-item-form">' + 
+			                '</div>' +
+			                '<div>' +
+			                    '<label for="select">Select when to send this reminder:</label>' + 
+			                '</div>' +
+			                '<input type="hidden" value="notification[' + itemName + ']">' +
+			                '<input type="hidden" value="notification[' + itemId +']">' +
+			                '<input type="hidden" value="notification[' + listId +']">' +
+			                '<select name="notification[send_by]"" onchange="this.form.submit()">' +
+			                    '<option selected>Select time</option>' +
+			                    '<option>Now</option>' +
+			                    '<option>One Hour</option>' +
+			                    '<option>One Day</option>' +
+			                    '<option>One Week</option>' +
+			                '</select>' +
+			                '<noscript><input type="submit" value="Submit"></noscript>' +
+			            '</form>' +            
+			        '</div>';
 		$(html).appendTo('.render-forms-here');
 	}
 
