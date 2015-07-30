@@ -2,7 +2,10 @@
 // ==== JQUERY FOR LISTS INDEX PAGE ===========
 // ============================================
 
-$(function () {
+var ready;
+ready = function(){
+
+	console.log("list_index.js jquery is ready");
 
 // ============================================
 // =========== GLOBAL FUNCTIONS ===============
@@ -231,9 +234,8 @@ $(function () {
 		});//END OF AJAX .done CALL
 	}); //END OF LIST-TOGGLE-BOX CLICK FUNCTION
 	
-	
 
+};//END
 
-
-
-});//END
+$(document).ready(ready);
+$(document).on('page:load', ready);
