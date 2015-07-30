@@ -1,12 +1,17 @@
-<div>
-<% @members.each do |member| %>
-    <div class="user-mini-profile">
-        <div class="photo-div" title="Link to users profile" style="background-image: url(<%= member.avatar %>);"></div>
-        <div class="user-first-name"><%= member.first_name %></div>
-    </div>
+<div class="group-members-slider-outer">
+    <div class="group-members-slider-inner">
+       
 
-<% end %>
+        <% @members.each do |member| %>
+            <div class="members-mini-profile">
+                <div class="group-members-photo-div" title="Link to users profile" style="background-image: url(<%= member.avatar %>);"></div>
+                <div class="user-first-name"><%= member.first_name %></div>
+            </div>
+        <% end %>
+    </div>    
 </div>
+<h6 class="members-label">Group Members</h6>
+
 <div class="hidden-list-box">
       <h3>Create a New List</h3>
       <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
@@ -15,14 +20,40 @@
         <div class="create-list-btn"><%= f.submit "Create a new List", class:"btn btn-primary" %></div>
       <% end %>
     </div>
+
 <div class="render-forms-here">
     <i class="close-me-button fa fa-times"></i>
     
 
-        <div class="new-reminder-form">
-            <h3>Send a reminder</h3>
-            
-
+        <div class="new-reminder-form-box">
+            <h3>Send text reminder AND FINISH BUILDING THIS</h3>
+            <form action="/notifications/" class="new-notification-form" method="POST">
+                <div class='notification-phone-label'>
+                    <label for="phone">Cell phone number:</label> 
+                </div>
+                <div>
+                    <input type="tel" name="notification[phone]" class="add-item-form" pattern="?:\(\d{3}\)|\d{3}[- ]?\d{3}[- ]?\d{4}" maxlength="12" required="required" placeholder="xxx-xxx-xxxx" autofocus>  
+                </div>
+                <div class='item-description-label'>
+                    <label for="message"> Custom message (optional): </label>
+                </div>    
+                <div id ="item-description" class="notification-text-box">    
+                    <input type="text" name="notifiction[message]" class="add-item-form"> 
+                </div>
+                <div>
+                    <label for="select">Select when to send this reminder:</label> 
+                </div>
+                <input type="hidden" value="notification[item_name]">
+                <input type="hidden" value="notification[list_id]">
+                <select name='notification[send_by]' onchange='this.form.submit()'>
+                    <option selected>Select time</option>
+                    <option>Now</option>
+                    <option>One Hour</option>
+                    <option>One Day</option>
+                    <option>One Week</option>
+                </select>
+                <noscript><input type="submit" value="Submit"></noscript> 
+            </form>            
         </div>
 
 
@@ -54,7 +85,7 @@
 
 </div>    
 
-<div>    
+<div class="below-group-member-list">    
     <div class="list-list-toggles">   
         <div class="list-list-toggles-inner">
             <% @lists.each do |list| %>

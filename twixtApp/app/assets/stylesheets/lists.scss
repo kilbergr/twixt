@@ -7,6 +7,73 @@
 // ==== LISTs INDEX PAGE =====
 // ===========================
 
+
+
+// =================================================
+// ==== GROUP MEMBERS AVATAR CIRCLE & FIRST NAME ===
+// =================================================
+
+.group-members-slider-outer {
+	width: 100vw;
+	height: 80px;
+	margin: auto;
+	margin-top: -50px;
+	border: 1px black solid;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	text-align: center; 
+	background-color: rgba(0,0,0,0.2);
+
+}
+
+.group-members-slider-inner {
+	height: 80px;
+	width: 1500px;
+	margin: auto;
+	overflow-y: hidden;
+	overflow-x: scroll;
+
+}
+
+
+.members-mini-profile {
+  float: left;
+  text-align: center; 
+  margin-top: 3px;
+}
+
+.group-members-photo-div {
+	margin-right: 20px;
+  padding-right: 50px;
+	border-radius: 180px;
+	background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: black 1px solid;
+  box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+
+.user-first-name {
+  margin-right: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.members-label {
+	margin-left: 10px;
+	width: 300px;
+	display: inline-block;
+}
+
+
+// =============================================
+// ==== HIDDEN ELEMENTS FOR DOM MANIPULATION ===
+// =============================================
+
 .screen-blanket {
 	width: 100vw;
 	height: 100vh;
@@ -34,6 +101,7 @@
 	color: white;
 }
 
+///// NEW ITEM /////
 .new-item-form-box {
 	text-align: center;
 
@@ -55,6 +123,24 @@
 	margin-top: 15px;
 	padding: 8px;
 }
+
+///// NEW NOTIFICATION /////
+
+.new-reminder-form-box {
+	text-align: center;
+}
+
+.new-notification-form {
+	margin-top: 20px;
+}
+
+.notification-phone-label {
+	margin-right: 90px;
+}
+
+.add-item-form {
+	margin-right: 45px;
+}
 //==========================
 //==== ADD LISTS TO PAGE ===
 //==========================
@@ -68,16 +154,16 @@
 .hidden-list-box {
 	width: 300px;
 	height: 200px;
-	// position: fixed;
+	position: fixed;
 	background-color: rgba(100,122,158,0.9);
 	text-align: center;
-	margin-left: 65%;
+	margin-left: 55%;
   margin-right: 35px;
   color: white;
   border-radius: 25px;
   padding: 10px;
   display: none;
-  margin-top: 20px; 
+  margin-top: -80px; 
 }
 
 
@@ -104,6 +190,7 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 	background-color: #F9F9F9;
+	margin-top: -20px;
 }
 
 .list-list-toggles-inner {
