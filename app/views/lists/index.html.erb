@@ -27,14 +27,14 @@
     <i class="close-me-button fa fa-times"></i>
     
 
-        <!-- <div class="new-reminder-form-box">
-            <h3>Send text reminder</h3>
+      <!--   <div class="new-reminder-form-box">
+            <h3>Send email reminder</h3>
             <form action="/notifications/" class="new-notification-form" method="POST">
-                <div class='notification-phone-label'>
-                    <label for="phone">Cell phone number:</label> 
+                <div class='notification-label'>
+                    <label for="recemail">Recipient Email:</label> 
                 </div>
                 <div>
-                    <input type="tel" name="notification[phone]" class="add-item-form" pattern="?:\(\d{3}\)|\d{3}[- ]?\d{3}[- ]?\d{4}" maxlength="12" required="required" placeholder="xxx-xxx-xxxx" autofocus>  
+                    <input type="tel" name="notification[recemail]" class="add-item-form" pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}" required="required" placeholder="example@example.com" autofocus>  
                 </div>
                 <div class='item-description-label'>
 
@@ -60,10 +60,10 @@
                 </select>
                 <noscript><input type="submit" value="Submit"></noscript> 
             </form>            
-        </div> -->
+        </div>
 
 
-
+ -->
 
     <!-- <div class="new-item-form-box">
         <h3>Add a new item to your list</h3>
@@ -93,7 +93,9 @@
 
 <div class="below-group-member-list"> 
 
-   
+
+<!-- <h3 class="float-left"><%= @group.name %> Lists</h3>    -->
+
     <div class="list-list-toggles">   
         <div class="list-list-toggles-inner">
             <% @lists.each do |list| %>
