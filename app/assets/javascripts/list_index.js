@@ -57,32 +57,38 @@ ready = function(){
 			items.forEach(function (item){
 				//LIST ITEM TEXT STRING
 				html += '<li class="list-li">' +
-									'<div class="list-item-header-outer">' +
-									'<div class="list-item-header-inner">' +
-										'<i class="collapse-icon fa fa-caret-square-o-down"></i>' +
-										'<span class="list-item-name">' + item.name + '</span>' +
-										'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
-											'<i class="google-calendar-button fa fa-calendar"></i>' +
-										'<i class="schedule-email-button fa fa-envelope-o"></i>' +	
-										'<i class="easy-upload-button fa fa-camera"></i>' +
-									'</div>' +
-									'</div>' +
-									'<div class="list-item-body" id="ib">';
 
-				if (item.image_url == "" || item.image_url == "nil"){
-					html +=		'<div class="image-div">' +
-										'<img src="'+ item.image_url +'" class="item-img"></div>' +
+						// LIST ITEM HEADER
+									'<div class="list-item-header-outer">' +
+										'<div class="list-item-header-inner">' +
+											'<i class="collapse-icon fa fa-caret-square-o-down"></i>' +
+											'<span class="list-item-name">' + item.name + '</span>' +
+											'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
+											'<i class="google-calendar-button fa fa-calendar"></i>' +
+											'<i class="schedule-email-button fa fa-envelope-o"></i>' +	
+											'<i class="easy-upload-button fa fa-camera"></i>' +
 										'</div>' +
+									'</div>' +
+
+						// LIST ITEM BODY
+						'<div class="list-item-body">';
+
+						if (item.image_url == "" || item.image_url == "nil"){
+							html +=	'<div class="image-div">' +
+										'<img src="'+ item.image_url +'" class="item-img">
+									</div>' +
+						'</div>' +
+						
 										item.description +	
-										'<div class="list-item-footer" id="if">' +
+										'<div class="list-item-footer">' +
 										'<i class="item-completed-button fa fa-check-square"></i>' +
 										'<i class="delete-item-button fa fa-minus-square"></i>' +
-										'</div>' +
+									'</div>' +
 										'</li>';
-				} else {
+						} else {
 									html += item.description +					
 									'</div>' +
-									'<div class="list-item-footer" id="if">' +
+									'<div class="list-item-footer">' +
 										'<i class="item-completed-button fa fa-check-square"></i>' +
 										'<i class="delete-item-button fa fa-minus-square"></i>' +
 									'</div>' +
