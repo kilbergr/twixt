@@ -47,17 +47,17 @@ nav ul li {
   display: inline;
   padding: 1vw;
   border-radius: 5px;
-  border: solid #5F8894 1px;
-  background-image: url('/notebook.jpg');
-  /*background: #DFEBD7;*/
+  border: solid #2F6C79 1px;
+  /*background-image: url('/notebook.jpg');*/
+  background: #EBE5CC;
   margin: auto 1vw auto 0;
   font-weight: 400;
-  color: #5F8894;
+  color: #2F6C79;
 }
 
 nav ul li:hover {
-  background: #5F8894;
-  color: #fff;
+  background: #DF5A43;
+  color: #EBE5CC;
 }
 
 nav ul li a:link {
@@ -75,7 +75,7 @@ nav ul li a:hover {
 }
 
 nav ul li a:active {
-	color: #fff;
+	color: #EBE5CC;
 }
 
 /*
@@ -95,7 +95,7 @@ nav ul li a:active {
   background-size: cover;
   width: 50px;
   height: 50px;
-  border: #5F8894 1px solid;
+  border: #2F6C79 1px solid;
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
@@ -152,7 +152,7 @@ nav ul li a:active {
   border-radius: 25px;
   z-index: 1;
   display: none;
-  color: #EBE5CC;
+  color: #2F6C79;
   /*F9F9F9;*/
   text-align: center;
   margin-top: 10px;

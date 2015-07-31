@@ -92,8 +92,8 @@
 	width: 100px;
 	background-color: #A7CCC2;
 	// F9F9F9;  /* off-white */
-	color: #5F8894;
-	border: solid #5F8894 1px;
+	color: #2F6C79;
+	border: solid #2F6C79 1px;
 	border-radius: 15px;
 	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 	display: inline;
@@ -108,8 +108,8 @@
 }
 
 .list-toggle-box:hover {
-	background: #5F8894;
-	color: #fff;	
+	background: #2F6C79;
+	color: #EBE5CC;	
 }
 
 .list-name {
@@ -150,10 +150,11 @@
 
 .screen-blanket {
 	width: 100vw;
-	height: 100vh;
-	position: absolute;
+	height: 100%;
+	position: fixed;
 	background-color: rgba(0,0,0,0.6);
 	display: none;
+	z-index: 1;
 }
 
 .render-forms-here {
@@ -166,7 +167,7 @@
 	left: 50%;
 	margin-left: -200px;
 	display: none;
-	border: #5F8894 solid 3px; 
+	border: #2F6C79 solid 3px; 
 	padding: 10px;
 }
 
@@ -287,10 +288,10 @@
 	margin-left: -200px; 
 	opacity: 0.9;
 	background-color: #A7CCC2;
-	border: #5F8894 solid 1px;
+	border: #2F6C79 solid 1px;
 	text-align: center;
 	margin-right: 35px;
-	color: #5F8894;
+	color: #2F6C79;
 	border-radius: 25px;
 	z-index: 1;
 	display: none;

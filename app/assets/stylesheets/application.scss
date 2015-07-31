@@ -88,7 +88,7 @@ HEX: e8e6e6
 body {
 	background-image: url('/notebook.jpg');
 	// background-color: #DFEBD7;
-	color: #5F8894;
+	color: #2F6C79;
 	// 5F8894;
 	line-height: 1.5;
 	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -107,7 +107,7 @@ h3 {
 	font-size: 1.35em;
 	font-weight: 400;
 	margin-left: 30px;
-	color: #5F8894;
+	color: #2F6C79;
 	// 5F8894;
 	margin-bottom: 15px;
 }
@@ -133,11 +133,11 @@ label {
 .btn {
 	background-color: #f8efc0; /* light yellow bootstrap uses for alerts */
 	background-image: none;
-	color: #5F8894;
+	color: #2F6C79;
 }
 
 .btn-primary:focus, .btn-primary:hover {
-	background-color: #5F8894;
+	background-color: #2F6C79;
 	// border-color: #F9F9F9;
 }
 
@@ -145,7 +145,7 @@ label {
 // ==== GLOBAL WIDGET OVERRIDES TO JQUERY ====
 // ===========================================
 .ui-widget {
-	color: #5F8894;
+	color: #2F6C79;
 	line-height: 1.5;
 	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
