@@ -20,14 +20,15 @@ class NotificationsController < ApplicationController
 			end
 			@list_id = params["list_id"]
 			@group = find_group(@list_id)
-			binding.pry
-			redirect_to group_lists_path([@group,@list_id]), flash: {success: "Notification sent!"}
+		
+			redirect_to group_lists_path([@group, @list_id]), flash: {success: "Notification sent!"}
 		else
 			@list_id = params["list_id"]
-			binding.pry
+
 			@notification = Notification.new(params)
 	    @notification.save
 	    @group = find_group(@list_id)
+
 	    redirect_to group_lists_path([@group,@list_id]), flash: {success: "Notification scheduled!"}
   	end
  	end
@@ -43,6 +44,7 @@ class NotificationsController < ApplicationController
 
 	  def find_group(list_id)
 	  	@list = List.find_by_id(list_id)
+	  	@list.group
 	  end
 
 	  def formated_notification_params(notification_params)
