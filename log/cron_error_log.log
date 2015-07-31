@@ -3453,3 +3453,16 @@ Tasks: TOP => twixt:find_current_notifications
 /Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
 /Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/config/initializers/omniauth.rb:2: warning: already initialized constant OpenSSL::SSL::VERIFY_PEER
 /Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
+/Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/config/initializers/omniauth.rb:2: warning: already initialized constant OpenSSL::SSL::VERIFY_PEER
+/Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
+rake aborted!
+ArgumentError: Account SID and auth token are required
+/Users/rebeccakilberg/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-4.2.1/lib/twilio-ruby/rest/base_client.rb:32:in `initialize'
+/Users/rebeccakilberg/.rvm/gems/ruby-2.1.2/gems/twilio-ruby-4.2.1/lib/twilio-ruby/rest/client.rb:125:in `initialize'
+/Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/app/models/notification.rb:15:in `new'
+/Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/app/models/notification.rb:15:in `send_text_notification'
+/Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/lib/tasks/schedule_notification.rake:7:in `block (2 levels) in <top (required)>'
+/Users/rebeccakilberg/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `eval'
+/Users/rebeccakilberg/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => twixt:find_current_notifications
+(See full trace by running task with --trace)
