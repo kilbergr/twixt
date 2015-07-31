@@ -1,9 +1,7 @@
 <h3>Group: <%= @group.name %></h3>
 
-
 <div class="group-members-slider-outer">
     <div class="group-members-slider-inner">
-       
         <% @members.each do |member| %>
             <div class="members-mini-profile">
                 <div class="group-members-photo-div" title="Link to users profile" style="background-image: url(<%= member.avatar %>);"></div>
@@ -15,85 +13,21 @@
 
 
 <div class="hidden-list-box">
-      <h3>Create a New List</h3>
-      <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
+    <h3>Create a New List</h3>
+    <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
         <div><%= f.label "List Name:", class:"new-list-label" %></div>
         <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-list-form" %></div>
         <div class="create-list-btn"><%= f.submit "Create a new List", class:"btn btn-primary" %></div>
-      <% end %>
-    </div>
+    <% end %>
+</div>
 
 <div class="render-forms-here">
     <i class="close-me-button fa fa-times"></i>
-    
-
-      <!--   <div class="new-reminder-form-box">
-            <h3>Send email reminder</h3>
-            <form action="/notifications/" class="new-notification-form" method="POST">
-                <div class='notification-label'>
-                    <label for="recemail">Recipient Email:</label> 
-                </div>
-                <div>
-                    <input type="tel" name="notification[recemail]" class="add-item-form" pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}" required="required" placeholder="example@example.com" autofocus>  
-                </div>
-                <div class='item-description-label'>
-
-
-                    <label for="message"> Custom message (optional): </label>
-                </div>    
-                <div id ="item-description" class="notification-text-box">    
-                    <input type="text" name="notification[message]" class="add-item-form"> 
-                </div>
-                
-
-                <div>
-                    <label for="select">Select when to send this reminder:</label> 
-                </div>
-                <input type="hidden" value="notification[item_name]">
-                <input type="hidden" value="notification[list_id]">
-                <select name='notification[send_by]' onchange='this.form.submit()'>
-                    <option selected>Select time</option>
-                    <option>Now</option>
-                    <option>One Hour</option>
-                    <option>One Day</option>
-                    <option>One Week</option>
-                </select>
-                <noscript><input type="submit" value="Submit"></noscript> 
-            </form>            
-        </div>
-
-
- -->
-
-    <!-- <div class="new-item-form-box">
-        <h3>Add a new item to your list</h3>
-        <form action="/groups/:group_id/items/" class="add-item-form" method="POST">
-            <div>
-                <div class='item-name-label'><label for="title">Name: </div>
-                    <input type="text" name="item[name]" id="name" class="add-item-form" autofocus>
-                </label>
-            </div>
-            <div class='item-description-label'><label> Decription of Issue: </label></div>    
-                <div id ="item-description" class="text-box">    
-                        <textarea name="item[description]" rows="5" cols="20" id="description" class="add-item-description"></textarea>
-                </div>
-            <div>
-                <label for="uploadcare"> Upload an Image.</label>
-            </div>
-            <div class="image-upload-div">
-                <input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload" />
-            </div>                
-            <div>
-                <input type="submit" value="Create New Issue" class="add-item-submit-button">
-            </div>
-        </form>
-    </div> -->
-
+    <!-- 'Send email reminder' form moved to list_index.js file in javascripts folder -->
+    <!-- 'Add a new list item' form moved to list_index.js file in javascripts folder -->
 </div>    
 
 <div class="below-group-member-list"> 
-
-   
     <div class="lists-list-toggles-outer">   
         <div class="lists-list-toggles-inner">
             <% @lists.each do |list| %>
@@ -110,36 +44,8 @@
         </div>
     </div>
 </div>
+
 <div class="list-display">
-    
-    <!-- <div class="list-item-box", data-id="LIST ID">
-        <div class="list-header">
-            <h4 class="list-name-text">List Name</h4>
-            <i class="add-item-icon fa fa-plus"></i>
-        </div>
-        <div class="list-body">
-            <ul class="list-ul">
-                <li class="list-li">
-                    <div class="list-item-header">
-                        <i class="collapse-icon fa fa-caret-square-o-down"></i>
-                        <h7 class="list-item-name">Item Name</h7>
-                        <i class="easy-upload-button fa fa-camera"></i>
-                        <i class="google-calendar-button fa fa-calendar"></i>
-                        <i class="schedule-email-button fa fa-envelope-o"></i>
-                        <i class="schedule-text-button fa fa-phone-square"></i>
-                        
-                    </div>
-                    <div class="list-item-body">
-                        <img src="" alt="">
-                    </div>
-                    <div class="list-item-footer">
-                        <i class="item-completed-button fa fa-check-square"></i>
-                        <i class="delete-item-button fa fa-minus-square"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div> -->
-
-
+    <!-- 'list-item-box' div moved to list_index.js file in javascripts folder -->
 </div>
+

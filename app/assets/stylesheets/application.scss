@@ -73,7 +73,7 @@ HEX: e8e6e6
 
  @import "font-awesome-sprockets";
  @import "font-awesome";
- @import url(https://fonts.googleapis.com/css?family=Oswald|Kranky);
+ @import url(http://fonts.googleapis.com/css?family=Kranky|Oswald:400,300,700);
 
 
 // ============================================
@@ -89,17 +89,20 @@ body {
 	background-color: #DFEBD7;
 	color: #5C4463;
 	line-height: 1.5;
-	font-family: 'Oswald';
+	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
 }
 
 h1 {
 	color: #5C4463;
 	margin-bottom: 25px;
 	margin-top: 0;
+	font-weight: 400;
 }
 
 h3 {
 	font-size: 1.35em;
+	font-weight: 400;
 	margin-left: 30px;
 	color: #5C4463;
 	margin-bottom: 15px;
@@ -112,6 +115,10 @@ h3 {
 .float-left {
 	float: left;
 	margin-left: 20px;
+}
+
+label {
+	font-weight: 400;
 }
 
 // ==============================================
@@ -129,3 +136,12 @@ h3 {
 	// border-color: #F9F9F9;
 }
 
+// ===========================================
+// ==== GLOBAL WIDGET OVERRIDES TO JQUERY ====
+// ===========================================
+.ui-widget {
+	color: #5C4463;
+	line-height: 1.5;
+	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
