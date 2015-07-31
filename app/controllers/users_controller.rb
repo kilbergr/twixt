@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def update
   	@user.update(user_params)
-    binding.pry
   	@user.save
   	redirect_to user_path
   end
