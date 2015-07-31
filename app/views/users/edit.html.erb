@@ -1,2 +1,16 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h3>Edit Account Info</h3>
+<div class="profile-view-wrapper">
+
+<%= form_for @user do |f| %>
+	<%= f.label "First name: " %>
+	<%= f.text_field :first_name %>
+	<%= f.label "Last name: " %>
+	<%= f.text_field :last_name %>
+	<%= f.submit "Save Changes" %>
+<% end %>
+
+
+
+<%= link_to "Cancel", user_path(@user), class: "btn btn-primary profile-button-two" %>
+
+</div> <!-- close profile-view-wrapper -->

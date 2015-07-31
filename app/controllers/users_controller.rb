@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
-	before_action :find_user, only: [:show, :edit, :update, :destroy]
+	before_action :find_user, only: [:show, :edit, :destroy, :update]
 
   def edit
   end
 
   def update
-  	@user.update user_params
+  	@user.update(user_params)
+    binding.pry
   	@user.save
   	redirect_to user_path
   end
