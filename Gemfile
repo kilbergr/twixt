@@ -46,6 +46,7 @@ gem 'google-api-client', :require => 'google/api_client'
 gem 'twilio-ruby'
 
 gem 'rails_12factor', :group => :production
+gem 'whenever', :require => false
 # Use Unicorn as the app server
 # gem 'unicorn'
 

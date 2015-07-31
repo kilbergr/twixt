@@ -15,7 +15,6 @@ class Notification < ActiveRecord::Base
 		client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token  
 		unless array.length == 0
 			array.each do |notification|
-				binding.pry
 				if notification["message"] == nil || notification["message"] == ""
 					client.account.messages.create({
 						:from => '+14154814661', 
