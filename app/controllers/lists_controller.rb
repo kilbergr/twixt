@@ -39,7 +39,7 @@ class ListsController < ApplicationController
   end
 
   def find_group 
-    @group = Group.find_by_id(params[:group_id])
+    @group = Group.find_by_id(params[:group_id]) 
   end
 
   private

@@ -1,10 +1,11 @@
 class NotificationsController < ApplicationController
 	before_action :find_item
+	
 
 	def create
 		
 		params = formated_notification_params(notification_params)
-		
+		binding.pry
 		if params["send_by"] == "Now"
 			phone = params["phone"]
 			recemail = params["recemail"]
@@ -19,14 +20,16 @@ class NotificationsController < ApplicationController
 				Reminder.send_email_notification(send_now).deliver_now
 			end
 			@list_id = params["list_id"]
-			redirect_to group_lists_path(@list_id), flash: {success: "Notification sent!"}
+			@group = find_group(@list_id)
+			redirect_to group_lists_path([@group,@list_id]), flash: {success: "Notification sent!"}
 		else
 			@list_id = params["list_id"]
 			
 			
 			@notification = Notification.new(params)
 	    @notification.save
-	    redirect_to group_lists_path(@list_id), flash: {success: "Notification scheduled!"}
+	    @group = find_group(@list_id)
+	    redirect_to group_lists_path([@group,@list_id]), flash: {success: "Notification scheduled!"}
   	end
  	end
 
@@ -39,10 +42,19 @@ class NotificationsController < ApplicationController
 	    @item = Item.find_by_id(params[:item_id])
 	  end
 
+	  def find_group(list_id)
+	  	@list = List.find_by_id(list_id)
+	  	@group = @list.group
+	  end
+
 	  def formated_notification_params(notification_params)
-		  notification_params[:phone].slice!("-")
-			notification_params[:phone].slice!("-")
-			phone = notification_params[:phone]
+	  	if notification_params[:phone]
+			  notification_params[:phone].slice!("-")
+				notification_params[:phone].slice!("-")
+				phone = notification_params[:phone]
+			else
+				phone = notification_params[:phone]
+			end
 			message = notification_params[:message]
 			if notification_params[:recemail]
 				recemail = notification_params[:recemail]
