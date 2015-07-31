@@ -20,9 +20,13 @@
 				<td><%= f.label "Email:" %></td>
 				<td class="table-column-2"><%= f.text_field :email %></td>
 			</tr>
-						<tr>
+			<tr>
 				<td><%= f.label "Birthdate:" %></td>
 				<td class="table-column-2"><%= f.text_field :birthday %></td>
+			</tr>
+			<tr>
+				<td>Upload new profile image</td>
+				<td><span class="image-upload-div"><input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload"></span></td>
 			</tr>
 		</table>
 
