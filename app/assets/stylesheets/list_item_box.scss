@@ -2,9 +2,13 @@
 // ==== THE DRAGGABLE DROPABLE SUPER DYNAMIC AND INTERACTIVE LIST BOX THAT IS BASICALLY 99% OF OUR APP =====
 // =========================================================================================================
 
+span {
+	padding: 4px;
+}
+
 .list-item-box {
 	background-color: #F9F9F9;
-	// width: 220px;
+	width: 225px;
 	float: left;
 	display: inline-block;
 	margin-left: 20px;
@@ -12,9 +16,13 @@
 	border: 3px solid #5C4463;
 }
 
+.list-body {
+	// width: 220px;
+}
+
 .list-header {
 	background-color: #75DCB1;
-	width: 220px;
+	// width: 219px;
 	height: 30px;
 	margin-bottom: -10px;
 	border: #5C4463 solid 1px;
@@ -23,17 +31,17 @@
 .list-name-text-box {
 	display: inline;
 	padding-left: 3px;
-	width: 180px;
+	// width: 180px;
 	overflow-x: hidden;
-
+	// overflow-y: hidden;
 }
 
 .list-name-text {
 	display: inline;
-	padding-left: 3px;
-	width: 180px;
+	margin-left: 10px;
+	// padding-left: 3px;
+	// width: 180px;
 	overflow-x: hidden;
-
 }
 
 .add-item-icon {
@@ -47,34 +55,32 @@
 	cursor: pointer;
 }
 
-.list-body {
-	width: 220px;
-	
-}
-
 .list-ul{
 
 }
 
 .list-li {
 	border: #5C4463 solid 1px;
-	width: 220px;
+	// width: 219px;
 	list-style-type: none;
 	float: left;
 }
 
 .list-item-header-outer {
 	background-color: #DFEBD7;
+	// width: 100%;
 	height: 30px;
-	overflow-x: scroll;
+	// overflow-x: hidden;
+	// overflow-y: hidden;
 }
 
 .list-item-header-inner {
 	background-color: #DFEBD7;
-	width: 250px;
+	// width: 100%;
 	height: 30px;
-	overflow-x: scroll;
-	
+	// overflow-x: hidden;
+	// overflow-y: hidden;
+	position: relative;
 }
 
 .collapse-icon {
@@ -90,11 +96,34 @@
 	cursor: pointer;
 }
 
-
 .list-item-name {
 	display: inline;
 	margin-left: 5px;
 }
+
+.list-item-body {
+	background-color: #F9F9F9;
+	height: auto;
+}
+
+.image-div {
+	width: 180px;
+	height: 190px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.item-img {
+	// width: 180px;
+	// height: 190px;
+}
+
+.list-item-footer {
+	margin-top: 20px;
+	background-color: #DFEBD7;
+}
+
+// BUTTON ICONS
 
 .easy-upload-button {
 	display: inline;
@@ -145,28 +174,6 @@
 	cursor: pointer;
 }
 
-.list-item-body {
-	background-color: #F9F9F9;
-	height: auto;
-}
-
-.image-div {
-	width: 180px;
-	height: 190px;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-.item-img {
-	width: 180px;
-	height: 190px;
-}
-
-.list-item-footer {
-	margin-top: 20px;
-	background-color: #DFEBD7;
-}
-
 .item-completed-button {
 	display: inline;
 	margin-left: 180px;
@@ -176,7 +183,6 @@
 	color: #F9F9F9;
 	cursor: pointer;
 }
-
 
 .delete-item-button {
 	display: inline;
