@@ -155,7 +155,7 @@
 .render-forms-here {
 	position: absolute;
 	width: 400px;
-	height: 420px;
+	height: 430px;
 	background-color: #DFEBD7;
 	border-radius: 25px;
 	z-index: 2;
@@ -189,8 +189,13 @@
 	margin-left: 15px;
 }
 
-.new-item-form-box #name{
+.new-item-form-box {
 	width: 350px;
+	margin-left: 15px;
+}
+
+.item-name-input {
+	width: 320px;
 	margin-left: 15px;
 }
 
@@ -201,12 +206,19 @@
 .add-item-description-label{
 	margin-left: 17px;
 	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.item-name-input {
+	margin-left: 17px;
+	margin-top: 15px;
+	// margin-bottom: 10px;
 }
 
 .add-item-description-text-area {
 	margin-left: 15px;
 	margin-bottom: 10px;
-	width: 350px;
+	width: 320px;
 }
 
 .upload-care-label {
@@ -228,7 +240,7 @@
 }
 
 .add-item-submit-button {
-	margin-top: 15px;
+	// margin-top: 5px;
 	margin-left: 15px;
 	padding: 8px;
 }
