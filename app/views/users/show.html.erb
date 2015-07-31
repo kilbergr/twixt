@@ -9,19 +9,19 @@
 
 	<table class="profile-table">
 		<tr>
-			<td>First Name:</td>
+			<td class="table-label">First Name:</td>
 			<td class="table-column-2"><%= @user.first_name %></td>
 		</tr>
 		<tr>
-			<td>Last Name:</td>
+			<td class="table-label">Last Name:</td>
 			<td class="table-column-2"><%= @user.last_name %></td>
 		</tr>
 		<tr>
-			<td>Email:</td>
+			<td class="table-label">Email:</td>
 			<td class="table-column-2"><%= @user.email %></td>
 		</tr>
 		<tr>
-			<td>Birthdate:</td>
+			<td class="table-label">Birthdate:</td>
 			<td class="table-column-2">
 				<% if @user.birthday %>
 					<%= @user.birthday %>
@@ -32,6 +32,6 @@
 	</table>
 
 
-<p><%= link_to "Edit Account Info", edit_user_path(@user) %></p>
+<%= link_to "Edit Account Info", edit_user_path(@user), class: "btn btn-primary profile-button" %>
 
 </div> <!-- close profile-view-wrapper -->
