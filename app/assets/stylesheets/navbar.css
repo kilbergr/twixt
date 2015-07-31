@@ -7,8 +7,10 @@
 #navbar {
   width: 100vw;
   height: 78px;
-  background: #75DCB1; 
-  border-bottom: solid #5C4463 4px;
+  background: #A7CCC2;
+  /*BEDFD0;*/
+ /* #75DCB1; */
+  border-bottom: solid #DF5A43 4px;
   z-index: 1;
 }
 
@@ -20,7 +22,7 @@
   font-family: Kranky,'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 5em;
   margin: 42px 20px;
-  color: #5C4463;
+  color: #DF5A43;
   line-height: 1.1;
 }
 
@@ -36,7 +38,8 @@ nav {
 nav ul {
   list-style: none;
   cursor: pointer;
-  color: #F9F9F9;
+  color: #EBE5CC;
+  /*F9F9F9;*/
 }
 
 nav ul li {
@@ -44,15 +47,16 @@ nav ul li {
   display: inline;
   padding: 1vw;
   border-radius: 5px;
-  border: solid #5C4463 1px;
-  background: #DFEBD7;
+  border: solid #5F8894 1px;
+  background-image: url('/notebook.jpg');
+  /*background: #DFEBD7;*/
   margin: auto 1vw auto 0;
   font-weight: 400;
-  color: #5C4463;
+  color: #5F8894;
 }
 
 nav ul li:hover {
-  background: #5C4463;
+  background: #5F8894;
   color: #fff;
 }
 
@@ -91,7 +95,7 @@ nav ul li a:active {
   background-size: cover;
   width: 50px;
   height: 50px;
-  border: #5C4463 1px solid;
+  border: #5F8894 1px solid;
   box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
@@ -136,17 +140,20 @@ nav ul li a:active {
 */
 
 .hidden-new-group-box {
+  background-color: #A7CCC2;
+  opacity: 0.9;
   width: 400px;
   height: 200px;
   position: fixed;
   left: 75%;
   margin-left: -200px; 
-  background-color: rgba(100,122,158,0.9);
+  /*background-color: rgba(100,122,158,0.9);*/
   border: black solid 1px;
   border-radius: 25px;
   z-index: 1;
   display: none;
-  color: #F9F9F9;
+  color: #EBE5CC;
+  /*F9F9F9;*/
   text-align: center;
   margin-top: 10px;
 }

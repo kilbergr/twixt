@@ -41,7 +41,7 @@ RGB: 249, 249, 249
 deep purple 
 - to replace anything we want to be black
 - body text color, logo text color, outlines/borders, items/groups/li hover color
-HEX: 5C4463
+HEX: 5F8894
 RGB: 92, 68, 99
 
 blue gray 
@@ -88,14 +88,16 @@ HEX: e8e6e6
 body {
 	background-image: url('/notebook.jpg');
 	// background-color: #DFEBD7;
-	color: #5C4463;
+	color: #5F8894;
+	// 5F8894;
 	line-height: 1.5;
 	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 }
 
 h1 {
-	color: #5C4463;
+	color: #DF5A43;
+	// 5F8894;
 	margin-bottom: 25px;
 	margin-top: 0;
 	font-weight: 400;
@@ -105,7 +107,8 @@ h3 {
 	font-size: 1.35em;
 	font-weight: 400;
 	margin-left: 30px;
-	color: #5C4463;
+	color: #5F8894;
+	// 5F8894;
 	margin-bottom: 15px;
 }
 
@@ -130,11 +133,11 @@ label {
 .btn {
 	background-color: #f8efc0; /* light yellow bootstrap uses for alerts */
 	background-image: none;
-	color: #5C4463;
+	color: #5F8894;
 }
 
 .btn-primary:focus, .btn-primary:hover {
-	background-color: #5C4463;
+	background-color: #5F8894;
 	// border-color: #F9F9F9;
 }
 
@@ -142,7 +145,7 @@ label {
 // ==== GLOBAL WIDGET OVERRIDES TO JQUERY ====
 // ===========================================
 .ui-widget {
-	color: #5C4463;
+	color: #5F8894;
 	line-height: 1.5;
 	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;

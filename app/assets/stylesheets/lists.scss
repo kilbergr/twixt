@@ -20,7 +20,9 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 	text-align: center; 
-	background-color: #DFEBD7;
+  background-image: url('/notebook.jpg');
+	 // background-color: #3E8A92;
+	 // DFEBD7
 }
 
 .group-members-slider-inner {
@@ -50,7 +52,7 @@
 	background-size: cover;
 	width: 50px;
 	height: 50px;
-	border: #5C4463 1px solid;
+	border: #5F8894 1px solid;
 	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 }
 
@@ -71,7 +73,8 @@
 	padding-left: 14px;
 	overflow-y: hidden;
 	overflow-x: scroll;
-	background-color: #DFEBD7;
+  background-image: url('/notebook.jpg');
+	// background-color: #DFEBD7;
 	clear: both;
 	margin-top: -20px;
 	position: relative;
@@ -87,9 +90,10 @@
 .list-toggle-box {
 	height: 70px;
 	width: 100px;
-	background-color: #F9F9F9;  /* off-white */
-	color: #5C4463;
-	border: solid #5C4463 1px;
+	background-color: #A7CCC2;
+	// F9F9F9;  /* off-white */
+	color: #5F8894;
+	border: solid #5F8894 1px;
 	border-radius: 15px;
 	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
 	display: inline;
@@ -104,7 +108,7 @@
 }
 
 .list-toggle-box:hover {
-	background: #5C4463;
+	background: #5F8894;
 	color: #fff;	
 }
 
@@ -123,7 +127,7 @@
 }
 
 .list-display {
-   background-color: #647A9E;
+   // background-color: #647A9E;
 	width: 100vw;
 	height: 100%;
 	margin-top: -14px;
@@ -156,13 +160,13 @@
 	position: absolute;
 	width: 400px;
 	height: 430px;
-	background-color: #DFEBD7;
+  background-color: #A7CCC2;
 	border-radius: 25px;
 	z-index: 2;
 	left: 50%;
 	margin-left: -200px;
 	display: none;
-	border: #5C4463 solid 3px; 
+	border: #5F8894 solid 3px; 
 	padding: 10px;
 }
 
@@ -175,7 +179,8 @@
 
 .close-me-button:hover {
 	cursor: pointer;
-	color: #F9F9F9;
+	color: #EBE5CC;
+	// F9F9F9;
 }
 
 ///// NEW ITEM /////
@@ -280,15 +285,16 @@
 	position: fixed;
 	left: 75%;
 	margin-left: -200px; 
-	background-color: rgba(100,122,158,0.9);
-	border: #5C4463 solid 1px;
+	opacity: 0.9;
+	background-color: #A7CCC2;
+	border: #5F8894 solid 1px;
 	text-align: center;
 	margin-right: 35px;
-	color: white;
+	color: #5F8894;
 	border-radius: 25px;
 	z-index: 1;
 	display: none;
-	margin-top: -100px;
+	margin-top: -150px;
 }
 
 .new-list-label {
@@ -325,7 +331,8 @@
 	text-align: center;
 	left: 50%;
 	margin-left: -150px;
-	color: #F9F9F9;
+	color: #EBE5CC;
+	// F9F9F9;
 	border-radius: 25px;
 	display: none;
 	margin-top: -20px; 
