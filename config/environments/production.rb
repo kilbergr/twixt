@@ -1,6 +1,20 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+  #reset password mailers
+  config.action_mailer.default_url_options =  { host: "https://twixt.herokuapp.com" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => Rails.application.secrets[:MANDRILL_USERNAME],
+    :password  => Rails.application.secrets[:MANDRILL_PASSWORD], # SMTP password is any valid API key
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
   config.serve_static_assets = true
