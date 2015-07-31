@@ -69,15 +69,12 @@
 	height: 115px;
 	width: 100vw;
 	padding-left: 14px;
-	// border-bottom: 1px #5C4463 solid;
 	overflow-y: hidden;
 	overflow-x: scroll;
 	background-color: #DFEBD7;
 	clear: both;
 	margin-top: -20px;
-	z-index: 5;
 	position: relative;
-
 }
 
 .lists-list-toggles-inner {
@@ -85,7 +82,6 @@
 	width: 120%;
 	overflow-y: hidden;
 	overflow-x: scroll;
-	// z-index: 5;
 }
 
 .list-toggle-box {
@@ -133,7 +129,6 @@
 	margin-top: -14px;
 	display: contain;
 	overflow: auto;
-	z-index: 10;
 	position: relative;
 }
 
