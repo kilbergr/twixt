@@ -191,9 +191,20 @@
 	margin-left: 15px;
 }
 
-.item-description-label{
+.add-item-description-label{
+	margin-left: 17px;
+	margin-top: 15px;
+}
+
+.add-item-description-text-area {
 	margin-left: 15px;
-	margin-top: 5px;
+	margin-bottom: 10px;
+	width: 350px;
+}
+
+.upload-care-label {
+	display: inline;
+	padding-left: 15px;
 }
 
 .item-description-label .uploadcare-widget{

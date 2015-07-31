@@ -49,7 +49,7 @@ ready = function(){
 			//LIST HEADER TEXT STRING
 			var html= '<div class="list-item-box draggable-list", id="drag-me" data-id="'+ id +'">' +
 											'<div class="list-header">' +
-												'<h4 class="list-name-text">' + listName +'</h4>' +
+												'<span class="list-name-text">' + listName +'</span>' +
 												'<i class="add-item-icon fa fa-plus" data-id="'+ id +'""></i>' +
 											'</div>'+
 											'<div class="list-body">'+ 
@@ -60,7 +60,7 @@ ready = function(){
 									'<div class="list-item-header-outer">' +
 									'<div class="list-item-header-inner">' +
 										'<i class="collapse-icon fa fa-caret-square-o-down"></i>' +
-										'<h7 class="list-item-name">' + item.name + '</h7>' +
+										'<span class="list-item-name">' + item.name + '</span>' +
 										'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
 											'<i class="google-calendar-button fa fa-calendar"></i>' +
 										'<i class="schedule-email-button fa fa-envelope-o"></i>' +	
@@ -234,18 +234,18 @@ ready = function(){
 				                    '<input type="text" name="item[name]" id="name" class="add-item-form" autofocus>' +
 				                '</label>' +
 				            '</div>' +
-				            '<div class="item-description-label"><label> Item Description: </label></div>'+
-				                '<div id ="item-description" class="text-box">'+    
-				                        '<textarea name="item[description]" rows="5" cols="20" class="add-item-description"></textarea>' +
+				            '<div><label class="add-item-description-label">Item Description: </label></div>'+
+				                '<div class="text-box">'+    
+				                        '<textarea name="item[description]" rows="5" cols="20" class="add-item-description-text-area"></textarea>' +
 				                '</div>' +
-				            '<div style="display:inline;padding:10px;">' +
+				            '<div class="upload-care-label">' +
 				                '<label for="uploadcare">Upload an Image for this Item</label>' +
 				            '</div>' +
 				            '<div class="image-upload-div" style="display:inline;">' +
 				                '<input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload">' +
 				            '</div>' +                
 				            '<div style="margin-top:30px;">' +
-				                '<input type="submit" value="Add List Item" class="add-item-submit-button button">' +
+				                '<input type="submit" value="Add List Item" class="add-item-submit-button btn btn-primary">' +
 				            '</div>' +
 				        '</form>' +
 				    '</div>';

@@ -17,7 +17,7 @@
 }
 
 .logo-text {
-  font-family: Kranky,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Kranky,'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 5em;
   margin: 42px 20px;
   color: #5C4463;
@@ -25,7 +25,6 @@
 }
 
 .nav-group-right {
-  /*margin-top: 5px;*/
   margin: 15px 1vw 15px 0;
 }
 
@@ -48,9 +47,8 @@ nav ul li {
   border: solid #5C4463 1px;
   background: #DFEBD7;
   margin: auto 1vw auto 0;
-  font-weight: 700;
+  font-weight: 400;
   color: #5C4463;
-  /*box-shadow: 3px 3px 5px rgba(0,0,0,.5);*/
 }
 
 nav ul li:hover {
