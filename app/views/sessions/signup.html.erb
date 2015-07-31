@@ -12,7 +12,7 @@
 		<div class="sign-up-form-box">
 		  	<div class="login-forms">
 
-				<%= form_for(@user, url: signup_path) do |f|%>
+				<%= form_for @user do |f|%>
 					<p>
 				  		<div class="signup-label"><%= f.label(:first_name) %></div>
 				  		<%= f.text_field(:first_name, autofocus: true, class: "name-field") %>
