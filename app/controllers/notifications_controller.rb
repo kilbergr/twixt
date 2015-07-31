@@ -5,7 +5,6 @@ class NotificationsController < ApplicationController
 	def create
 		
 		params = formated_notification_params(notification_params)
-		binding.pry
 		if params["send_by"] == "Now"
 			phone = params["phone"]
 			recemail = params["recemail"]

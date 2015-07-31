@@ -75,8 +75,7 @@ ready = function(){
 
 						if (item.image_url == "" || item.image_url == "nil"){
 							html +=	'<div class="image-div">' +
-										'<img src="'+ item.image_url +'" class="item-img">
-									</div>' +
+										'<img src="'+ item.image_url +'" class="item-img"></div>' +
 						'</div>' +
 						
 										item.description +	
