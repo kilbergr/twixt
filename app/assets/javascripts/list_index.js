@@ -47,7 +47,7 @@ ready = function(){
 		}).done(function (data){
 			var items = data;
 			//LIST HEADER TEXT STRING
-			var html= '<div class="list-item-box draggable-list", id="drag-me" data-id="'+ id +'">' +
+			var html= '<div class="list-item-box draggable-list", class="drag-me" data-id="'+ id +'">' +
 											'<div class="list-header">' +
 												'<span class="list-name-text">' + listName +'</span>' +
 												'<i class="add-item-icon fa fa-plus" data-id="'+ id +'""></i>' +
@@ -57,9 +57,8 @@ ready = function(){
 			items.forEach(function (item){
 				//LIST ITEM TEXT STRING
 				html += '<li class="list-li">' +
-
 						// LIST ITEM HEADER
-									'<div class="list-item-header-outer">' +
+						'<div class="list-item-header-outer">' +
 										'<div class="list-item-header-inner">' +
 											'<i class="collapse-icon fa fa-caret-square-o-down"></i>' +
 											'<span class="list-item-name">' + item.name + '</span>' +
@@ -69,7 +68,6 @@ ready = function(){
 											'<i class="easy-upload-button fa fa-camera"></i>' +
 										'</div>' +
 									'</div>' +
-
 						// LIST ITEM BODY
 						'<div class="list-item-body">';
 
@@ -233,7 +231,7 @@ ready = function(){
 				        '<form action="/lists/'+ id +'/items/" class="add-item-form" method="POST">' +
 				            '<div>' +
 				                '<div class="item-name-label"><label for="title">Name: </div>' +
-				                    '<input type="text" name="item[name]" id="name" class="add-item-form" autofocus>' +
+				                    '<input type="text" name="item[name]" class="item-name-input" class="add-item-form" autofocus>' +
 				                '</label>' +
 				            '</div>' +
 				            '<div><label class="add-item-description-label">Item Description: </label></div>'+
