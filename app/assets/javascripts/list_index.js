@@ -47,7 +47,8 @@ ready = function(){
 		}).done(function (data){
 			var items = data;
 			//LIST HEADER TEXT STRING
-			var html= '<div class="list-item-box draggable-list", class="drag-me" data-id="'+ id +'">' +
+
+			var html= '<div class="list-item-box draggable-list", id="draggable" data-id="'+ id +'">' +
 											'<div class="list-header">' +
 												'<span class="list-name-text">' + listName +'</span>' +
 												'<i class="add-item-icon fa fa-plus" data-id="'+ id +'""></i>' +
@@ -63,9 +64,8 @@ ready = function(){
 											'<i class="collapse-icon fa fa-caret-square-o-down"></i>' +
 											'<span class="list-item-name">' + item.name + '</span>' +
 											'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
-											'<i class="google-calendar-button fa fa-calendar"></i>' +
 											'<i class="schedule-email-button fa fa-envelope-o" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>' +	
-											'<i class="easy-upload-button fa fa-camera"></i>' +
+											'<i class="google-calendar-button fa fa-calendar"></i>' +		
 										'</div>' +
 									'</div>' +
 						// LIST ITEM BODY
