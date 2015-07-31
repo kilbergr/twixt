@@ -3,12 +3,12 @@ namespace :twixt do
 	task find_current_notifications: :environment do
 		puts "Finding and sending relevent notifications"
 		notificationsArray = Notification.find_notifications_to_send
-		puts "Notification array length: #{notificationsArray.length}"
+		puts "Notification array length before: #{notificationsArray.length}"
 		Notification.send_text_notification(notificationsArray)
 		Reminder.send_email_notification(notificationsArray).deliver_now
 		Notification.purge_old_notifications(notificationsArray)
 		notificationsArray = Notification.find_notifications_to_send
-		puts "Notification array length: #{notificationsArray.length}"
+		puts "Notification array length after: #{notificationsArray.length}"
 	end
 end
 
