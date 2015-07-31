@@ -73,27 +73,24 @@ ready = function(){
 						// LIST ITEM BODY
 						'<div class="list-item-body">';
 
-						if (item.image_url == "" || item.image_url == "nil"){
-							html +=	'<div class="image-div">' +
-										'<img src="'+ item.image_url +'" class="item-img"></div>' +
-						'</div>' +
-						
-										item.description +	
-										'<div class="list-item-footer">' +
-										'<i class="item-completed-button fa fa-check-square"></i>' +
-										'<i class="delete-item-button fa fa-minus-square"></i>' +
-									'</div>' +
-										'</li>';
-						} else {
-									html += item.description +					
-									'</div>' +
+					 if (item.image_url == "" || item.image_url == "nil"){
+									html += item.description + '</div>' +
 									'<div class="list-item-footer">' +
 										'<i class="item-completed-button fa fa-check-square"></i>' +
 										'<i class="delete-item-button fa fa-minus-square"></i>' +
 									'</div>' +
 								'</li>';
-				}
-				
+							}
+					else {
+							html +=	'<div class="image-div">' +
+										'<img src="'+ item.image_url +'" class="item-img"></div>' +
+										'</div>' + item.description +	
+										'<div class="list-item-footer">' +
+										'<i class="item-completed-button fa fa-check-square"></i>' +
+										'<i class="delete-item-button fa fa-minus-square"></i>' +
+									'</div>' +
+										'</li>';
+						}
 			});
 			html += '</ul>' +
 						'</div>' +
