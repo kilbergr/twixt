@@ -45,8 +45,8 @@ class Notification < ActiveRecord::Base
 
 	def self.purge_old_notifications(array)
 		array.each do |notification|
-			delete_this = Notification.find_by_id(notification["id"])
-			delete_this.destroy
+			# delete_this = Notification.find_by_id(notification["id"])
+			notification.destroy
 		end
 	end
 

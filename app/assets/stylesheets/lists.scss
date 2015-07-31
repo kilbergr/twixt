@@ -123,14 +123,15 @@
 }
 
 .list-display {
-  background-color: #647A9E;
+   background-color: #647A9E;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	margin-top: -14px;
 	// display: contain;
 	// overflow: auto;
-	position: relative;
-	background: url("../../images/notebook.jpg") no-repeat center center fixed; 
+	// position: relative;
+	// 	z-index: 7;
+	background: url("/notebook.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
