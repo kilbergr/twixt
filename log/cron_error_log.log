@@ -3449,3 +3449,7 @@ Tasks: TOP => twixt:find_current_notifications
 /Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
 /Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/config/initializers/omniauth.rb:2: warning: already initialized constant OpenSSL::SSL::VERIFY_PEER
 /Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
+/Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/config/initializers/omniauth.rb:2: warning: already initialized constant OpenSSL::SSL::VERIFY_PEER
+/Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
+/Users/rebeccakilberg/Documents/coding/Galvanize/14_wk/twixt/config/initializers/omniauth.rb:2: warning: already initialized constant OpenSSL::SSL::VERIFY_PEER
+/Users/rebeccakilberg/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:54: warning: previous definition of VERIFY_PEER was here
