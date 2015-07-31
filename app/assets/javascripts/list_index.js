@@ -64,7 +64,7 @@ ready = function(){
 											'<span class="list-item-name">' + item.name + '</span>' +
 											'<i class="schedule-text-button fa fa-phone-square" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>'	+		
 											'<i class="google-calendar-button fa fa-calendar"></i>' +
-											'<i class="schedule-email-button fa fa-envelope-o"></i>' +	
+											'<i class="schedule-email-button fa fa-envelope-o" data-listId="' + id + '" data-itemId="' + item.id + '" data-itemName="' + item.name + '"></i>' +	
 											'<i class="easy-upload-button fa fa-camera"></i>' +
 										'</div>' +
 									'</div>' +
@@ -138,6 +138,7 @@ ready = function(){
 			var itemId = $this.attr('data-itemId');
 			var listId = $this.attr('data-listId');
 			var itemName = $this.attr('data-itemName');
+			console.log(itemId + " " + listId + " " + itemName);
 			renderAddEmailNotification(itemId, listId, itemName);
 		});
 
@@ -293,24 +294,24 @@ ready = function(){
 		var html =   '<div class="new-reminder-form-box">' + 
             '<h3>Send email reminder</h3>' + 
             '<form action="/notifications/" class="new-notification-form" method="POST">' + 
+            		'<input type="hidden" name="notification[item_name]" value="'+ itemName +'">' +
+	              '<input type="hidden" name="notification[item_id]" value="'+ itemId +'">' +
+	              '<input type="hidden" name="notification[list_id]" value="'+ listId +'">' +
                 '<div class="notification-label">' + 
                     '<label for="recemail">Recipient Email:</label> ' + 
                 '</div>' + 
                 ' <div>' + 
-                    ' <input type="tel" name="notification[recemail]" class="add-item-form" pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}" required="required" placeholder="example@example.com" autofocus>  ' + 
+                    '<input type="text" name="notification[recemail]" class="add-item-form" required="required" placeholder="example@example.com" autofocus>' + 
                 '</div>' + 
                 '<div class="item-description-label">' + 
                     '<label for="message"> Custom message (optional): </label>' + 
-                '</div>    ' + 
+                '</div>' + 
                 '<div id ="item-description" class="notification-text-box">    ' + 
                     '<input type="text" name="notification[message]" class="add-item-form"> ' + 
                 '</div>' + 
                 '<div>' + 
                     ' <label for="select">Select when to send this reminder:</label> ' +
                 '</div>' + 
-           			  '<input type="hidden" name="notification[item_name]" value="'+ itemName +'">' +
-	                '<input type="hidden" name="notification[item_id]" value="'+ itemId +'">' +
-	                '<input type="hidden" name="notification[list_id]" value="'+ listId +'">' +
 	                 '<select name="notification[send_by]" onchange="this.form.submit()">'+
                 	'<option selected>Select time</option>' +
 			                    '<option>Now</option>' +

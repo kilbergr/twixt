@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
   def create
     @item = @list.items.create(item_params)
     @item.save
+    binding.pry
     redirect_to group_lists_path(@list.group)
   end
 
